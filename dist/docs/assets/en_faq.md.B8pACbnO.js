@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as a}from"./chunks/framework.BeVX27ge.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"en/faq.md","filePath":"en/faq.md"}'),n={name:"en/faq.md"};function r(o,s,c,f,p,_){return t(),a("div")}const m=e(n,[["render",r]]);export{i as __pageData,m as default};

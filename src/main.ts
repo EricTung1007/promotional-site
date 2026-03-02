@@ -93,14 +93,14 @@ function setLanguage(lang: SupportedLocales) {
     }
   });
 
-  localStorage.setItem('ai-coach-lang', lang);
+  localStorage.setItem('aicoach-lang-v2', lang);
   document.documentElement.lang = lang;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize Language Switcher
-  const savedLang = (localStorage.getItem('ai-coach-lang') || 'vi') as SupportedLocales;
+  const savedLang = (localStorage.getItem('aicoach-lang-v2') || 'vi') as SupportedLocales;
   const langSwitcher = document.getElementById('lang-switcher') as HTMLSelectElement;
 
   if (langSwitcher) {

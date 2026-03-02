@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "AI Coach"
-  text: "User Guide & Wiki"
-  tagline: Make every practice closer to reality
+  text: "使用指南與 Wiki"
+  tagline: 讓每一次練習都更接近真實。
   actions:
     - theme: brand
       text: 開始使用
@@ -14,10 +14,10 @@ hero:
       link: /zh-TW/USER_GUIDE
 
 features:
-  - title: Multi-Stage Practice
-    details: Complete simulation covering the entire sales process from ice-breaking to closing.
-  - title: AI Co-Pilot
-    details: Get immediate, line-by-line feedback during conversation and full post-analysis.
-  - title: Advanced Analytics
-    details: Monitor individual and team progress over time with comprehensive dashboards.
+  - title: 多階段練習
+    details: 涵蓋從破冰到促成的完整銷售流程，逐階段追蹤進展。
+  - title: AI 輔助教練
+    details: 實時對話中獲得逐句回饋，練習結束後獲得完整的綜合評核報告。
+  - title: 進階分析與追蹤
+    details: 透過儀表板與歷史紀錄，全面掌握個人與團隊的學習進度及成長軌跡。
 ---
