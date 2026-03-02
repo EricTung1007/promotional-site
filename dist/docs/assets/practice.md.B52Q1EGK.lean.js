@@ -1,0 +1,1 @@
+import{_ as d,o as a,c as r,ae as e}from"./chunks/framework.BeVX27ge.js";const c=JSON.parse('{"title":"對話練習","description":"","frontmatter":{},"headers":[],"relativePath":"practice.md","filePath":"practice.md"}'),l={name:"practice.md"};function o(i,t,h,n,s,b){return a(),r("div",null,[...t[0]||(t[0]=[e("",82)])])}const g=d(l,[["render",o]]);export{c as __pageData,g as default};

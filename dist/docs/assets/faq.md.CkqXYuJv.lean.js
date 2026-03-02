@@ -1,0 +1,1 @@
+import{_ as a,o as r,c as l,ae as o}from"./chunks/framework.BeVX27ge.js";const p=JSON.parse('{"title":"常見問題 FAQ","description":"","frontmatter":{},"headers":[],"relativePath":"faq.md","filePath":"faq.md"}'),i={name:"faq.md"};function e(d,t,h,n,s,q){return r(),l("div",null,[...t[0]||(t[0]=[o("",119)])])}const u=a(i,[["render",e]]);export{p as __pageData,u as default};

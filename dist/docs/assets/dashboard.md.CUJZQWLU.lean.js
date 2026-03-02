@@ -1,0 +1,1 @@
+import{_ as a,o as r,c as d,ae as e}from"./chunks/framework.BeVX27ge.js";const u=JSON.parse('{"title":"儀表板","description":"","frontmatter":{},"headers":[],"relativePath":"dashboard.md","filePath":"dashboard.md"}'),l={name:"dashboard.md"};function o(h,t,i,n,s,b){return r(),d("div",null,[...t[0]||(t[0]=[e("",30)])])}const p=a(l,[["render",o]]);export{u as __pageData,p as default};
