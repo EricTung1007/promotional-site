@@ -17,7 +17,7 @@ export default defineConfig({
             themeConfig: {
                 nav: [
                     { text: 'Trang chủ', link: '/' },
-                    { text: 'Về trang chính', link: '/promotional-site/' },
+                    { text: 'Về trang chính', link: 'https://erictung1007.github.io/promotional-site/' },
                 ],
                 sidebar: [
                     {
@@ -57,7 +57,7 @@ export default defineConfig({
             themeConfig: {
                 nav: [
                     { text: 'Home', link: '/en/' },
-                    { text: 'Back to Site', link: '/promotional-site/' },
+                    { text: 'Back to Site', link: 'https://erictung1007.github.io/promotional-site/' },
                 ],
                 sidebar: [
                     {
@@ -97,7 +97,7 @@ export default defineConfig({
             themeConfig: {
                 nav: [
                     { text: '首頁', link: '/zh-TW/' },
-                    { text: '回主站', link: '/promotional-site/' },
+                    { text: '回主站', link: 'https://erictung1007.github.io/promotional-site/' },
                 ],
                 sidebar: [
                     {
