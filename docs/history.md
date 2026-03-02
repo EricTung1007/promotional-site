@@ -1,144 +1,73 @@
-# 練習歷史
+# Lịch sử
 
-> 回顧所有練習紀錄，透過篩選與分析找出改善方向
+> Xem lại tất cả các bản ghi luyện tập, tìm kiếm hướng cải thiện thông qua phân tích và lọc.
 
-## 概覽
+## Tổng quan
 
-練習歷史頁面提供您所有練習紀錄的完整列表，支援多維度篩選與排序，讓您輕鬆找到特定的練習紀錄並進行回顧或重新挑戰。
+Trang Lịch sử cung cấp danh sách đầy đủ tất cả các bài thực hành của bạn, hỗ trợ lọc và sắp xếp đa chiều, giúp bạn dễ dàng tìm thấy các bản ghi luyện tập cụ thể để xem lại hoặc thực hành lại.
 
-## 進入方式
+## Cách Truy cập
+- Lựa chọn **"Tất cả"** trong phần lọc nhanh của Bảng điều khiển
+- Truy cập trực tiếp đường dẫn `/practice-history`
 
-- 儀表板快速篩選中的 **「全部」** 選項
-- 直接訪問路徑 `/practice-history`
-
----
-
-## 頁面結構
-
-頁面由上而下分為以下區域：
-
-| 區域 | 說明 |
-| --- | --- |
-| 頁面標題列 | 包含標題「練習紀錄」、篩選按鈕、開始對話按鈕 |
-| 篩選標籤列 | 顯示目前套用的篩選條件標籤（可快速移除） |
-| 練習紀錄表格 | 顯示所有練習紀錄 |
-| 分頁控制列 | 分頁導航、每頁顯示筆數設定 |
+## Cấu trúc Trang
+Trang Lịch sử bao gồm các khu vực sau:
+- **Thanh Tiêu đề**: Gồm Tiêu đề "Lịch sử Luyện tập", Nút Bộ lọc, Nút Bắt đầu Trò chuyện
+- **Nhãn Lọc**: Hiển thị các điều kiện lọc đang áp dụng
+- **Bảng Lịch sử**: Hiển thị toàn bộ lịch sử luyện tập
 
 ---
 
-## 篩選功能
+## Tính năng Lọc
+Nhấp vào nút **"Bộ lọc"** để mở bảng điều khiển lọc. Bạn có thể áp dụng nhiều bộ lọc cùng một lúc.
 
-點擊 **「篩選條件」** 按鈕開啟篩選面板。可同時套用多個篩選條件。
-
-### 日期範圍
-
-提供開始日期與結束日期的日期選擇器，自行設定所需的日期區間。
-
-### 客戶屬性篩選
-
-| 篩選條件 | 類型 | 選項 |
+| Tiêu chuẩn Lọc | Loại | Lựa chọn |
 | --- | --- | --- |
-| 年齡範圍 | 數字範圍 | 最小年齡 ~ 最大年齡（18-65） |
-| 性別 | 單選 | 男 / 女 |
-| 姓名 | 文字輸入 | 依客戶姓名篩選 |
-| 收入 | 單選 | 5M~10M / 10M~15M / 15M~20M / 大於 20M |
-| 婚姻狀況 | 單選 | 單身 / 已婚 |
-| 關係類型 | 單選 | 親友 / 陌生客 |
-| 達成階段範圍 | 數字範圍 | 最小達成階段 ~ 最大達成階段 |
-
-### 篩選操作
-
-| 按鈕 | 說明 |
-| --- | --- |
-| 套用 | 套用目前的篩選條件 |
-| 清除 | 清除所有篩選條件 |
-| 收摺 / 展開 | 收合或展開篩選面板 |
-
-### 篩選標籤
-
-套用篩選後，頁面會在表格上方顯示篩選標籤，每個標籤代表一個篩選條件：
-
-- 點擊標籤上的 X 可移除該條件
-- 點擊 **「清除全部」** 可一次移除所有篩選
+| Độ Tuổi | Dải Số | Tuổi tối thiểu ~ Tuổi tối đa (18-65) |
+| Giới tính | Lựa Chọn | Nam / Nữ |
+| Tên | Văn Bản | Theo tên khách hàng |
+| Thu nhập | Lựa Chọn | 5M~10M / 10M~15M / 15M~20M / > 20M |
+| Tình trạng Hôn nhân | Lựa Chọn | Độc thân / Đã kết hôn |
+| Loại Mối quan hệ | Lựa Chọn | Người thân / Người lạ |
+| Giai đoạn Đạt được | Dải Số | Giai đoạn bán hàng tối thiểu ~ tối đa |
 
 ---
 
-## 練習紀錄表格
+## Bảng Lịch sử
 
-### 表格欄位
-
-| 欄位 | 說明 |
+| Cột | Mô tả |
 | --- | --- |
-| 日期 | 練習進行的日期與時間 |
-| 年齡 | 客戶角色年齡 |
-| 性別 | 客戶角色性別 |
-| 姓名 | 客戶角色姓名 |
-| 職業 | 客戶角色職業 |
-| 收入 | 客戶角色收入等級 |
-| 婚姻狀況 | 單身 / 已婚 |
-| 子女數量 | 客戶子女數量 |
-| 與業務員關係 | 親友 / 陌生客 |
-| 達成階段 | 練習最終達成的銷售階段 |
-| 練習時長 | 對話時長（分鐘） |
-| 操作 | 操作按鈕列 |
+| Ngày | Ngày và Thời gian thực hành |
+| Tuổi | Tuổi của khách hàng |
+| Giới tính | Giới tính của khách hàng |
+| Tên | Tên khách hàng |
+| Nghề nghiệp | Nghề nghiệp khách hàng |
+| Thu nhập | Mức thu nhập khách hàng |
+| Hôn nhân | Tình trạng hôn nhân (Độc thân / Đã kết hôn) |
+| Con cái | Số lượng con |
+| Mối quan hệ | Người thân / Người lạ |
+| Giai đoạn Đạt được | Giai đoạn bán hàng cuối cùng |
+| Thời lượng | Thời lượng trò chuyện |
+| Thao tác | Các Tùy chọn Thao tác |
 
-### 操作按鈕
-
-每筆紀錄右側提供三個操作按鈕：
-
-| 按鈕 | 說明 |
-| --- | --- |
-| 查看評量 | 前往該次練習的評量報告頁面，檢視詳細評核結果 |
-| 重新挑戰 | 使用相同客戶角色，開啟全新對話進行練習 |
-| 繼續練習 | 接續未完成的對話（僅限進行中的練習可用） |
+### Nút Thao tác
+- **Xem Đánh giá**: Chuyển đến báo cáo đánh giá để xem chi tiết kết quả.
+- **Thử lại**: Tạo một bài thực hành hoàn toàn mới nhưng sử dụng cùng một khách hàng.
+- **Tiếp tục**: Tiếp tục dở dang (chỉ dành cho các bài thực hành chưa kết thúc).
 
 ---
 
-## 分頁
+## Lời khuyên 
 
-當紀錄數量超過每頁顯示上限時，頁面底部會出現分頁控制列：
+### Tìm Điểm yếu
+Lọc theo Giai đoạn Đạt được, tìm những bài luyện tập chỉ đạt Giai đoạn 1 hoặc 2. Xem Báo cáo Đánh giá để xác định điểm yếu và tập trung cải thiện trong tương lai.
 
-| 元素 | 說明 |
-| --- | --- |
-| 顯示筆數 | 格式：「顯示第 1-20 筆，共 150 筆」 |
-| 每頁顯示 | 可調整每頁顯示的筆數 |
-| 上一頁 / 下一頁 | 分頁導航按鈕 |
+### Bài tập Nhất định
+Sử dụng bộ lọc (như Thu nhập, Hôn nhân) để tìm kiếm các loại khách hàng cụ thể. Sau đó sử dụng tính năng "Thử lại" để làm quen với các loại khách hàng gây khó khăn.
 
 ---
 
-## 空白狀態
-
-| 情境 | 顯示訊息 |
-| --- | --- |
-| 完全沒有紀錄 | 暫無練習紀錄 |
-| 篩選後無結果 | 當前條件下暫無練習紀錄，請清除條件或修改條件後重試 |
-
----
-
-## 使用建議
-
-### 找出弱項
-
-1. 按「達成階段」篩選，找出只達成第 1 或第 2 階段的練習
-2. 檢視這些練習的評量報告，找出共同的弱點
-3. 針對弱項進行重點練習
-
-### 追蹤進步
-
-1. 使用日期範圍篩選特定時間段
-2. 比較不同時期的達成階段分布
-3. 觀察練習時長的變化趨勢
-
-### 專項練習
-
-1. 使用收入、婚姻狀況等篩選條件找出特定類型客戶
-2. 檢視針對該類型客戶的歷史表現
-3. 重新挑戰表現不佳的客戶角色
-
----
-
-## 下一步
-
-- 回到 [儀表板](dashboard.md) 查看統計概覽
-- 了解 [評量報告](evaluation.md) 的評核內容
-- 開始新的 [對話練習](practice.md)
+## Bước tiếp theo
+- Quay trở lại [Bảng điều khiển](dashboard.md)
+- Hiểu chuyên sâu [Đánh giá & Phản hồi](evaluation.md)
+- Bắt đầu [Mô phỏng thực hành](practice.md)

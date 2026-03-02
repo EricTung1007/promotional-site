@@ -1,85 +1,64 @@
-# 儀表板
+# Bảng điều khiển
 
-> 一目了然掌握你的練習進度與學習成果
+> Nắm bắt nhanh tiến độ và kết quả học tập của bạn
 
-## 頁面概覽
+## Tổng quan Trang
 
-儀表板是登入後的首頁，提供個人學習概況與快速操作入口。頁面由上而下分為兩個區域：**統計卡片區** 與 **近期練習紀錄**。
+Bảng điều khiển là trang chủ sau khi đăng nhập, cung cấp cái nhìn tổng quan về quá trình học tập cá nhân và các lối tắt nhanh. Trang được chia thành hai phần: **Thẻ Thống kê** và **Lịch sử Luyện tập Gần đây**.
 
-## 統計卡片區
+## Khu vực Thẻ Thống kê
 
-頁面上方顯示四張統計卡片：
+### Bắt đầu Trò chuyện
+- Nhấp để vào trang luyện tập và bắt đầu bài tập mới
 
-### 開始對話
+### Số lần Thực hành
+- Hiển thị tổng số bài luyện tập bạn đã hoàn thành cho đến nay
+- Đơn vị: **Lần**
 
-- 點擊即可進入對話練習頁面，開始新的練習
-- 描述文字：「點擊開始新的練習」
+### Tổng Thời gian
+- Hiển thị tổng thời lượng của tất cả các bài luyện tập
+- Đơn vị: **Giờ**
 
-### 累積練習次數
+### Chuỗi ngày Thực hành
+- Hiển thị số ngày bạn luyện tập liên tiếp
+- Đơn vị: **Ngày** (Sẽ quay về 0 nếu bỏ lỡ một ngày)
 
-- 顯示您截至目前為止完成的所有練習總次數
-- 單位：**次**
-- 載入中時顯示 `--`
+## Lọc Nhanh
 
-### 對話總時間
-
-- 顯示您所有練習的累計對話時長
-- 單位：**小時**
-- 由系統自動從所有練習紀錄的秒數彙總計算
-
-### 連續練習的天數
-
-- 顯示您連續每日進行練習的天數紀錄
-- 單位：**天**
-- 只要有一天未練習，連續紀錄就會重新計算
-
-## 快速篩選
-
-統計卡片下方提供三種快速篩選選項：
-
-| 選項 | 說明 |
+| Tùy chọn | Mô tả |
 | --- | --- |
-| 時鐘圖示（預設） | 顯示最近 5 筆練習紀錄 |
-| 今天 | 篩選出今日的練習紀錄 |
-| 全部 | 跳轉至「練習歷史」頁面，查看完整紀錄 |
+| Biểu tượng Đồng hồ (Mặc định) | Hiển thị 5 bài thực hành gần nhất |
+| Hôm nay | Lọc các bài thực hành của ngày hôm nay |
+| Tất cả | Chuyển đến trang "Lịch sử" để xem toàn bộ |
 
-## 近期練習紀錄
+## Lịch sử Luyện tập Gần đây
 
-顯示最近的練習紀錄列表（預設最多 5 筆），每筆紀錄包含以下欄位：
-
-| 欄位 | 說明 |
+| Trường | Mô tả |
 | --- | --- |
-| 日期 | 練習進行的日期 |
-| 年齡 | 客戶角色的年齡 |
-| 性別 | 客戶角色的性別（男 / 女） |
-| 姓名 | 客戶角色的姓名 |
-| 職業 | 客戶角色的職業 |
-| 收入 | 客戶角色的收入等級 |
-| 達成階段 | 該次練習最終達成的銷售階段 |
-| 練習時長 | 該次練習的對話時長（分鐘） |
+| Ngày | Ngày thực hiện luyện tập |
+| Tuổi | Tuổi của khách hàng |
+| Giới tính | Giới tính khách hàng |
+| Tên | Tên khách hàng |
+| Nghề nghiệp | Nghề nghiệp khách hàng |
+| Thu nhập | Mức thu nhập khách hàng |
+| Giai đoạn | Giai đoạn bán hàng cuối cùng đạt được |
+| Thời lượng | Thời lượng trò chuyện (Phút) |
 
-### 操作按鈕
+### Nút Thao tác
 
-每筆紀錄右側提供三個操作按鈕：
-
-| 按鈕 | 說明 |
+| Nút | Mô tả |
 | --- | --- |
-| 查看評量 | 前往該次練習的評量報告頁面 |
-| 重新挑戰 | 使用相同的客戶角色設定，開始一次全新的練習 |
-| 繼續練習 | 接續上次未完成的對話（僅限狀態為進行中的練習） |
+| Xem Đánh giá | Chuyển đến trang báo cáo đánh giá |
+| Thử lại | Tạo bài tập mới với cùng khách hàng đó |
+| Tiếp tục | Tiếp tục cuộc trò chuyện chưa hoàn thành |
 
-### 日期分組
-
-當同一天有多筆練習時，紀錄會依日期分組顯示，並標示「還有 N 筆，共 M 筆」的提示訊息。
-
-### 空白狀態
-
-如果尚無任何練習紀錄，頁面會顯示「尚無練習紀錄」提示，引導您開始第一次練習。
+### Phân nhóm theo Ngày
+Các bản ghi được nhóm theo ngày với số lượng thống kê nếu có nhiều bài tập trong cùng một ngày.
 
 ---
 
-## 下一步
+## Bước tiếp theo
 
-- 開始 [對話練習](practice.md)
-- 了解 [評量報告](evaluation.md) 的評核內容
-- 查看完整的 [練習歷史](history.md)
+- Bắt đầu [Thực hành](practice.md)
+- Hiểu nội dung [Báo cáo đánh giá](evaluation.md)
+- Xem [Lịch sử](history.md) đầy đủ

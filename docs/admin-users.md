@@ -1,214 +1,57 @@
-# 使用者管理
+# Quản lý Người dùng
 
-> 管理平台帳號、角色與權限，掌控誰可以使用哪些功能
+> Quản lý tài khoản, vai trò và quyền trên nền tảng.
 
-## 概覽
+## Tổng quan
+Quản lý người dùng cho phép quản trị viên tạo, chỉnh sửa, nhập và xóa tài khoản, cũng như chỉ định vai trò và quyền truy cập phù hợp.
 
-使用者管理是管理員後台的核心功能，讓您建立、編輯、匯入和刪除平台使用者帳號，並指派適當的角色與權限。
+> Chỉ dành cho Quản trị viên có quyền Quản lý Người dùng.
 
-> 此功能僅對具有使用者管理權限的管理員開放。
-
-## 進入方式
-
-1. 點擊頁面右上方的 **管理設定圖示**（齒輪）
-2. 在管理員後台中選擇「使用者管理」
+## Cách Truy cập
+1. Nhấp vào **Biểu tượng Cài đặt** (Bánh răng) ở góc trên bên phải.
+2. Chọn "Quản lý Người dùng" trong bảng điều khiển.
 
 ---
 
-## 頁面結構
-
-| 區域 | 說明 |
-| --- | --- |
-| 頁面標題列 | 標題「使用者管理」、篩選按鈕、新增使用者按鈕、更多操作下拉選單 |
-| 篩選標籤列 | 顯示目前套用的篩選條件 |
-| 使用者表格 | 所有使用者的列表 |
-| 分頁控制列 | 分頁導航 |
+## Cấu trúc Trang
+- **Thanh Tiêu đề**: Bao gồm nút Lọc, Thêm Người dùng, và menu Hành động khác.
+- **Nhãn Lọc**: Các bộ lọc đang được áp dụng.
+- **Bảng Người dùng**: Danh sách tất cả người dùng.
+- **Phân trang**: Thanh điều hướng trang.
 
 ---
 
-## 篩選使用者
-
-點擊 **「篩選條件」** 開啟篩選面板：
-
-| 篩選欄位 | 說明 |
-| --- | --- |
-| 公司 | 下拉選單，篩選所屬公司 |
-| 部門 | 下拉選單，需先選擇公司後才可使用（提示：「請先選擇公司以查看部門」） |
-| 權限 | 下拉選單，可選：管理員 / 使用者 / 超級使用者 / 監督者 |
-| 電子郵件 | 文字搜尋，依 Email 篩選 |
-| 姓名 | 文字搜尋，依姓名篩選 |
-| 啟用狀態 | 下拉選單，可選：可用 / 停用 |
-
-套用篩選後，篩選標籤列會顯示每個條件的標籤，可個別移除或「清除全部」。
+## Lọc Người dùng
+Nhấp vào **"Bộ lọc"** để mở bảng lọc:
+- **Công ty**: Lọc theo công ty.
+- **Phòng ban**: Lọc theo phòng ban (Yêu cầu chọn Công ty trước).
+- **Quyền**: Quản trị viên / Người dùng / Siêu người dùng / Giám sát.
+- **Email**: Tìm kiếm văn bản.
+- **Tên**: Tìm kiếm văn bản.
+- **Trạng thái**: Hoạt động / Vô hiệu hóa.
 
 ---
 
-## 使用者表格
+## Thêm Người dùng
+Nhấp vào **"Thêm Người dùng"** để mở biểu mẫu.
+- **Tên**: Tên hiển thị (Bắt buộc nếu có Email).
+- **Email**: Tên đăng nhập (Bắt buộc hoặc Mã NV).
+- **Mã NV**: Mã số nhân viên.
+- **Công ty**: Chọn công ty (Bắt buộc).
+- **Phòng ban**: Chọn phòng ban.
+- **Quyền**: Chọn vai trò.
+- **Trạng thái**: Bật / Tắt.
 
-### 表格欄位
-
-| 欄位 | 說明 |
-| --- | --- |
-| 公司別 | 使用者所屬的公司名稱 |
-| 部門別 | 使用者所屬的部門名稱 |
-| 員工編號 | 使用者的員工識別碼 |
-| 電子郵件 | 使用者的 Email（也是登入帳號） |
-| 姓名 | 使用者的顯示名稱 |
-| 啟用狀態 | 綠色圓點「可用」或紅色圓點「停用」 |
-| 權限 | 使用者被指派的角色名稱 |
-| 操作 | 編輯與刪除按鈕 |
-
----
-
-## 新增使用者
-
-點擊 **「新增使用者」** 按鈕開啟新增表單。
-
-### 表單欄位
-
-| 欄位 | 類型 | 必填 | 說明 |
-| --- | --- | --- | --- |
-| 姓名 | 文字輸入 | 是（搭配 Email） | 使用者的顯示名稱 |
-| 電子郵件 | 文字輸入 | 是（或員工編號） | 使用者的登入帳號，需為有效 Email 格式 |
-| 員工編號 | 文字輸入 | 否（或 Email） | 替代識別方式，至少需填寫 Email 或員工編號其一 |
-| 公司 | 下拉選單 | 是 | 選擇使用者所屬的公司 |
-| 部門 | 下拉選單 | 否 | 選擇使用者所屬的部門（需先選擇公司） |
-| 權限 | 下拉選單 | 是 | 指派角色：管理員 / 使用者 / 超級使用者 / 監督者 |
-| 啟用狀態 | 開關切換 | — | 預設為啟用。可設為停用以暫時禁止登入 |
-
-### 角色說明
-
-| 角色 | 說明 |
-| --- | --- |
-| 管理員 | 擁有所有管理功能的存取權限，包括使用者管理、Prompt 管理、階段管理、知識庫管理 |
-| 超級使用者 | 擁有進階功能權限，但部分管理功能受限 |
-| 監督者 | 可監督團隊練習數據，但無法修改系統設定 |
-| 使用者 | 一般使用者，僅可使用對話練習、評量報告、練習歷史等功能 |
-
-### 驗證規則
-
-- Email 必須是有效的電子郵件格式
-- Email 不可與現有使用者重複
-- 至少需填寫 Email 或員工編號其一
-- 所有文字輸入會進行安全性檢查
+### Mô tả Vai trò
+- **Quản trị viên**: Quyền truy cập đầy đủ vào tất cả chức năng quản lý.
+- **Siêu người dùng**: Quyền nâng cao nhưng giới hạn một số chức năng quản lý.
+- **Giám sát**: Có thể xem dữ liệu thực hành của nhóm nhưng không thể sửa cài đặt.
+- **Người dùng**: Chỉ có thể sử dụng các chức năng thực hành và đánh giá cơ bản.
 
 ---
 
-## 編輯使用者
-
-在表格中點擊對應使用者的 **「編輯」** 按鈕，開啟編輯表單。
-
-- 表單欄位與新增相同，但會預填現有資料
-- 修改完成後點擊儲存即可更新
-
----
-
-## 刪除使用者
-
-在表格中點擊對應使用者的 **「刪除」** 按鈕。
-
-- 系統會彈出確認對話框
-- 確認後執行軟刪除（資料不會永久移除，但帳號無法再登入）
-- 如需恢復，請聯繫系統管理員
-
----
-
-## 批次匯入使用者
-
-適用於一次性新增大量使用者。
-
-### 操作流程
-
-1. 點擊頁面右上方的 **「更多操作」** 下拉選單
-2. 選擇 **「匯入使用者」**
-3. 點擊 **「下載 CSV 模板」** 取得標準範本
-4. 依範本格式填入使用者資料
-5. 點擊上傳區域或將 CSV 檔案拖曳至上傳區域
-6. 系統驗證檔案格式與內容
-7. 驗證通過後執行匯入
-
-### CSV 檔案格式
-
-CSV 檔案必須包含以下欄位（依序）：
-
-| 欄位順序 | 欄位名稱 | 說明 | 範例 |
-| --- | --- | --- | --- |
-| 1 | Company Code | 公司代碼 | TW |
-| 2 | Department Code | 部門代碼 | TW1 |
-| 3 | Employee No | 員工編號 | EMP001 |
-| 4 | Email | 電子郵件 | `user@example.com` |
-| 5 | Name | 使用者姓名 | 王小明 |
-| 6 | Role | 角色名稱 | user |
-| 7 | Is Active | 是否啟用 | true / false |
-| 8 | Action | 操作類型 | create / update |
-
-CSV 範例：
-
-```csv
-Company Code,Department Code,Employee No,Email,Name,Role,Is Active,Action
-TW,TW1,EMP001,user@company.com,王小明,user,true,create
-```
-
-### 常見匯入錯誤
-
-| 錯誤類型 | 錯誤訊息 | 解決方式 |
-| --- | --- | --- |
-| 檔案類型錯誤 | 請上傳 CSV 檔案 | 確認上傳的是 .csv 格式檔案 |
-| 空檔案 | CSV 檔案為空 | 確認檔案中有資料 |
-| 缺少標題行 | CSV 檔案必須包含標題行 | 確認第一行為欄位標題 |
-| 欄位數量錯誤 | CSV 標題行欄位數量不正確，必須為 N 個欄位 | 檢查欄位數量是否完整 |
-| 欄位順序錯誤 | CSV 標題行欄位順序或內容不正確 | 依照範本的欄位順序排列 |
-| 資料列欄位不足 | 欄位數量不正確 | 確認每列資料欄位完整 |
-
-### 匯入結果
-
-匯入完成後，系統會顯示結果報告：
-
-- **成功筆數** — 成功建立或更新的使用者數量
-- **失敗筆數** — 匯入失敗的資料筆數
-- **錯誤明細** — 每筆失敗資料的具體錯誤原因（含行號與識別資訊）
-
----
-
-## 批次刪除使用者
-
-1. 點擊 **「更多操作」** → **「批次刪除使用者」**
-2. 在彈出的對話框中選擇或篩選要刪除的使用者
-3. 確認刪除操作
-4. 系統執行批次軟刪除
-
----
-
-## 權限系統說明
-
-AI Coach 採用 RBAC（角色基礎存取控制）權限模型：
-
-### 權限類型
-
-每個功能模組可設定以下權限：
-
-| 權限 | 說明 |
-| --- | --- |
-| 讀取 (Read) | 可查看資料 |
-| 新增 (Create) | 可建立新資料 |
-| 更新 (Update) | 可修改既有資料 |
-| 刪除 (Delete) | 可刪除資料 |
-
-### 功能模組
-
-| 模組 | 說明 |
-| --- | --- |
-| chat | 對話練習功能 |
-| userDashboard | 儀表板功能 |
-| prompt | Prompt 管理功能 |
-| stage | 階段管理功能 |
-| user | 使用者管理功能 |
-| knowledge | 知識庫功能 |
-
----
-
-## 下一步
-
-- 設定 [Prompt 管理](admin-prompts.md) 控制 AI 行為
-- 管理 [銷售階段](admin-stages.md) 定義練習標準
-- 維護 [知識庫](admin-knowledge.md) 充實學習資源
+## Tính năng Khác
+- **Chỉnh sửa Người dùng**: Nhấp vào "Chỉnh sửa" trong bảng để sửa thông tin.
+- **Xóa Người dùng**: Nhấp vào "Xóa". Tài khoản sẽ bị vô hiệu hóa (xóa mềm).
+- **Nhập Hàng loạt**: Sử dụng tệp CSV mẫu để thêm nhiều người dùng cùng lúc.
+- **Xóa Hàng loạt**: Chọn nhiều người dùng và xóa cùng lúc.

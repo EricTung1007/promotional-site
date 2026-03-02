@@ -1,89 +1,61 @@
-# 知識助手
+# Trợ lý Kiến thức
 
-> 隨時查詢銷售知識，為你的對話練習提供專業後盾
+> Tra cứu kiến thức bán hàng bất cứ lúc nào, hỗ trợ chuyên nghiệp cho việc luyện tập của bạn.
 
-## 概覽
+## Tổng quan
+Trợ lý Kiến thức là tính năng Hỏi & Đáp thông minh được tích hợp trong AI Coach, dựa trên công nghệ RAG. Nó có thể truy xuất thông tin liên quan từ cơ sở kiến thức của công ty và tạo ra câu trả lời chính xác. Bạn có thể sử dụng bất cứ lúc nào: trước, trong và sau khi thực hành.
 
-知識助手是 AI Coach 內建的智慧問答功能，基於 RAG（檢索增強生成）技術，能從公司知識庫中檢索相關資料並產生精準回答。您可以在練習前、中、後隨時使用，補充銷售知識與話術技巧。
+## Cách Mở
+Nhấp vào **Biểu tượng Trợ lý Kiến thức** trên thanh điều hướng góc trên cùng bên phải.
 
-## 開啟方式
-
-點擊頁面右上方導覽列中的 **知識助手圖示** 即可開啟。
-
-> 此功能需要具備知識庫閱讀權限。如果看不到圖示，請聯繫管理員確認權限設定。
+> Tính năng này yêu cầu quyền đọc cơ sở kiến thức. Nếu bạn không thấy biểu tượng, vui lòng liên hệ quản trị viên.
 
 ---
 
-## 介面說明
+## Giao diện
 
-### 標題列
+### Thanh Tiêu đề
+- **AI Logo**: Biểu tượng nhận diện của Trợ lý Kiến thức
+- **AI Chat**: Văn bản tiêu đề
+- **Trạng thái**: Chấm xanh lá cây chỉ "Trực tuyến"; đỏ chỉ "Ngoại tuyến"
+- **Xóa cuộc trò chuyện**: Xóa tất cả lịch sử trò chuyện và bắt đầu lại
 
-| 元素 | 說明 |
+### Khu vực Trò chuyện
+- **Màn hình chào mừng**: Hiển thị lần đầu mở, cung cấp hướng dẫn
+- **Danh sách Tin nhắn**: Câu hỏi của bạn (phải) và phản hồi của AI (trái)
+- **Chỉ báo đang gõ**: Hiệu ứng động khi AI đang tạo câu trả lời
+
+### Khu vực Nhập liệu
+- Hộp nhập: Nhập câu hỏi bạn muốn tra cứu
+- Nút gửi: Nhấp để gửi câu hỏi (tạm thời vô hiệu hóa khi AI đang trả lời)
+
+---
+
+## Cách Sử dụng
+1. Nhấp vào biểu tượng Trợ lý Kiến thức để mở cửa sổ trò chuyện.
+2. Nhập câu hỏi của bạn.
+3. Nhấp Gửi hoặc nhấn Enter.
+4. Đợi AI truy xuất dữ liệu từ cơ sở kiến thức và trả lời.
+5. Xem nội dung và tiếp tục đặt câu hỏi nếu cần.
+
+## Tình huống Sử dụng
+
+| Tình huống | Ví dụ Câu hỏi |
 | --- | --- |
-| AI Logo | 知識助手的辨識圖示 |
-| AI Chat | 標題文字 |
-| 連線狀態 | 綠色圓點「線上」表示可正常使用；紅色圓點「離線」表示暫時無法使用 |
-| 清除對話 | 清除所有對話紀錄，重新開始 |
+| Tra cứu Sản phẩm | "Phạm vi bảo hiểm của Sản phẩm XX là gì?" |
+| Tham khảo Kịch bản | "Làm sao để thuyết phục khách hàng lo ngại phí bảo hiểm cao?" |
+| Tra cứu Quy định | "Quy trình yêu cầu bồi thường là gì?" |
+| So sánh Phân tích | "Sự khác biệt giữa Gói A và Gói B là gì?" |
+| C.Hỏi Thường gặp | "3 câu hỏi phổ biến nhất của khách hàng là gì?" |
 
-### 對話區域
-
-| 元素 | 說明 |
-| --- | --- |
-| 歡迎畫面 | 首次開啟時顯示，提供使用引導 |
-| 訊息列表 | 您的問題（右側）與 AI 回答（左側）的對話紀錄 |
-| 打字指示器 | AI 正在產生回答時顯示的動畫效果 |
-
-### 輸入區
-
-- 輸入框：輸入您要查詢的問題
-- 傳送按鈕：點擊送出問題（AI 回答中時暫時停用）
+## Lưu ý
+- Chất lượng câu trả lời phụ thuộc vào cơ sở kiến thức do quản trị viên tải lên.
+- Câu trả lời chỉ mang tính tham khảo. Hãy dựa vào tài liệu chính thức của công ty trong thực tế.
+- Lịch sử trò chuyện được lưu trên trình duyệt cục bộ.
+- Chuyển đổi tài khoản sẽ xóa lịch sử.
 
 ---
 
-## 使用方式
-
-1. 點擊知識助手圖示開啟聊天視窗
-2. 在輸入框中輸入您的問題
-3. 點擊傳送或按 Enter 送出
-4. 等待 AI 從知識庫中檢索資料並產生回答
-5. 查看回答內容，如需進一步了解可繼續提問
-
-## 適用場景
-
-| 場景 | 問題範例 |
-| --- | --- |
-| 產品查詢 | 「XX保險的保障範圍有哪些？」 |
-| 話術參考 | 「面對擔心保費太高的客戶，有什麼建議的話術？」 |
-| 規範查詢 | 「理賠申請的流程是什麼？」 |
-| 比較分析 | 「A 方案和 B 方案的差異在哪裡？」 |
-| 常見問題 | 「客戶最常問的前三個問題是什麼？」 |
-
-## 注意事項
-
-- 知識助手的回答品質取決於管理員上傳的知識庫內容
-- 回答僅供參考，實際銷售時請以公司正式文件與最新規範為準
-- 對話紀錄儲存在本地瀏覽器中，清除瀏覽器資料後會消失
-- 切換帳號或清除對話後，歷史紀錄不會保留
-
----
-
-## 與對話練習的搭配
-
-### 練習前
-
-- 查詢即將練習的客戶類型常見需求
-- 了解對應的保險產品特色與賣點
-- 準備應對可能的異議與問題
-
-### 練習後
-
-- 針對評量報告指出的弱項查詢相關知識
-- 學習更好的話術與應對策略
-- 補強特定銷售階段的知識
-
----
-
-## 下一步
-
-- 開始 [對話練習](practice.md) 實際運用學到的知識
-- 查看 [評量報告](evaluation.md) 找出需要補強的方向
+## Bước tiếp theo
+- Bắt đầu [Thực hành](practice.md) để áp dụng kiến thức
+- Xem [Báo cáo Đánh giá](evaluation.md) để tìm ra điểm cần cải thiện

@@ -1,99 +1,63 @@
-# AI Coach - 智能銷售教練平台
+# AI Coach - Hướng dẫn Sử dụng
 
-> 透過 AI 驅動的客戶模擬對話，提升保險銷售人員的實戰溝通能力
+> Nâng cao kỹ năng giao tiếp thực tế của nhân viên tư vấn qua các cuộc trò chuyện mô phỏng do AI điều khiển.
 
-## 平台簡介
+## Giới thiệu Nền tảng
+AI Coach là hệ thống đào tạo thông minh được thiết kế riêng cho tư vấn viên bảo hiểm. Nền tảng sử dụng công nghệ AI tiên tiến để mô phỏng các tình huống khách hàng thực tế đa dạng, cho phép người dùng rèn luyện kỹ năng bán hàng trong môi trường an toàn, nhận phản hồi chuyên môn cụ thể và tức thì.
 
-AI Coach 是一套專為保險銷售人員設計的智能培訓系統。平台利用先進的 AI 技術，模擬各種真實客戶場景，讓使用者在安全的練習環境中反覆磨練銷售技巧，並獲得即時且具體的專業回饋。
+### Giá trị Cốt lõi
+- **Tương tác Khách hàng Chân thực** — AI mô phỏng phản ứng thực tế dựa trên thuộc tính khách hàng (tuổi, nghề nghiệp, thu nhập, đặc điểm tính cách).
+- **Thực hành Bán hàng Đa giai đoạn** — Bao gồm toàn bộ quy trình bán hàng từ phá băng đến chốt sale, theo dõi tiến độ từng giai đoạn.
+- **Đánh giá Tức thì & Sau mỗi Giai đoạn** — Phản hồi từng câu trong cuộc trò chuyện, báo cáo phân tích toàn diện sau khi kết thúc.
+- **Theo dõi Tiến độ Cá nhân** — Bảng điều khiển và lịch sử giúp bạn nắm bắt tiến độ thực hành và quá trình phát triển.
+- **Hỗ trợ Cơ sở Kiến thức** — Hệ thống Hỏi & Đáp RAG, giúp tra cứu kiến thức sản phẩm và kỹ năng xử lý bất kỳ lúc nào.
 
-### 核心價值
-
-- **擬真客戶互動** — AI 根據設定的客戶屬性（年齡、職業、收入、人格特質等）模擬真實客戶反應
-- **多階段銷售訓練** — 涵蓋從破冰到促成的完整銷售流程，逐階段追蹤進展
-- **即時與事後評量** — 對話中獲得逐句回饋，結束後獲得完整綜合評核報告
-- **個人化學習追蹤** — 透過儀表板與歷史紀錄，掌握自己的練習進度與成長軌跡
-- **知識庫輔助** — RAG 智慧問答功能，隨時查詢產品與銷售知識
-
-### 適用對象
-
-| 角色           | 使用場景                                           |
+### Đối tượng Phù hợp
+| Vai trò        | Tình huống Sử dụng                                          |
 | -------------- | -------------------------------------------------- |
-| 保險業務員     | 日常銷售技巧練習、新產品話術演練、弱項強化訓練     |
-| 新進人員       | 入職訓練、模擬首次客戶接觸、建立銷售信心           |
-| 團隊主管       | 監控團隊練習數據、管理培訓內容、調整 AI 行為       |
-| 培訓講師       | 設計練習情境、管理評核標準、優化 Prompt 指令       |
+| Tư vấn viên bảo hiểm | Luyện kỹ năng bán hàng hàng ngày, thực hành kịch bản sản phẩm mới, cải thiện điểm yếu |
+| Nhân viên mới       | Đào tạo gia nhập, mô phỏng liên hệ khách hàng lần đầu, xây dựng sự tự tin |
+| Quản lý nhóm        | Giám sát dữ liệu thực hành của nhóm, quản lý nội dung đào tạo, điều chỉnh AI |
+| Giảng viên đào tạo  | Thiết kế tình huống, quản lý tiêu chí đánh giá, tối ưu cấu hình Prompt |
 
 ---
 
-## 文件導覽
+## Điều hướng Tài liệu
 
-本使用手冊依功能模組分為以下章節，請依需求閱讀：
+### Người dùng Phổ thông
 
-### 一般使用者
-
-| 章節 | 說明 | 連結 |
+| Nội dung | Mô tả | Chi tiết |
 |------|------|------|
-| 快速開始 | 系統需求、首次登入、操作流程總覽 | [getting-started.md](./getting-started.md) |
-| 儀表板 | 學習統計、近期紀錄、日曆檢視 | [dashboard.md](./dashboard.md) |
-| 對話練習 | 場景選擇、角色設定、對話操作、語音輸入 | [practice.md](./practice.md) |
-| 評量報告 | 綜合評核、階段評量、逐句評價、評分回饋 | [evaluation.md](./evaluation.md) |
-| 練習歷史 | 歷史紀錄查詢、進階篩選、重新挑戰 | [history.md](./history.md) |
-| 知識助手 | 智慧問答、知識庫查詢 | [knowledge-assistant.md](./knowledge-assistant.md) |
+| Bắt đầu | Yêu cầu hệ thống, đăng nhập lần đầu, tổng quan quy trình | [getting-started.md](./getting-started.md) |
+| Bảng điều khiển | Thống kê học tập, kỷ lục gần đây, lịch | [dashboard.md](./dashboard.md) |
+| Thực hành | Chọn cảnh, thiết lập vai, thao tác trò chuyện | [practice.md](./practice.md) |
+| Đánh giá | Báo cáo toàn diện, đánh giá tổng thể | [evaluation.md](./evaluation.md) |
+| Lịch sử | Hồ sơ luyện tập, lọc, thử lại | [history.md](./history.md) |
+| Trợ lý Kiến thức | Q&A thông minh, tra tìm | [knowledge-assistant.md](./knowledge-assistant.md) |
 
-### 管理員
+### Quản trị viên
 
-| 章節 | 說明 | 連結 |
+| Nội dung | Mô tả | Chi tiết |
 |------|------|------|
-| 使用者管理 | 帳號建立、批次匯入、權限設定 | [admin-users.md](./admin-users.md) |
-| Prompt 管理 | 提示詞編輯、版本控制、啟用管理 | [admin-prompts.md](./admin-prompts.md) |
-| 階段管理 | 銷售階段定義、評估標準設定 | [admin-stages.md](./admin-stages.md) |
-| 知識庫管理 | 文件上傳、分塊管理、資料維護 | [admin-knowledge.md](./admin-knowledge.md) |
+| Quản lý người dùng | Tạo tài khoản, nhập hàng loạt, cài đặt quyền | [admin-users.md](./admin-users.md) |
+| Quản lý Prompt | Chỉnh sửa dấu nhắc, kiểm soát phiên bản | [admin-prompts.md](./admin-prompts.md) |
+| Quản lý Giai đoạn | Xác định các bước bán hàng | [admin-stages.md](./admin-stages.md) |
+| Quản lý Kiến thức | Tải lên tài liệu, bảo trì dữ liệu | [admin-knowledge.md](./admin-knowledge.md) |
 
-### 附錄
+### Phụ lục
 
-| 章節 | 說明 | 連結 |
+| Nội dung | Mô tả | Chi tiết |
 |------|------|------|
-| 常見問題 FAQ | 常見問題與疑難排解 | [faq.md](./faq.md) |
+| FAQ (Câu hỏi thường gặp) | Khắc phục sự cố và trả lời câu hỏi | [faq.md](./faq.md) |
 
 ---
 
-## 功能總覽
+## Hỗ trợ Đa ngôn ngữ
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                     AI Coach 平台                        │
-├──────────────┬──────────────┬───────────────────────────┤
-│   一般使用者  │   管理員      │   系統功能                │
-├──────────────┼──────────────┼───────────────────────────┤
-│ ✦ 儀表板     │ ✦ 使用者管理  │ ✦ Google/Microsoft SSO   │
-│ ✦ 對話練習   │ ✦ Prompt 管理 │ ✦ 多語系 (繁中/越南文)    │
-│ ✦ 評量報告   │ ✦ 階段管理    │ ✦ 角色權限控制 (RBAC)    │
-│ ✦ 練習歷史   │ ✦ 知識庫管理  │ ✦ 多租戶資料隔離          │
-│ ✦ 知識助手   │              │ ✦ 內容安全檢測            │
-│ ✦ 語音輸入   │              │                           │
-└──────────────┴──────────────┴───────────────────────────┘
-```
-
----
-
-## 多語系支援
-
-| 語言     | 代碼  | 狀態 |
+| Ngôn ngữ | Mã | Trạng thái |
 | -------- | ----- | ---- |
-| 繁體中文 | zh-TW | 完整支援 |
-| 越南文   | vi    | 完整支援 |
+| Tiếng Trung (Phồn thể) | zh-TW | Hỗ trợ đầy đủ |
+| Tiếng Việt | vi | Hỗ trợ đầy đủ |
+| Tiếng Anh  | en | Hỗ trợ đầy đủ |
 
-可透過頁面右上方的語言切換器即時切換介面語言。
-
----
-
-## 技術支援
-
-如遇到系統問題或有功能建議，請透過以下方式聯繫：
-
-- 聯繫所屬公司的系統管理員
-- 向 IT 部門提交服務請求
-
----
-
-*AI Coach — 讓每一次練習都更接近真實，讓每一次對話都更有價值。*
+Chuyển đổi ngôn ngữ dễ dàng bằng bộ chọn ngôn ngữ ở góc trên bên phải.

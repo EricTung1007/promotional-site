@@ -1,121 +1,91 @@
-# 快速開始
+# Hướng dẫn nhanh
 
-> 從登入到完成第一次練習，只需要 5 分鐘
+> Từ đăng nhập đến khi hoàn thành bài thực hành đầu tiên chỉ mất 5 phút.
 
-## 系統需求
+## Yêu cầu Hệ thống
 
-| 項目 | 需求 |
+| Tiêu chí | Yêu cầu |
 | --- | --- |
-| 瀏覽器 | Chrome、Edge、Firefox、Safari 最新版本 |
-| 網路 | 穩定的網際網路連線 |
-| 裝置 | 桌面電腦、筆記型電腦、平板（支援 RWD 響應式設計） |
-| 麥克風 | 選配，語音輸入功能需要 |
+| Trình duyệt | Phiên bản mới nhất của Chrome, Edge, Firefox, Safari |
+| Mạng | Kết nối internet ổn định |
+| Thiết bị | Máy tính bàn, Laptop, Máy tính bảng (Hỗ trợ thiết kế đa màn hình) |
+| Micro | Tùy chọn, cần thiết nếu dùng tính năng nhập bằng giọng nói |
 
-## 登入系統
+## Đăng nhập
 
-AI Coach 採用企業級 SSO（單一登入）認證，無需額外註冊帳號。
+AI Coach sử dụng hệ thống đăng nhập SSO cấp doanh nghiệp. Bạn không cần đăng ký tài khoản riêng.
 
-### 登入方式
+### Phương thức đăng nhập
 
-平台支援以下 SSO 登入方式（依公司設定而異）：
+1. **Đăng nhập bằng Microsoft** — Sử dụng tài khoản Microsoft của công ty.
+2. **Đăng nhập bằng Google** — Sử dụng tài khoản Google của công ty.
 
-1. **使用 Microsoft 帳號登入** — 點擊「使用 Microsoft 帳號登入」按鈕，透過公司 Microsoft 帳號完成驗證
-2. **使用 Google 帳號登入** — 點擊「使用 Google 帳號登入」按鈕，透過公司 Google 帳號完成驗證
+> Các tùy chọn đăng nhập phụ thuộc vào cài đặt của công ty bạn. Đôi khi chỉ có tùy chọn Microsoft.
 
-> 登入頁面顯示的 SSO 選項依公司部署環境設定，部分環境可能僅提供 Microsoft 登入。
+### Khắc phục sự cố đăng nhập
 
-### 登入流程
-
-```text
-開啟平台網址 → 點擊 SSO 登入按鈕 → 輸入公司帳號密碼 → 自動跳轉至儀表板
-```
-
-### 登入異常處理
-
-| 狀況 | 說明 | 解決方式 |
+| Tình huống | Mô tả | Giải pháp |
 | --- | --- | --- |
-| 帳號未註冊 | 您的帳號尚未被管理員加入系統 | 聯繫公司管理員新增帳號 |
-| 帳號已停用 | 頁面顯示「帳號已停用」提示 | 聯繫管理員確認帳號狀態 |
-| 認證失敗 | 顯示「認證失敗，請重新登入後再試」 | 重新整理頁面後再試，或清除瀏覽器快取 |
-| 請求過於頻繁 | 顯示「請求過於頻繁，請稍後再試」 | 等待數分鐘後再嘗試 |
+| Tài khoản chưa đăng ký | Tài khoản chưa được thêm vào hệ thống | Liên hệ quản trị viên |
+| Tài khoản bị khóa | Cảnh báo "Tài khoản bị vô hiệu hóa" | Liên hệ quản trị viên để kiểm tra trạng thái |
+| Xác thực thất bại | Cảnh báo "Đăng nhập thất bại" | Tải lại trang hoặc xóa bộ nhớ cache |
 
-## 介面總覽
+## Tổng quan Giao diện
 
-登入後您會看到以下主要介面區域：
+### Thanh điều hướng (Menu trên cùng)
 
-### 頁首導覽列
-
-頁面最上方的導覽列包含以下元素（由左至右）：
-
-| 元素 | 說明 |
+| Thành phần | Mô tả |
 | --- | --- |
-| AI Coach Logo | 點擊可返回儀表板首頁 |
-| 語言切換器 | 切換介面語言（繁體中文 / 越南文） |
-| 知識助手圖示 | 開啟知識庫智慧問答（需有知識庫閱讀權限） |
-| 管理設定圖示 | 進入管理員後台（僅管理員可見） |
-| 登出圖示 | 登出系統，會彈出確認對話框：「您確定要登出嗎？」 |
+| Logo AI Coach | Nhấp để quay lại Bảng điều khiển |
+| Bộ chuyển đổi ngôn ngữ | Thay đổi ngôn ngữ giao diện (Tiếng Việt / Phồn thể) |
+| Trợ lý Kiến thức | Mở hộp thoại Hỏi & Đáp (cần quyền truy cập) |
+| Cài đặt | Dành cho quản trị viên cấu hình hệ thống |
+| Đăng xuất | Đăng xuất khỏi hệ thống an toàn |
 
-### 主要頁面
+### Các Trang Chính
 
-| 頁面 | 路徑 | 說明 |
+| Trang | Đường dẫn | Mô tả |
 | --- | --- | --- |
-| 儀表板 | `/dashboard` | 登入後首頁，顯示學習統計與近期紀錄 |
-| 對話練習 | `/chat` | 與 AI 客戶進行模擬銷售對話 |
-| 評量報告 | `/review/:sessionId` | 查看練習的評核結果 |
-| 練習歷史 | `/practice-history` | 查看所有歷史練習紀錄 |
+| Bảng điều khiển | `/dashboard` | Trang chủ, hiển thị thống kê học tập và dữ liệu gần đây |
+| Thực hành | `/chat` | Trò chuyện mô phỏng với khách hàng AI |
+| Báo cáo đánh giá | `/review/:sessionId` | Xem kết quả phân tích đánh giá sau thực hành |
+| Lịch sử | `/practice-history` | Xem danh sách tất cả các bài thực hành trước |
 
-## 第一次練習：完整流程
+## Bài Thực Hành Đầu Tiên: Quy trình hoàn chỉnh
 
-以下是從登入到完成第一次練習的完整操作流程：
+### Bước 1: Xem Bảng điều khiển
+Đăng nhập để xem bảng điều khiển. Các chỉ số sẽ là 0 trong lần đầu tiên sử dụng.
 
-### 步驟 1：登入並查看儀表板
+### Bước 2: Bắt đầu Thực hành
+Nhấp vào nút **"Bắt đầu trò chuyện"** (Start Conversation) trên Bảng điều khiển.
 
-登入後自動進入儀表板。首次使用時統計數字皆為 0，這是正常的。
-
-### 步驟 2：開始練習
-
-點擊儀表板上的 **「開始對話」** 按鈕，進入對話練習頁面。
-
-### 步驟 3：選擇場景
-
-您會看到兩張場景卡片：
-
-| 場景 | 說明 |
+### Bước 3: Chọn Kịch bản
+| Kịch bản | Mô tả |
 | --- | --- |
-| 隨機角色 | 系統將為您隨機選擇一個角色進行對話練習。適合快速開始 |
-| 自訂角色 | 您可以自行定義角色以進行對話練習。適合針對特定情境訓練 |
+| Chân dung Ngẫu nhiên | Hệ thống tạo ngẫu nhiên một khách hàng để luyện tập. Phù hợp để bắt đầu nhanh. |
+| Chân dung Tùy chỉnh | Bạn tự định nghĩa đặc điểm khách hàng để huấn luyện cho tình huống cụ thể. |
 
-> 建議首次使用選擇 **「隨機角色」**，系統會自動生成完整的客戶角色，讓您快速體驗。
+> **Mẹo:** Khuyến nghị chọn **"Chân dung Ngẫu nhiên"** cho lần đầu tiên.
 
-### 步驟 4：開始對話
+### Bước 4: Trò chuyện
+Giao diện trò chuyện bao gồm:
+- **Bên trái**: Thông tin hồ sơ khách hàng
+- **Ở giữa**: Cửa sổ trò chuyện với khách hàng AI
+- **Bên trên**: Đồng hồ bấm giờ để theo dõi thời lượng
+Nhập tin nhắn của bạn và nhấn Enter để gửi.
 
-選擇場景後，系統會產生客戶角色（需等待數秒）。產生完成後即進入對話介面：
+### Bước 5: Kết thúc
+Khi hoàn tất, hãy nhấp vào nút **"Kết thúc trò chuyện"** (End Conversation) ở góc trên bên phải. Hệ thống sẽ tự động tổng hợp và lưu kết quả.
 
-- **左側**：客戶資訊側邊欄，顯示客戶的基本資料
-- **中央**：對話視窗，您可以在此與 AI 客戶交流
-- **上方**：計時器，記錄練習時長
-
-在下方輸入框中輸入訊息，按 Enter 或點擊傳送按鈕即可發送。
-
-### 步驟 5：結束練習
-
-當您準備結束時，點擊右上方的 **「結束對話」** 按鈕，確認後系統會自動：
-
-1. 結束對話並儲存紀錄
-2. 開始產生評量報告
-3. 跳轉至評量報告頁面
-
-### 步驟 6：查看評量
-
-評量報告產生需要一些時間（通常 30 秒至 2 分鐘），產生完成後您可以看到：
-
-- **綜合評核** — 整體表現評估、階段評量、改善建議
-- **逐句評價** — 每則訊息的詳細回饋
+### Bước 6: Xem Đánh giá
+Báo cáo sẽ mất từ 30 giây đến 2 phút để tạo và phân tích tự động. Nó bao gồm:
+- **Đánh giá Toàn diện**: Đánh giá hiệu suất chung và theo giai đoạn
+- **Phản hồi Từng câu**: Các nhận xét chi tiết cho từng tin nhắn bạn đã gửi
 
 ---
 
-## 下一步
+## Bước tiếp theo
 
-- 了解 [儀表板](dashboard.md) 的完整功能
-- 深入學習 [對話練習](practice.md) 的進階設定
-- 瞭解 [評量報告](evaluation.md) 的各項指標
+- Tìm hiểu toàn bộ chức năng của [Bảng điều khiển](dashboard.md)
+- Khám phá cài đặt nâng cao của chức năng [Thực hành](practice.md)
+- Hiểu các chỉ số trong [Báo cáo Đánh giá](evaluation.md)

@@ -1,186 +1,53 @@
-# Prompt 管理
+# Quản lý Prompt
 
-> 控制 AI 客戶的行為模式，打造最貼近真實的練習體驗
+> Kiểm soát hành vi của AI, tạo trải nghiệm thực hành sát với thực tế nhất.
 
-## 概覽
+## Tổng quan
+Prompt là chỉ lệnh cốt lõi điều khiển hành vi của AI. Tính năng này giúp quản trị viên điều chỉnh cách AI phản hồi, tiêu chí đánh giá, và quy tắc tạo vai, nhằm đáp ứng mục tiêu đào tạo.
 
-Prompt（提示詞）是控制 AI 行為的核心指令。透過 Prompt 管理功能，管理員可以調整 AI 客戶的回應方式、評量標準、角色生成規則等，確保練習體驗符合公司的培訓目標。
+> Chỉ dành cho Quản trị viên có quyền Quản lý Prompt.
 
-> 此功能僅對具有 Prompt 管理權限的管理員開放。
-
-## 進入方式
-
-1. 點擊頁面右上方的 **管理設定圖示**（齒輪）
-2. 在管理員後台中選擇「Prompt 管理」
-
----
-
-## 頁面結構
-
-頁面分為三個主要區域：
-
-| 區域 | 說明 |
-| --- | --- |
-| 標題列 | 公司/部門選擇、版本選擇、操作按鈕 |
-| Prompt 卡片列表 | 顯示目前版本下所有 Prompt 卡片 |
-| 編輯面板 | 右側滑出面板，顯示選中 Prompt 的詳細編輯介面 |
+## Cấu trúc Trang
+- **Thanh Tiêu đề**: Chọn Công ty/Phòng ban, Chọn Phiên bản, và các nút thao tác.
+- **Danh sách Thẻ Prompt**: Hiển thị tất cả Prompt trong phiên bản hiện tại.
+- **Bảng Chỉnh sửa**: Khung trượt bên phải hiển thị giao diện chỉnh sửa.
 
 ---
 
-## 基本操作流程
-
-### 步驟 1：選擇公司與部門
-
-在標題列中選擇要管理的公司與部門：
-
-- **公司** — 下拉選單選擇公司（提示：「請選擇公司」）
-- **部門** — 下拉選單選擇部門（提示：「請先選擇公司以查看部門」）
-
-### 步驟 2：選擇 Prompt 版本
-
-每套 Prompt 可以有多個版本，選擇要查看或編輯的版本：
-
-- 下拉選單顯示所有可用版本（提示：「請選擇提示詞版本」）
-- 標示「當前版本」的即為目前啟用中的版本
-
-### 步驟 3：查看與編輯
-
-選擇版本後，頁面會顯示該版本下的所有 Prompt 卡片。
+## Chi tiết Thẻ Prompt
+Mỗi thẻ hiển thị:
+- **Tên**: Tên nhận dạng duy nhất
+- **Mô tả**: Tóm tắt chức năng
+- **Thẻ Phân loại**: Danh mục của Prompt (như Character, Judge, System...)
+- **Nhãn "Đang sử dụng"**: Nếu Prompt đã được phát hành
+- **Chỉnh sửa / Xóa**: Các nút thao tác
 
 ---
 
-## Prompt 卡片
+## Chỉnh sửa Prompt
+Nhấp **"Chỉnh sửa"** để mở bảng điều khiển bên phải.
 
-每張 Prompt 卡片顯示以下資訊：
+### Trường thông tin
+- **Tên**: Nhận dạng duy nhất (Bắt buộc).
+- **Danh mục**: Danh sách phân loại.
+- **Mô tả**: Chức năng của Prompt.
+- **Nội dung Prompt**: Trình soạn thảo văn bản lớn để nhập chỉ lệnh.
 
-| 元素 | 說明 |
-| --- | --- |
-| 名稱 | Prompt 的唯一識別名稱 |
-| 描述 | Prompt 的簡要說明 |
-| 類別標籤 | 顯示 Prompt 所屬的類別（見下方類別說明） |
-| 使用中標籤 | 如果此 Prompt 已發布啟用，會顯示「使用中」標籤 |
-| 編輯按鈕 | 開啟右側編輯面板 |
-| 刪除按鈕 | 刪除此 Prompt（會彈出確認訊息） |
-
-### Prompt 類別
-
-| 類別 | 說明 |
-| --- | --- |
-| Character | 客戶角色生成相關的指令 |
-| Judge | 評量與判斷相關的指令 |
-| System | 系統層級的基礎指令 |
-| GenerationAI | AI 生成行為的指令 |
-| CustomerAI | 客戶 AI 的回應行為指令 |
-| MentorAI | 導師 AI 的評核行為指令 |
-| Other | 其他類別 |
+### Hệ thống Biến
+Sử dụng dấu ngoặc nhọn `{...}` để chèn biến.
+VD: `{question}`, `{character_detail}`, `{conversation_history}`, `{stage_description}`.
 
 ---
 
-## 編輯 Prompt
+## Quản lý Phiên bản
+Tính năng này giúp bạn chỉnh sửa và kiểm thử Prompt mà không ảnh hưởng đến phiên bản hiện tại.
 
-點擊 Prompt 卡片上的「編輯」按鈕，右側會滑出編輯面板。
-
-### 編輯欄位
-
-| 欄位 | 說明 |
-| --- | --- |
-| 名稱 | Prompt 的唯一識別名稱。提示：「名稱必須唯一，用於程式中引用提示詞」 |
-| 類別 | 下拉選單，選擇 Prompt 類別 |
-| 描述 | Prompt 的功能說明文字 |
-| 提示詞內容 | 大型文字編輯區，輸入完整的 Prompt 指令文字 |
-| 提示詞用途描述 | 說明此 Prompt 的用途與預期效果 |
-
-### 變數系統
-
-在提示詞內容中可以使用大括號包含變數，系統會在執行時自動替換為實際值。
-
-提示：「您可以使用大括號包含變數，例如 `{question}`, `{character_detail}` 等」
-
-常見變數：
-
-| 變數 | 說明 |
-| --- | --- |
-| `{question}` | 使用者的對話訊息 |
-| `{character_detail}` | 客戶角色的詳細設定資料 |
-| `{character_data}` | 客戶角色的基本資料 |
-| `{conversation_history}` | 對話歷史紀錄 |
-| `{stage_description}` | 當前銷售階段的描述 |
-
-> 可用的變數會依 Prompt 類別有所不同，請參考各 Prompt 類別的說明。
-
-### 未儲存變更提示
-
-當您修改了 Prompt 內容但尚未儲存時，系統會顯示提示：「您有尚未儲存的變更」。
+- **Thêm Phiên bản**: Sao chép Prompt từ phiên bản hiện tại sang phiên bản mới.
+- **Phát hành**: Đặt phiên bản làm phiên bản Đang sử dụng.
+- Lưu ý: Chỉ phiên bản "Phát hành" mới được áp dụng cho các bài tập mới. Các bài tập đang diễn ra sẽ sử dụng phiên bản cũ.
 
 ---
 
-## 版本管理
-
-Prompt 版本管理讓您在不影響目前運作的情況下，修改與測試新的 Prompt 設定。
-
-### 操作說明
-
-| 操作 | 說明 |
-| --- | --- |
-| 新增提示詞 | 在目前版本中新增一個 Prompt |
-| 新增版本 | 以目前版本為基礎，建立新版本（複製所有 Prompt） |
-| 新增版本並發布 | 建立新版本並同時設為啟用版本 |
-| 儲存並發布 | 儲存目前的修改並將此版本設為啟用 |
-| 另存 | 將目前修改儲存為新版本 |
-| 另存並發布 | 將目前修改儲存為新版本並設為啟用 |
-| 發布 | 將選中的版本設為啟用版本 |
-
-### 版本生效規則
-
-- 只有被「發布」（啟用）的版本才會在實際對話中生效
-- 同一時間只有一個版本處於啟用狀態
-- 修改非啟用版本不會影響目前的使用者體驗
-- 切換啟用版本會立即生效，新的對話會使用新版本
-- 已進行中的對話不受版本切換影響
-
----
-
-## 新增 Prompt
-
-1. 點擊標題列的 **「新增提示詞」** 按鈕
-2. 右側開啟空白的編輯面板
-3. 填寫所有必要欄位（名稱、類別、內容等）
-4. 點擊儲存
-
----
-
-## 刪除 Prompt
-
-1. 在 Prompt 卡片上點擊 **「刪除」** 按鈕
-2. 系統彈出確認對話框：「確定要刪除提示詞 "XXX" 嗎？」
-3. 確認後刪除
-
-> 刪除正在使用中的 Prompt 可能影響系統運作，請謹慎操作。
-
----
-
-## 最佳實踐
-
-### Prompt 修改建議
-
-1. **先建立新版本** — 不要直接修改啟用中的版本
-2. **小幅調整** — 一次只修改少量內容，便於追蹤效果
-3. **充分測試** — 修改後先在新版本中測試，確認效果再發布
-4. **保留歷史** — 保留舊版本以便在需要時快速回退
-
-### 常見調整情境
-
-| 需求 | 建議調整的 Prompt 類別 |
-| --- | --- |
-| 客戶反應不夠真實 | CustomerAI |
-| 評量標準需要調整 | Judge、MentorAI |
-| 角色生成結果不理想 | Character |
-| 對話風格需要改變 | CustomerAI、GenerationAI |
-
----
-
-## 下一步
-
-- 管理 [銷售階段](admin-stages.md) 設定練習標準
-- 維護 [知識庫](admin-knowledge.md) 充實學習資源
-- 管理 [使用者帳號](admin-users.md)
+## Lời khuyên
+1. **Luôn tạo phiên bản mới** thay vì sửa đổi trực tiếp phiên bản Đang sử dụng.
+2. **Kiểm thử kỹ lưỡng** trước khi Phát hành.
