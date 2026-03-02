@@ -603,6 +603,10 @@ a {
 @media (max-width: 768px) {
 
   /* Navigation Bar Fixes */
+  .hide-on-mobile {
+    display: none !important;
+  }
+
   .nav-content {
     gap: 16px;
     padding: 0 16px;
