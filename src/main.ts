@@ -100,7 +100,7 @@ function setLanguage(lang: SupportedLocales) {
 document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize Language Switcher
-  const savedLang = (localStorage.getItem('ai-coach-lang') || 'zh-TW') as SupportedLocales;
+  const savedLang = (localStorage.getItem('ai-coach-lang') || 'vi') as SupportedLocales;
   const langSwitcher = document.getElementById('lang-switcher') as HTMLSelectElement;
 
   if (langSwitcher) {
