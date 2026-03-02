@@ -4,12 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"vite\" \"vitepress dev docs\"",
+    "dev:app": "vite",
     "docs:dev": "vitepress dev docs",
     "build": "tsc && vite build && vitepress build docs",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "typescript": "~5.9.3",
     "vite": "^7.3.1",
     "vitepress": "^1.6.4"

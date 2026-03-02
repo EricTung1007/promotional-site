@@ -37,15 +37,6 @@ export default defineConfig({
                             { text: 'Lịch sử', link: '/history' },
                             { text: 'Trợ lý kiến thức', link: '/knowledge-assistant' },
                         ]
-                    },
-                    {
-                        text: 'Quản trị',
-                        items: [
-                            { text: 'Quản lý người dùng', link: '/admin-users' },
-                            { text: 'Hành vi AI', link: '/admin-prompts' },
-                            { text: 'Quản lý kiến thức', link: '/admin-knowledge' },
-                            { text: 'Giai đoạn huấn luyện', link: '/admin-stages' },
-                        ]
                     }
                 ]
             }
@@ -76,15 +67,6 @@ export default defineConfig({
                             { text: 'Evaluation & Feedback', link: '/en/evaluation' },
                             { text: 'History Tracking', link: '/en/history' },
                             { text: 'Knowledge Assistant', link: '/en/knowledge-assistant' },
-                        ]
-                    },
-                    {
-                        text: 'Administration',
-                        items: [
-                            { text: 'User Management', link: '/en/admin-users' },
-                            { text: 'Prompt & AI Behavior', link: '/en/admin-prompts' },
-                            { text: 'Manage Knowledge Base', link: '/en/admin-knowledge' },
-                            { text: 'Training Stages', link: '/en/admin-stages' },
                         ]
                     }
                 ]
@@ -117,15 +99,6 @@ export default defineConfig({
                             { text: '練習歷史', link: '/zh-TW/history' },
                             { text: '知識助手', link: '/zh-TW/knowledge-assistant' },
                         ]
-                    },
-                    {
-                        text: '管理員',
-                        items: [
-                            { text: '使用者管理', link: '/zh-TW/admin-users' },
-                            { text: '提示詞與 AI 行為', link: '/zh-TW/admin-prompts' },
-                            { text: '知識庫管理', link: '/zh-TW/admin-knowledge' },
-                            { text: '訓練階段設定', link: '/zh-TW/admin-stages' },
-                        ]
                     }
                 ]
             }
@@ -133,6 +106,7 @@ export default defineConfig({
     },
 
     themeConfig: {
+        search: { provider: 'local' },
         socialLinks: [
             { icon: 'github', link: 'https://github.com/EricTung1007/promotional-site' }
         ]

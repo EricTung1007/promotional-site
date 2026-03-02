@@ -1,1 +1,0 @@
-import{_ as h,o as n,c as a,ae as i}from"./chunks/framework.BeVX27ge.js";const s=JSON.parse('{"title":"Lịch sử","description":"","frontmatter":{},"headers":[],"relativePath":"history.md","filePath":"history.md"}'),c={name:"history.md"};function r(d,t,o,e,l,u){return n(),a("div",null,[...t[0]||(t[0]=[i("",27)])])}const p=h(c,[["render",r]]);export{s as __pageData,p as default};

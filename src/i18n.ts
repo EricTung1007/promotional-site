@@ -43,6 +43,8 @@ export const i18n = {
         'roles.c4.d': '設計練習情境、管理評核標準、優化 Prompt 指令。',
         'mod.title': '無縫跨國協作',
         'mod.desc': '跨語系支援，無縫切換。支援繁體中文與越南文，跨國團隊也能輕鬆使用 AI 教練進行練習。',
+        'mod.rag.title': '企業級 RAG 知識庫',
+        'mod.rag.desc': '內建產品文件與銷售手冊，練習中隨時智能檢索專業資訊。',
         'footer': 'AI Coach — 讓每一次練習都更接近真實，讓每一次對話都更有價值。',
     },
     'en': {
@@ -87,6 +89,8 @@ export const i18n = {
         'roles.c4.d': 'Design scenarios, manage evaluation grading, and optimize prompts.',
         'mod.title': 'Seamless Cross-border Collab',
         'mod.desc': 'Multi-language support for seamless switching. Supports Traditional Chinese and Vietnamese.',
+        'mod.rag.title': 'Enterprise RAG Database',
+        'mod.rag.desc': 'Instantly retrieve product documents and knowledge base articles without leaving the training environment.',
         'footer': 'AI Coach — Making every practice closer to reality, and every conversation more valuable.',
     },
     'vi': {
@@ -131,6 +135,8 @@ export const i18n = {
         'roles.c4.d': 'Thiết kế tình huống thực hành, quản lý tiêu chuẩn đánh giá.',
         'mod.title': 'Cộng tác xuyên biên giới',
         'mod.desc': 'Hỗ trợ đa ngôn ngữ, chuyển đổi mượt mà. Đội ngũ xuyên quốc gia sử dụng dễ dàng.',
+        'mod.rag.title': 'Cơ sở dữ liệu RAG',
+        'mod.rag.desc': 'Truy xuất ngay tài liệu sản phẩm và cơ sở kiến thức mà không cần rời khỏi môi trường huấn luyện.',
         'footer': 'AI Coach — Làm cho từng bài thực hành chân thực hơn, tạo giá trị cho từng cuộc hội thoại.',
     }
 }

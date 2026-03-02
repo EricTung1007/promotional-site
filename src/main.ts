@@ -357,8 +357,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ease: "power3.out"
   })
 
-  // 7. Modules Container Scale Outline
-  gsap.fromTo('.modules-container', {
+  // 7. Modules Cards Scale Outline Staggered Reveal
+  const moduleCards = gsap.utils.toArray<HTMLElement>('.module-card')
+  gsap.fromTo(moduleCards, {
     opacity: 0,
     scale: 0.95
   }, {
@@ -368,6 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     opacity: 1,
     scale: 1,
+    stagger: 0.2,
     duration: 1.2,
     ease: "power4.out"
   })
