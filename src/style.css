@@ -601,29 +601,126 @@ a {
 }
 
 @media (max-width: 768px) {
+
+  /* Navigation Bar Fixes */
+  .nav-content {
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .nav-links {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-bottom: 5px;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .btn-primary-small,
+  .lang-select,
+  .nav-links a {
+    flex-shrink: 0;
+  }
+
+  /* Typography & Spacing Fixes */
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-desc {
+    font-size: 18px;
+  }
+
+  .section {
+    padding: 60px 16px;
+  }
+
+  /* Hero Fixes */
+  .hero-section {
+    padding-top: 100px;
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
   .hero-title {
-    font-size: 48px;
+    font-size: 40px;
   }
 
   .hero-subtitle {
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
   }
 
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-actions a {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Teardown Sequence Fixes */
+  .teardown-container {
+    height: 40vh;
+  }
+
+  .device-layer {
+    width: 260px;
+    height: 530px;
+  }
+
+  .chat-bubble {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .ai-center {
+    font-size: 16px;
+  }
+
+  /* Features Grid Fixes */
   .features-track {
     flex-direction: column;
+    gap: 16px;
+    padding: 20px 0;
   }
 
   .feature-card {
     min-width: 100%;
     height: auto;
+    padding: 24px;
   }
 
+  /* Roles Grid Fixes */
   .roles-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
+  .role-grid-item {
+    padding: 24px;
+  }
+
+  .role-grid-item h4 {
+    font-size: 24px;
+  }
+
+  /* Modules Container Fixes */
   .modules-container {
     flex-direction: column;
-    padding: 40px;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .lang-pill {
+    padding: 12px 24px;
+    font-size: 18px;
   }
 }
