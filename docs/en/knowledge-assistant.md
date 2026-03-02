@@ -25,6 +25,13 @@ Click the **Knowledge Assistant Icon** in the top right navigation bar.
 - **Message List**: Your questions (right) and AI responses (left)
 - **Typing Indicator**: Animation shown while AI is generating an answer
 
+### Suggested Prompt Cards
+Upon entering, you can directly click on the system's suggested tags:
+- **Insurance News (保險新知)**: Look up the latest industry trends and news.
+- **Insurance Q&A Guide (保險問答大補帖)**: Common scripts and customer Q&A references.
+- **Professional Updates for Agents (保險業務人員的專業新知)**: In-depth professional knowledge and insights.
+- **Psychology Applications in Insurance (心理學在保險業務中的應用)**: Practical applications of sales psychology.
+
 ### Input Area
 - Input Box: Enter the question you want to look up
 - Send Button: Click to send the question (temporarily disabled while AI is answering)

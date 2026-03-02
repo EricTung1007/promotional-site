@@ -1,57 +1,36 @@
 # User Management
 
-> Manage platform accounts, roles, and permissions to control feature access.
+> Manage accounts, roles, and platform access.
 
 ## Overview
-User management is the core feature of the admin panel, allowing you to create, edit, import, and delete user accounts, as well as assign appropriate roles and permissions.
+The User Management section allows administrators to view the current list of users, onboard new personnel, and manage their account status.
 
-> This feature is only available to administrators with User Management permissions.
+> Access is restricted to Administrators only.
 
-## How to Access
-1. Click the **Settings Icon** (Gear) in the top right corner of the page.
-2. Select "User Management" in the admin panel.
+## Interface Structure
 
----
+### User Database Table
+Displays a list of all accounts with the following data columns:
+- **Company:** The overarching company the user belongs to.
+- **Department:** The specific department or team.
+- **Employee ID:** The user's internal identification number.
+- **Email:** Contact email address.
+- **Name:** Display name of the user.
+- **Status:** Shows if the account is Active/Available or Disabled.
 
-## Page Structure
-- **Title Bar**: Includes Filters, Add User, and More Actions menu.
-- **Filter Tags**: Displays currently applied filters.
-- **User Table**: List of all users.
-- **Pagination**: Page navigation.
-
----
-
-## Filtering Users
-Click the **"Filters"** button to open the filter panel:
-- **Company**: Filter by associated company.
-- **Department**: Filter by department (requires selecting Company first).
-- **Role**: Admin / User / Superuser / Supervisor.
-- **Email**: Text search.
-- **Name**: Text search.
-- **Status**: Active / Disabled.
+### Action Buttons
+- **Filters (Funnel Icon):** Filter the list by Company, Department, or Status.
+- **Add User (+ 新增使用者):** Primary CTA to onboard a new user.
+- **More Options (Vertical Ellipsis):** Access bulk actions or other settings.
 
 ---
 
-## Adding Users
-Click **"Add User"** to open the creation form.
-- **Name**: Display name (Required if Email is provided).
-- **Email**: Login account (Required or Emp No).
-- **Emp No**: Employee number.
-- **Company**: Select company (Required).
-- **Department**: Select department.
-- **Role**: Assign role.
-- **Status**: Toggle Active/Disabled.
+## Adding a New User
+Clicking "Add User" opens a modal form focusing on these fields:
+- **Company:** Select from a dropdown list.
+- **Department:** Select from a dropdown list (dynamic based on Company).
+- **Employee ID:** Text input for their ID.
+- **Email:** Text input for their email.
+- **Name:** Text input for their full name.
 
-### Roles Description
-- **Admin**: Full access to all management features.
-- **Superuser**: Advanced access with limited management capabilities.
-- **Supervisor**: Can monitor team practice data but cannot modify system settings.
-- **User**: General user, can only access practice, history, and evaluations.
-
----
-
-## Other Features
-- **Edit User**: Click "Edit" in the table to modify details.
-- **Delete User**: Click "Delete". This performs a soft delete (account cannot log in).
-- **Batch Import**: Use a CSV template to add multiple users at once.
-- **Batch Delete**: Select multiple users and delete them simultaneously.
+Click confirm to grant the user access to the AI Coach platform.

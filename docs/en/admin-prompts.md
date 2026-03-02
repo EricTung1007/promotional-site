@@ -1,53 +1,44 @@
 # Prompt Management
 
-> Control AI behavior to create the most realistic practice experience.
+> Control the core behavior of the AI, setting its mindset and evaluation standards.
 
 ## Overview
-Prompts are the core instructions driving AI behavior. This feature allows administrators to adjust AI responses, evaluation criteria, and persona generation rules to meet company training goals.
+Prompts are the core instructions that drive the entire AI Coach platform. This feature allows administrators to adjust how the AI role-plays customers, defines reporting criteria, and applies system rules.
 
-> Only available to administrators with Prompt Management permissions.
+> Access is restricted to Administrators only.
 
-## Page Structure
-- **Title Bar**: Company/Department selection, Version selection, and action buttons.
-- **Prompt Card List**: Displays all prompts under the current version.
-- **Edit Panel**: Right-side sliding panel providing the detailed editing interface.
+## Interface Structure
+The management page is divided into two main sections:
+- **Toolbar & Filters (Top/Left)**:
+  - **Company/Department Dropdown:** Filter prompts that apply specifically to an organization (e.g., 台灣國泰人壽).
+  - **Version Dropdown:** Select the active prompt version you are working on (e.g., v1.0, v2.0 - Active).
+- **List & Editor**: A panel displaying the list of specific Prompts and a large text editor for the prompt source code.
 
 ---
 
 ## Prompt Card Details
-Each card displays:
-- **Name**: Unique identifier
-- **Description**: Brief summary
-- **Category Tag**: Category (e.g., Character, Judge, System, etc.)
-- **"In Use" Tag**: Appears if the prompt is currently published
-- **Edit / Delete**: Action buttons
+Each prompt card displays:
+- **Name**: A unique identifier within the system.
+- **Category**: Classification of the prompt (e.g., System, Character, Judge, Auto-Suggestions).
+- **Description**: A brief summary of its function.
+- **Status**: Indicates whether the Prompt is part of the "Active/In-Use" version.
+
+The editor provides a large text area for administrators to securely type and update instructions directly.
 
 ---
 
-## Editing Prompts
-Click **"Edit"** to open the side panel.
-
-### Fields
-- **Name**: Unique identifier (Required).
-- **Category**: Dropdown selection.
-- **Description**: Prompt functionality.
-- **Content**: Large text editor for the full prompt instructions.
-
-### Variable System
-Use curly braces `{...}` to insert dynamic variables.
-Examples: `{question}`, `{character_detail}`, `{conversation_history}`, `{stage_description}`.
+## Variable System
+Within the Prompt content, you can utilize dynamic variables enclosed in curly braces `{...}` to instruct the system to automatically inject actual runtime data:
+For example:
+- `{question}`: The user's latest query or message.
+- `{character_detail}`: The auto-generated customer persona background.
+- `{conversation_history}`: The transcript of the chat up to the current instance.
+- `{stage_description}`: Descriptions of the currently applicable sales stages.
 
 ---
 
-## Version Management
-Allows editing and testing prompts without affecting the live environment.
-
-- **Add Version**: Duplicates prompts from the current version into a new one.
-- **Publish**: Sets the selected version as the active version.
-- Note: Only the "Published" version applies to new sessions. Ongoing sessions continue to use the older version.
-
----
-
-## Best Practices
-1. **Always create a new version** rather than modifying the active version directly.
-2. **Test thoroughly** before publishing.
+## Version Control
+The system permits you to safely edit and test Prompts without impacting live sessions:
+- **Add Version**: Duplicates all Prompts from the current version into a new draft.
+- **Save Changes**: Edits are contained exclusively within the selected version.
+- **Publish**: Promotes the draft version into the live production environment as the Active version. Note: Once published, the new version applies strictly to *new* practice sessions moving forward.

@@ -1,53 +1,44 @@
 # Quản lý Prompt
 
-> Kiểm soát hành vi của AI, tạo trải nghiệm thực hành sát với thực tế nhất.
+> Kiểm soát hành vi cốt lõi của AI, thiết lập tư duy và tiêu chuẩn chấm điểm.
 
 ## Tổng quan
-Prompt là chỉ lệnh cốt lõi điều khiển hành vi của AI. Tính năng này giúp quản trị viên điều chỉnh cách AI phản hồi, tiêu chí đánh giá, và quy tắc tạo vai, nhằm đáp ứng mục tiêu đào tạo.
+Prompt là những chỉ lệnh cốt lõi điều khiển toàn bộ nền tảng AI Coach. Tính năng này giúp quản trị viên điều chỉnh cách AI đóng vai khách hàng, tiêu chí đánh giá báo cáo, và các quy tắc hệ thống.
 
-> Chỉ dành cho Quản trị viên có quyền Quản lý Prompt.
+> Chỉ dành cho Quản trị viên.
 
-## Cấu trúc Trang
-- **Thanh Tiêu đề**: Chọn Công ty/Phòng ban, Chọn Phiên bản, và các nút thao tác.
-- **Danh sách Thẻ Prompt**: Hiển thị tất cả Prompt trong phiên bản hiện tại.
-- **Bảng Chỉnh sửa**: Khung trượt bên phải hiển thị giao diện chỉnh sửa.
+## Cấu trúc Giao diện
+Trang quản lý được chia làm hai phần chính:
+- **Thanh Công cụ & Bộ lọc (Trái/Trên)**:
+  - **Công ty/Phòng ban (Company/Department):** Danh sách thả xuống để lọc bộ prompt áp dụng riêng cho một tổ chức (VD: 台灣國泰人壽).
+  - **Phiên bản (Version):** Chọn phiên bản prompt đang thao tác (VD: v1.0, v2.0 - Đang sử dụng).
+- **Danh sách & Trình soạn thảo**: Khung hiển thị danh sách các Prompt và trình soạn thảo mã nguồn prompt chi tiết.
 
 ---
 
 ## Chi tiết Thẻ Prompt
-Mỗi thẻ hiển thị:
-- **Tên**: Tên nhận dạng duy nhất
-- **Mô tả**: Tóm tắt chức năng
-- **Thẻ Phân loại**: Danh mục của Prompt (như Character, Judge, System...)
-- **Nhãn "Đang sử dụng"**: Nếu Prompt đã được phát hành
-- **Chỉnh sửa / Xóa**: Các nút thao tác
+Mỗi thẻ prompt hiển thị:
+- **Tên**: Tên nhận dạng duy nhất trong hệ thống.
+- **Danh mục (Category)**: Phân loại prompt (VD: System, Character, Judge, Auto-Suggestions).
+- **Mô tả**: Tóm tắt ngắn gọn chức năng của nó.
+- **Trạng thái**: Nhãn cho biết Prompt có đang nằm trong phiên bản "Đang sử dụng/Active" hay không.
+
+Trình soạn thảo cung cấp vùng không gian lớn để quản trị viên nhập văn bản Prompt một cách trực tiếp.
 
 ---
 
-## Chỉnh sửa Prompt
-Nhấp **"Chỉnh sửa"** để mở bảng điều khiển bên phải.
-
-### Trường thông tin
-- **Tên**: Nhận dạng duy nhất (Bắt buộc).
-- **Danh mục**: Danh sách phân loại.
-- **Mô tả**: Chức năng của Prompt.
-- **Nội dung Prompt**: Trình soạn thảo văn bản lớn để nhập chỉ lệnh.
-
-### Hệ thống Biến
-Sử dụng dấu ngoặc nhọn `{...}` để chèn biến.
-VD: `{question}`, `{character_detail}`, `{conversation_history}`, `{stage_description}`.
+## Hệ thống Biến (Variables)
+Trong nội dung Prompt, bạn có thể sử dụng các biến động trong ngoặc nhọn `{...}` để hệ thống tự động điền dữ liệu thực tế tại thời điểm chạy:
+Ví dụ: 
+- `{question}`: Câu hỏi mới nhất của người dùng.
+- `{character_detail}`: Chân dung và tiểu sử khách hàng được tạo tự động.
+- `{conversation_history}`: Lịch sử trò chuyện cho đến thời điểm hiện tại.
+- `{stage_description}`: Mô tả của các giai đoạn bán hàng đang áp dụng.
 
 ---
 
-## Quản lý Phiên bản
-Tính năng này giúp bạn chỉnh sửa và kiểm thử Prompt mà không ảnh hưởng đến phiên bản hiện tại.
-
-- **Thêm Phiên bản**: Sao chép Prompt từ phiên bản hiện tại sang phiên bản mới.
-- **Phát hành**: Đặt phiên bản làm phiên bản Đang sử dụng.
-- Lưu ý: Chỉ phiên bản "Phát hành" mới được áp dụng cho các bài tập mới. Các bài tập đang diễn ra sẽ sử dụng phiên bản cũ.
-
----
-
-## Lời khuyên
-1. **Luôn tạo phiên bản mới** thay vì sửa đổi trực tiếp phiên bản Đang sử dụng.
-2. **Kiểm thử kỹ lưỡng** trước khi Phát hành.
+## Quản lý Phiên bản (Version Control)
+Hệ thống cho phép bạn chỉnh sửa và kiểm thử Prompt mà không gây ảnh hưởng đến phiên bản người dùng đang sử dụng.
+- **Thêm Phiên bản**: Sao chép toàn bộ Prompt từ phiên bản hiện tại sang một phiên bản nháp mới.
+- **Lưu/Áp dụng sửa đổi**: Các thay đổi chỉ tác động trong phạm vi phiên bản đã chọn.
+- **Phát hành (Publish)**: Chính thức đưa phiên bản nháp lên môi trường thực tế làm phiên bản Đang sử dụng. Lưu ý: Phiên bản mới chỉ áp dụng cho các phiên luyện tập *mới* sau thời điểm phát hành.

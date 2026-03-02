@@ -1,42 +1,42 @@
 # Stage Management
 
-> Define sales practice stages, set AI evaluation standards and goals.
+> Define sales practice stages, setting evaluation standards and objectives.
 
 ## Overview
-Sales stages are the backbone of the AI Coach practice workflow. Each stage represents a critical step in the sales conversation. AI tracks your progress and generates evaluations based on these stages.
+Sales stages are the foundation of the practice sessions. Each stage represents a crucial step in the conversation; the AI will monitor and evaluate the user based on this configuration.
 
-> Only available to administrators with Stage Management permissions.
+> Access is restricted to Administrators only.
 
-## Page Structure
-Stage cards are ordered by their stage number:
-- **Title**: Format "Stage N: {Stage Name}"
-- **Customer Status**: The psychological or behavioral state of the customer at this stage.
-- **Options**: Edit / Delete buttons.
+## Interface Structure
+The management page displays a list of stages ordered numerically (typically 1 to 5):
+- **Card Title**: Format "Stage N: {Stage Name}" (supports bilingual display).
+- **Customer Status (Description)**: The expected psychological state or behavior of the customer during this step.
+- **Action Buttons**: Icons to Edit (pencil) or Delete (trash bin) the stage.
 
 ---
 
 ## Stage Attributes
 
 ### Stage Number
-- Determines the sequence. Must be a positive integer and unique. Cannot be modified after creation.
+- Determines the sequential order. Must be a positive integer and unique. Cannot be modified after creation.
 
-### Stage Description
-- The name and goal of the stage (e.g., "Ice-breaking", "Needs Discovery").
+### Stage Name
+- The official name of the sales step (e.g., 1. Ice-breaking, 2. Needs Discovery, 3. Closing). Bilingual input supported.
 
 ### Current Customer Status
-- Describes the customer's mindset, allowing AI to simulate realistic reactions (e.g., "Customer is hesitant and has not built trust yet").
+- Describes the psychological state of the customer. The AI uses this as a benchmark to assess whether the agent has successfully overcome this specific psychological barrier.
 
 ---
 
-## Actions
-- **Add Stage**: Click "Add Stage". Fill in Number, Description, and Status.
-- **Edit Stage**: Click "Edit" on the card (Stage Number cannot be changed).
-- **Delete Stage**: Click "Delete". This may affect the display of historical evaluations.
+## Operations
+- **Add Stage**: Click the Add button to input Number, Name, and Description in the designated languages.
+- **Edit**: Click the edit icon on the card (Note: Stage Number cannot be edited).
+- **Delete**: Click the delete icon. Warning: Deleting a stage might impact the evaluation reports of previous practice histories.
 
 ---
 
 ## Design Recommendations
-1. **Logical Progression**: From easy to hard, mimicking the natural sales flow.
-2. **Clear Goals**: Each stage should have specific, measurable objectives.
-3. **Realistic Descriptions**: Customer status must accurately reflect their actual mindset.
-4. **Appropriate Length**: 3-7 stages are recommended for optimal practice.
+1. **Logical Progression**: Order from easiest to hardest, following a natural sales flow.
+2. **Clear Objectives**: Each stage should have specific, measurable goals for the AI to score effectively.
+3. **Realistic Descriptions**: Customer psychological states should accurately reflect reality.
+4. **Appropriate Quantity**: Between 3 to 7 stages is optimal for a single practice session.
