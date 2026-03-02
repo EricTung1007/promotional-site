@@ -88,7 +88,7 @@ function setLanguage(lang: SupportedLocales) {
   // Handle active class toggles on the language pills in Modules section
   document.querySelectorAll('.lang-pill').forEach(pill => {
     pill.classList.remove('active');
-    if (pill.textContent === lang || (lang === 'zh-TW' && pill.textContent === 'zh-TW')) {
+    if (pill.getAttribute('data-lang') === lang) {
       pill.classList.add('active');
     }
   });
@@ -113,6 +113,18 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => ScrollTrigger.refresh(), 100);
     });
   }
+
+  // Language Pill Click Listeners
+  document.querySelectorAll('.lang-pill').forEach(pill => {
+    pill.addEventListener('click', (e) => {
+      const targetLang = (e.currentTarget as HTMLElement).getAttribute('data-lang') as SupportedLocales;
+      if (targetLang) {
+        if (langSwitcher) langSwitcher.value = targetLang;
+        setLanguage(targetLang);
+        setTimeout(() => ScrollTrigger.refresh(), 100);
+      }
+    });
+  });
 
   // Set initial language immediately
   setLanguage(savedLang);
@@ -257,7 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial state setup
     // Center them all with neutral rotation, keeping the -50% translation offset!
-    gsap.set('.device-layer', { z: 0, scale: 0.85, rotateX: 0, rotateY: 0, xPercent: -50, yPercent: -50 });
+    // Shifted yPercent to -42 (from -50 and -35) to find the perfect middle ground
+    gsap.set('.device-layer', { z: 0, scale: 0.85, rotateX: 0, rotateY: 0, xPercent: -50, yPercent: -42 });
     gsap.set('.layer-ui', { opacity: 0 });
     gsap.set('.layer-ai', { opacity: 0 });
     gsap.set('.layer-body', { opacity: 1 });
@@ -275,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tTl.to('.layer-ui', {
       opacity: 1,
       z: 120,
-      yPercent: -60, // -50 (base) - 10 (movement)
+      yPercent: -52, // -42 (base) - 10 (movement)
       xPercent: -60, // -50 (base) - 10 (movement)
       duration: 1
     }, 0.5);
@@ -290,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tTl.to('.layer-ai', {
       opacity: 1,
       z: -120,
-      yPercent: -40, // -50 (base) + 10 (movement)
+      yPercent: -32, // -42 (base) + 10 (movement)
       xPercent: -40, // -50 (base) + 10 (movement)
       duration: 1
     }, 0.5);
@@ -298,10 +311,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Step 3: Final glorious spread out (adjusting spread to keep in view)
     tTl.to('.device-layer', { rotateX: 30, rotateY: -10, scale: 0.65, duration: 2 }, 1.5);
 
-    // Spread them further but keep inside screen relative to the -50% center
-    tTl.to('.layer-ui', { z: 200, yPercent: -65, xPercent: -65, duration: 2 }, 1.5);
+    // Spread them further but keep inside screen relative to the -42% center
+    tTl.to('.layer-ui', { z: 200, yPercent: -57, xPercent: -65, duration: 2 }, 1.5);
     tTl.to('.layer-body', { z: 0, duration: 2 }, 1.5);
-    tTl.to('.layer-ai', { z: -200, yPercent: -35, xPercent: -35, duration: 2 }, 1.5);
+    tTl.to('.layer-ai', { z: -200, yPercent: -27, xPercent: -35, duration: 2 }, 1.5);
 
     // Step 4: Graceful fade out to prevent visual bleed during natural scroll
     tTl.to('.teardown-container', { opacity: 0, scale: 0.55, yPercent: -20, duration: 1.5 }, 3.5);

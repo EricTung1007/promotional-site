@@ -584,6 +584,12 @@ a {
   font-size: 24px;
   font-weight: 500;
   color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-pill:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .lang-pill.active {
@@ -645,18 +651,18 @@ a {
 
   /* Hero Fixes */
   .hero-section {
-    padding-top: 100px;
+    padding-top: 80px;
     min-height: auto;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
 
   .hero-title {
-    font-size: 40px;
+    font-size: 32px;
   }
 
   .hero-subtitle {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 16px;
+    margin-bottom: 24px;
   }
 
   .hero-actions {

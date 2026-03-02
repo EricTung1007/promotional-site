@@ -7,8 +7,8 @@
   <title>AI Coach - Nền tảng huấn luyện bán hàng thông minh</title>
   <!-- Use Apple-like Inter font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/promotional-site/assets/index-DTSJv42f.js"></script>
-  <link rel="stylesheet" crossorigin href="/promotional-site/assets/index-IeS13ZEP.css">
+  <script type="module" crossorigin src="/promotional-site/assets/index-C125vyDh.js"></script>
+  <link rel="stylesheet" crossorigin href="/promotional-site/assets/index-jOVMsYQ4.css">
 </head>
 
 <body>
@@ -19,12 +19,14 @@
 
   <nav class="navbar">
     <div class="nav-content">
-      <img src="/promotional-site/AI-coach-logo.png" alt="AI Coach Logo" class="logo magnetic-btn"
-        style="height: 32px; width: auto; object-fit: contain;" />
+      <a href="https://ai-coach-frontend-service-for-dev-218172420486.asia-east1.run.app/login"
+        class="logo magnetic-btn" style="display: flex; align-items: center;">
+        <img src="/promotional-site/AI-coach-logo.png" alt="AI Coach Logo" style="height: 32px; width: auto; object-fit: contain;" />
+      </a>
       <div class="nav-links">
-        <a href="#features" class="magnetic-btn" data-i18n="nav.features">Tính năng</a>
-        <a href="#roles" class="magnetic-btn" data-i18n="nav.roles">Đối tượng</a>
-        <a href="#modules" class="magnetic-btn" data-i18n="nav.modules">Mô-đun</a>
+        <a href="#features" class="magnetic-btn hide-on-mobile" data-i18n="nav.features">Tính năng</a>
+        <a href="#roles" class="magnetic-btn hide-on-mobile" data-i18n="nav.roles">Đối tượng</a>
+        <a href="#modules" class="magnetic-btn hide-on-mobile" data-i18n="nav.modules">Mô-đun</a>
         <select id="lang-switcher" class="lang-select magnetic-btn">
           <option value="vi" selected>Tiếng Việt</option>
           <option value="en">English</option>
@@ -171,8 +173,9 @@
             mượt mà. Đội ngũ xuyên quốc gia sử dụng dễ dàng.</p>
         </div>
         <div class="module-graphic">
-          <div class="lang-pill active">vi</div>
-          <div class="lang-pill">zh-TW</div>
+          <div class="lang-pill active magnetic-btn" data-lang="vi">vi</div>
+          <div class="lang-pill magnetic-btn" data-lang="en">en</div>
+          <div class="lang-pill magnetic-btn" data-lang="zh-TW">zh-TW</div>
         </div>
       </div>
     </section>
