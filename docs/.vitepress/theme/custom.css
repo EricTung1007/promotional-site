@@ -1,0 +1,9 @@
+.VPNavBarSearch .DocSearch-Button {
+    width: 100% !important;
+    min-width: 300px !important;
+}
+
+.VPNavBarSearch .local-search {
+    width: 100% !important;
+    min-width: 300px !important;
+}

@@ -28,27 +28,27 @@ AI Coach là hệ thống đào tạo thông minh được thiết kế riêng c
 
 | Nội dung | Mô tả | Chi tiết |
 |------|------|------|
-| Bắt đầu | Yêu cầu hệ thống, đăng nhập lần đầu, tổng quan quy trình | [getting-started.md](./getting-started.md) |
-| Bảng điều khiển | Thống kê học tập, kỷ lục gần đây, lịch | [dashboard.md](./dashboard.md) |
-| Thực hành | Chọn cảnh, thiết lập vai, thao tác trò chuyện | [practice.md](./practice.md) |
-| Đánh giá | Báo cáo toàn diện, đánh giá tổng thể | [evaluation.md](./evaluation.md) |
-| Lịch sử | Hồ sơ luyện tập, lọc, thử lại | [history.md](./history.md) |
-| Trợ lý Kiến thức | Q&A thông minh, tra tìm | [knowledge-assistant.md](./knowledge-assistant.md) |
+| Bắt đầu | Yêu cầu hệ thống, đăng nhập lần đầu, tổng quan quy trình | [Getting Started](./getting-started.md) |
+| Bảng điều khiển | Thống kê học tập, kỷ lục gần đây, lịch | [Dashboard](./dashboard.md) |
+| Thực hành | Chọn cảnh, thiết lập vai, thao tác trò chuyện | [Practice](./practice.md) |
+| Đánh giá | Báo cáo toàn diện, đánh giá tổng thể | [Evaluation](./evaluation.md) |
+| Lịch sử | Hồ sơ luyện tập, lọc, thử lại | [History](./history.md) |
+| Trợ lý Kiến thức | Q&A thông minh, tra tìm | [Knowledge Assistant](./knowledge-assistant.md) |
 
 ### Quản trị viên
 
 | Nội dung | Mô tả | Chi tiết |
 |------|------|------|
-| Quản lý người dùng | Tạo tài khoản, nhập hàng loạt, cài đặt quyền | [admin-users.md](./admin-users.md) |
-| Quản lý Prompt | Chỉnh sửa dấu nhắc, kiểm soát phiên bản | [admin-prompts.md](./admin-prompts.md) |
-| Quản lý Giai đoạn | Xác định các bước bán hàng | [admin-stages.md](./admin-stages.md) |
-| Quản lý Kiến thức | Tải lên tài liệu, bảo trì dữ liệu | [admin-knowledge.md](./admin-knowledge.md) |
+| Quản lý người dùng | Tạo tài khoản, nhập hàng loạt, cài đặt quyền | [Admin Users](./admin-users.md) |
+| Quản lý Prompt | Chỉnh sửa dấu nhắc, kiểm soát phiên bản | [Admin Prompts](./admin-prompts.md) |
+| Quản lý Giai đoạn | Xác định các bước bán hàng | [Admin Stages](./admin-stages.md) |
+| Quản lý Kiến thức | Tải lên tài liệu, bảo trì dữ liệu | [Admin Knowledge](./admin-knowledge.md) |
 
 ### Phụ lục
 
 | Nội dung | Mô tả | Chi tiết |
 |------|------|------|
-| FAQ (Câu hỏi thường gặp) | Khắc phục sự cố và trả lời câu hỏi | [faq.md](./faq.md) |
+| FAQ (Câu hỏi thường gặp) | Khắc phục sự cố và trả lời câu hỏi | [Faq](./faq.md) |
 
 ---
 

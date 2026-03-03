@@ -28,27 +28,27 @@ AI Coach is an intelligent training system designed specifically for insurance s
 
 | Chapter | Description | Link |
 |---------|-------------|------|
-| Quick Start | System requirements, first login, workflow overview | [getting-started.md](./getting-started.md) |
-| Dashboard | Learning stats, recent history, calendar view | [dashboard.md](./dashboard.md) |
-| Practice | Scenario selection, persona setup, chat ops | [practice.md](./practice.md) |
-| Evaluation | Comprehensive assessments, line-by-line feedback | [evaluation.md](./evaluation.md) |
-| History Tracking | Querying records, advanced filters, retry | [history.md](./history.md) |
-| Knowledge Assistant | Intelligent Q&A, knowledge base queries | [knowledge-assistant.md](./knowledge-assistant.md) |
+| Quick Start | System requirements, first login, workflow overview | [Getting Started](./getting-started.md) |
+| Dashboard | Learning stats, recent history, calendar view | [Dashboard](./dashboard.md) |
+| Practice | Scenario selection, persona setup, chat ops | [Practice](./practice.md) |
+| Evaluation | Comprehensive assessments, line-by-line feedback | [Evaluation](./evaluation.md) |
+| History Tracking | Querying records, advanced filters, retry | [History](./history.md) |
+| Knowledge Assistant | Intelligent Q&A, knowledge base queries | [Knowledge Assistant](./knowledge-assistant.md) |
 
 ### Administrators
 
 | Chapter | Description | Link |
 |---------|-------------|------|
-| User Management | Account creation, batch import, permissions | [admin-users.md](./admin-users.md) |
-| Prompt Management | Prompt editing, version control, release | [admin-prompts.md](./admin-prompts.md) |
-| Stage Management | Sales stage definitions, grading criteria | [admin-stages.md](./admin-stages.md) |
-| Knowledge Mgmt | Document upload, chunk management, updates | [admin-knowledge.md](./admin-knowledge.md) |
+| User Management | Account creation, batch import, permissions | [Admin Users](./admin-users.md) |
+| Prompt Management | Prompt editing, version control, release | [Admin Prompts](./admin-prompts.md) |
+| Stage Management | Sales stage definitions, grading criteria | [Admin Stages](./admin-stages.md) |
+| Knowledge Mgmt | Document upload, chunk management, updates | [Admin Knowledge](./admin-knowledge.md) |
 
 ### Appendix
 
 | Chapter | Description | Link |
 |---------|-------------|------|
-| FAQ | Frequently asked questions and troubleshooting | [faq.md](./faq.md) |
+| FAQ | Frequently asked questions and troubleshooting | [Faq](./faq.md) |
 
 ---
 

@@ -17,7 +17,9 @@
 
 ## Login & Accounts
 
-### Q: I cannot log into the system?
+---
+
+ I cannot log into the system?
 
 **A:** Please check the following items in order:
 
@@ -27,11 +29,15 @@
 4. Try clearing your browser cache and logging in again.
 5. If the issue persists, contact your company administrator.
 
-### Q: It says "Account Disabled" after logging in?
+---
+
+ It says "Account Disabled" after logging in?
 
 **A:** Your account has been disabled by an administrator. Please contact your administrator to change your account status back to "Active".
 
-### Q: Why can't I see certain features (like admin settings or the knowledge assistant) after logging in?
+---
+
+ Why can't I see certain features (like admin settings or the knowledge assistant) after logging in?
 
 **A:** Feature visibility depends on your role permissions. Different roles have access to different features:
 
@@ -42,11 +48,15 @@
 
 If you need additional permissions, please contact an administrator to adjust your role settings.
 
-### Q: How do I log out?
+---
+
+ How do I log out?
 
 **A:** Click the logout icon in the top right corner of the page (an arrow pointing right), and confirm "Are you sure you want to log out?" to log out.
 
-### Q: How do I switch languages?
+---
+
+ How do I switch languages?
 
 **A:** Click the language switcher in the top right corner of the page and select your preferred language (Traditional Chinese / Vietnamese / English). The interface will update immediately after switching.
 
@@ -54,7 +64,9 @@ If you need additional permissions, please contact an administrator to adjust yo
 
 ## Practice Sessions
 
-### Q: What is the difference between "Random Persona" and "Custom Persona"?
+---
+
+ What is the difference between "Random Persona" and "Custom Persona"?
 
 **A:**
 
@@ -63,11 +75,15 @@ If you need additional permissions, please contact an administrator to adjust yo
 | Random Persona | The system generates a completely random customer persona (age, occupation, gender, income, etc.), ideal for quickly starting a practice session. |
 | Custom Persona | You can specify some or all customer attributes (e.g., setting "high income, married"). Unspecified attributes are randomly filled by the system. |
 
-### Q: Do I have to fill out all fields when customizing a persona?
+---
+
+ Do I have to fill out all fields when customizing a persona?
 
 **A:** No. All fields are optional. You can set only the attributes you care about, and the AI will automatically fill in the rest. For example, if you only set "age 35, married, high income", the system will automatically generate other attributes.
 
-### Q: Does the MBTI personality type affect the AI customer's behavior?
+---
+
+ Does the MBTI personality type affect the AI customer's behavior?
 
 **A:** Yes. The MBTI type significantly affects the AI customer's communication style, decision-making process, and reaction patterns. For example:
 - **ISTJ** (Logistician) customers will value data and details more.
@@ -76,11 +92,15 @@ If you need additional permissions, please contact an administrator to adjust yo
 
 You can click the tooltip icon next to the "Personality" field in the persona setup panel to view detailed descriptions of each type.
 
-### Q: Why does persona generation take so long?
+---
+
+ Why does persona generation take so long?
 
 **A:** Persona generation usually takes a few seconds. If it takes longer than 30 seconds, it may be a network issue. Please try refreshing the page and try again.
 
-### Q: Why are the AI customer's responses unreasonable during the conversation?
+---
+
+ Why are the AI customer's responses unreasonable during the conversation?
 
 **A:** Possible reasons and suggestions:
 
@@ -88,7 +108,9 @@ You can click the tooltip icon next to the "Personality" field in the persona se
 2. **Unclear conversation context** — Try communicating with more explicit expressions.
 3. **Prompts need adjustment** — Report to an administrator to review and adjust the AI Prompt settings.
 
-### Q: Why can't I send a message, and it shows a security warning?
+---
+
+ Why can't I send a message, and it shows a security warning?
 
 **A:** The system has built-in content security detection. Messages containing the following content will be blocked:
 
@@ -99,7 +121,9 @@ You can click the tooltip icon next to the "Personality" field in the persona se
 
 Please modify your message and send it again. These checks ensure the safety of the practice environment.
 
-### Q: Can I continue an unfinished practice session later?
+---
+
+ Can I continue an unfinished practice session later?
 
 **A:** Yes. Unfinished sessions can be resumed via:
 
@@ -108,11 +132,15 @@ Please modify your message and send it again. These checks ensure the safety of 
 
 When continuing, the AI customer will have a vague impression of the previous conversation.
 
-### Q: Can I practice with the exact same customer again?
+---
+
+ Can I practice with the exact same customer again?
 
 **A:** Yes. Click "Retry" in the dashboard or practice history to start a new conversation using the exact same customer persona settings. This is very helpful for comparing the effectiveness of different strategies.
 
-### Q: When should I end the conversation?
+---
+
+ When should I end the conversation?
 
 **A:** We recommend ending the session when:
 
@@ -125,7 +153,9 @@ When continuing, the AI customer will have a vague impression of the previous co
 
 ## Evaluation Reports
 
-### Q: Why is my evaluation report stuck generating?
+---
+
+ Why is my evaluation report stuck generating?
 
 **A:** Report generation usually takes 30 seconds to 2 minutes. If it takes longer than 5 minutes:
 
@@ -135,7 +165,9 @@ When continuing, the AI customer will have a vague impression of the previous co
 
 Each section of the report (stage evaluation, comprehensive review, etc.) is generated independently, so some sections may finish before others.
 
-### Q: What is the difference between "Comprehensive Review" and "Line-by-line Feedback"?
+---
+
+ What is the difference between "Comprehensive Review" and "Line-by-line Feedback"?
 
 **A:**
 
@@ -146,11 +178,15 @@ Each section of the report (stage evaluation, comprehensive review, etc.) is gen
 
 We recommend reading the "Comprehensive Review" first for an overall understanding, then switching to "Line-by-line Feedback" to find specific conversational details to improve.
 
-### Q: What are "AI Inner Thoughts"?
+---
+
+ What are "AI Inner Thoughts"?
 
 **A:** AI Inner Thoughts show the AI's simulated psychological activities of the customer after receiving your message. This helps you understand the customer's true thoughts at each moment, allowing you to adjust your communication strategy next time.
 
-### Q: Can I provide feedback if I'm not satisfied with the evaluation results?
+---
+
+ Can I provide feedback if I'm not satisfied with the evaluation results?
 
 **A:** Yes. There is a rating function below each evaluation section:
 
@@ -160,7 +196,9 @@ We recommend reading the "Comprehensive Review" first for an overall understandi
 
 Your feedback helps the system continuously optimize evaluation quality.
 
-### Q: Why does it say "Did not reach any evaluation stage"?
+---
+
+ Why does it say "Did not reach any evaluation stage"?
 
 **A:** This means the AI determined that your conversation did not meet the standards for even the first sales stage. Possible reasons:
 
@@ -174,7 +212,9 @@ We recommend reviewing the specific feedback in the Line-by-line evaluation for 
 
 ## Practice History
 
-### Q: Why can't I find any records after filtering?
+---
+
+ Why can't I find any records after filtering?
 
 **A:** Please note the following:
 
@@ -185,7 +225,9 @@ We recommend reviewing the specific feedback in the Line-by-line evaluation for 
 
 If no records are found, it means no practice sessions occurred under those conditions.
 
-### Q: Why is the "Continue Practice" button disabled?
+---
+
+ Why is the "Continue Practice" button disabled?
 
 **A:** Only sessions with an "In Progress" status can be continued. If a session has ended (manually or automatically by the system), you can only use "Retry" to start a new conversation.
 
@@ -193,7 +235,9 @@ If no records are found, it means no practice sessions occurred under those cond
 
 ## Knowledge Assistant
 
-### Q: Why are the Knowledge Assistant's answers inaccurate or incomplete?
+---
+
+ Why are the Knowledge Assistant's answers inaccurate or incomplete?
 
 **A:** The quality of the Knowledge Assistant's answers depends on the following factors:
 
@@ -203,11 +247,15 @@ If no records are found, it means no practice sessions occurred under those cond
 
 > The Knowledge Assistant's answers are for reference only. Please refer to official company documents for actual operations.
 
-### Q: Why can't I see the Knowledge Assistant icon?
+---
+
+ Why can't I see the Knowledge Assistant icon?
 
 **A:** Your account may lack read permissions for the knowledge base. Please contact an administrator to verify your permission settings.
 
-### Q: Where did my chat history go?
+---
+
+ Where did my chat history go?
 
 **A:** The Knowledge Assistant's chat history is stored locally in your browser. The following actions will cause the history to be cleared:
 
@@ -220,7 +268,9 @@ If no records are found, it means no practice sessions occurred under those cond
 
 ## Administrator Features
 
-### Q: Why did batch importing users fail?
+---
+
+ Why did batch importing users fail?
 
 **A:** Common reasons:
 
@@ -234,18 +284,24 @@ If no records are found, it means no practice sessions occurred under those cond
 
 The system provides a detailed error report, including the line number and specific reason for each failed entry.
 
-### Q: When do changes to Prompts take effect?
+---
+
+ When do changes to Prompts take effect?
 
 **A:** After modifying a Prompt, you must "Publish" (activate) that version for it to take effect. Once effective:
 
 - **New Conversations** — Will immediately use the new Prompt version.
 - **Ongoing Conversations** — Will not be affected and will continue using the previous version.
 
-### Q: Will deleting a stage affect completed practice sessions?
+---
+
+ Will deleting a stage affect completed practice sessions?
 
 **A:** Deleting a stage will not affect the data of completed practice sessions, but it may affect how that stage is displayed in evaluation reports. It's recommended to confirm no ongoing sessions are using the stage before deleting it.
 
-### Q: How do I restore a deleted user?
+---
+
+ How do I restore a deleted user?
 
 **A:** The system uses a soft delete mechanism. Deleted user data remains in the database. To restore, please contact the system administrator or technical team.
 
@@ -253,7 +309,9 @@ The system provides a detailed error report, including the line number and speci
 
 ## System & Performance
 
-### Q: Why is the system loading so slowly?
+---
+
+ Why is the system loading so slowly?
 
 **A:** We recommend checking the following:
 
@@ -262,7 +320,9 @@ The system provides a detailed error report, including the line number and speci
 3. Try closing other resource-intensive tabs.
 4. Clear your browser cache and try again.
 
-### Q: It says "Server error occurred, please try again later"?
+---
+
+ It says "Server error occurred, please try again later"?
 
 **A:** This indicates a temporary anomaly in the backend service. Recommendations:
 
@@ -270,7 +330,9 @@ The system provides a detailed error report, including the line number and speci
 2. If the issue persists for over 30 minutes, contact an administrator or IT department.
 3. Do not repeatedly retry, as this may increase server load.
 
-### Q: Which browsers are supported by the system?
+---
+
+ Which browsers are supported by the system?
 
 **A:**
 

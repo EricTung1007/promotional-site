@@ -19,6 +19,15 @@ export const i18n = {
         'ai.stat1': '分析: 客戶擔憂流動性',
         'ai.stat2': '策略: 建議同理心回應',
         'ai.stat3': '話術輔助: 啟動「靈活提領」劇本',
+
+        // Teardown Labels
+        'tear.lbl.ui': '互動式對話介面',
+        'tear.lbl.ui.desc': '與擬真 AI 客戶進行流暢的對話練習。',
+        'tear.lbl.body': '人設與 RAG 系統',
+        'tear.lbl.body.desc': '動態生成客戶背景，並即時檢索企業知識庫。',
+        'tear.lbl.ai': 'AI 評估後端',
+        'tear.lbl.ai.desc': '驅動即時對話生成、邏輯分析與最終評分。',
+
         'feat.title': '核心價值',
         'feat.desc': '為保險業務量身打造',
         'feat.c1.t': '擬真客戶互動',
@@ -45,6 +54,10 @@ export const i18n = {
         'mod.desc': '跨語系支援，無縫切換。支援繁體中文與越南文，跨國團隊也能輕鬆使用 AI 教練進行練習。',
         'mod.rag.title': '企業級 RAG 知識庫',
         'mod.rag.desc': '內建產品文件與銷售手冊，練習中隨時智能檢索專業資訊。',
+        'mod.prac.title': '沈浸式對話練習',
+        'mod.prac.desc': '擬真 AI 客戶扮演。客製化人設與隨機對話劇本，訓練應變能力。',
+        'mod.eval.title': '多維度對話評量',
+        'mod.eval.desc': '對話結束即產出綜合評分雷達圖，抓出銷售盲點，即刻改善。',
         'footer': 'AI Coach — 讓每一次練習都更接近真實，讓每一次對話都更有價值。',
     },
     'en': {
@@ -64,8 +77,17 @@ export const i18n = {
         'ai.core': 'AI Coach Core',
         'ai.stat1': 'Analysis: Customer fears liquidity',
         'ai.stat2': 'Strategy: Recommend empathetic response',
-        'ai.stat3': 'Assist: Trigger "Flexible Withdrawal" prompt',
-        'feat.title': 'Core Value',
+        'ai.stat3': 'Support: Trigger "Flexible Withrawal" Script',
+
+        // Teardown Labels
+        'tear.lbl.ui': 'Interactive Conversation Interface',
+        'tear.lbl.ui.desc': 'Engage in fluid practice conversations with hyper-realistic AI customers.',
+        'tear.lbl.body': 'Persona & RAG System',
+        'tear.lbl.body.desc': 'Dynamically generates customer backgrounds and instantly retrieves enterprise knowledge.',
+        'tear.lbl.ai': 'AI Evaluation Backend',
+        'tear.lbl.ai.desc': 'Powers real-time conversation generation, logic analysis, and final scoring.',
+
+        'feat.title': 'Values',
         'feat.desc': 'Tailor-made for Insurance Agents',
         'feat.c1.t': 'Realistic Interaction',
         'feat.c1.d': 'AI simulates genuine customer reactions based on detailed personas.',
@@ -91,6 +113,10 @@ export const i18n = {
         'mod.desc': 'Multi-language support for seamless switching. Supports Traditional Chinese and Vietnamese.',
         'mod.rag.title': 'Enterprise RAG Database',
         'mod.rag.desc': 'Instantly retrieve product documents and knowledge base articles without leaving the training environment.',
+        'mod.prac.title': 'Immersive Practice Simulation',
+        'mod.prac.desc': 'Hyper-realistic AI customer roleplay. Custom personas and varied scenarios to train adaptability.',
+        'mod.eval.title': 'Multi-dimensional Evaluation',
+        'mod.eval.desc': 'Comprehensive scoring radar chart generated instantly upon finish, highlighting blind spots to improve.',
         'footer': 'AI Coach — Making every practice closer to reality, and every conversation more valuable.',
     },
     'vi': {
@@ -111,6 +137,15 @@ export const i18n = {
         'ai.stat1': 'Phân tích: Khách lo ngại thanh khoản',
         'ai.stat2': 'Chiến lược: Đề xuất phản hồi đồng cảm',
         'ai.stat3': 'Hỗ trợ: Kích hoạt kịch bản "Rút tiền linh hoạt"',
+
+        // Teardown Labels
+        'tear.lbl.ui': 'Giao diện trò chuyện tương tác',
+        'tear.lbl.ui.desc': 'Thực hành hội thoại trôi chảy với khách hàng AI siêu thực.',
+        'tear.lbl.body': 'Hệ thống Persona & RAG',
+        'tear.lbl.body.desc': 'Tạo lập lý lịch khách hàng và truy tìm ngay kiến thức doanh nghiệp.',
+        'tear.lbl.ai': 'Lõi AI Backend',
+        'tear.lbl.ai.desc': 'Kiểm soát tạo đối thoại, phân tích logic và chấm điểm cuối cùng.',
+
         'feat.title': 'Giá trị',
         'feat.desc': 'Dành riêng cho Tư vấn viên',
         'feat.c1.t': 'Tương tác chân thực',
@@ -137,6 +172,10 @@ export const i18n = {
         'mod.desc': 'Hỗ trợ đa ngôn ngữ, chuyển đổi mượt mà. Đội ngũ xuyên quốc gia sử dụng dễ dàng.',
         'mod.rag.title': 'Cơ sở dữ liệu RAG',
         'mod.rag.desc': 'Truy xuất ngay tài liệu sản phẩm và cơ sở kiến thức mà không cần rời khỏi môi trường huấn luyện.',
+        'mod.prac.title': 'Thực hành mô phỏng sâu',
+        'mod.prac.desc': 'Đóng vai khách hàng AI siêu chân thực. Trải nghiệm kịch bản tùy chỉnh để rèn luyện phản ứng.',
+        'mod.eval.title': 'Đánh giá đa chiều',
+        'mod.eval.desc': 'Biểu đồ radar chấm điểm toàn diện được tạo ngay sau khi kết thúc, giúp tìm ra điểm yếu để cải thiện.',
         'footer': 'AI Coach — Làm cho từng bài thực hành chân thực hơn, tạo giá trị cho từng cuộc hội thoại.',
     }
 }

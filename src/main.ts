@@ -257,6 +257,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4b. Ultra-Premium Teardown Sequence
   const teardownSection = document.querySelector('.teardown-section');
   if (teardownSection) {
+    const isMobile = window.innerWidth <= 768;
+    const baseScale = isMobile ? 0.6 : 0.85;
+    const step1Scale = isMobile ? 0.55 : 0.75;
+    const step3Scale = isMobile ? 0.45 : 0.65;
+    const yOffset = isMobile ? -60 : -42; // move phone higher on mobile to make room for labels
+
     const tTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".teardown-section",
@@ -269,17 +275,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial state setup
     // Center them all with neutral rotation, keeping the -50% translation offset!
-    // Shifted yPercent to -42 (from -50 and -35) to find the perfect middle ground
-    gsap.set('.device-layer', { z: 0, scale: 0.85, rotateX: 0, rotateY: 0, xPercent: -50, yPercent: -42 });
+    // Shifted yPercent to base yOffset to find the perfect middle ground
+    gsap.set('.device-layer', { z: 0, scale: baseScale, rotateX: 0, rotateY: 0, xPercent: -50, yPercent: yOffset });
     gsap.set('.layer-ui', { opacity: 0 });
     gsap.set('.layer-ai', { opacity: 0 });
     gsap.set('.layer-body', { opacity: 1 });
+
+    // Set the labels' initial state and attach them to the layers using the same transforms 
+    // but without the 3D rotation offsets so they stay flat.
+    gsap.set('.teardown-label', { opacity: 0 });
 
     // Step 1: All layers tilt back together to prevent Z-fighting
     tTl.to('.device-layer', {
       rotateX: 45,
       rotateY: -15,
-      scale: 0.75,
+      scale: step1Scale,
       duration: 1
     }, 0);
 
@@ -288,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tTl.to('.layer-ui', {
       opacity: 1,
       z: 120,
-      yPercent: -52, // -42 (base) - 10 (movement)
+      yPercent: yOffset - 10,
       xPercent: -60, // -50 (base) - 10 (movement)
       duration: 1
     }, 0.5);
@@ -303,21 +313,25 @@ document.addEventListener('DOMContentLoaded', () => {
     tTl.to('.layer-ai', {
       opacity: 1,
       z: -120,
-      yPercent: -32, // -42 (base) + 10 (movement)
+      yPercent: yOffset + 10,
       xPercent: -40, // -50 (base) + 10 (movement)
       duration: 1
     }, 0.5);
 
     // Step 3: Final glorious spread out (adjusting spread to keep in view)
-    tTl.to('.device-layer', { rotateX: 30, rotateY: -10, scale: 0.65, duration: 2 }, 1.5);
+    tTl.to('.device-layer', { rotateX: 30, rotateY: -10, scale: step3Scale, duration: 2 }, 1.5);
 
-    // Spread them further but keep inside screen relative to the -42% center
-    tTl.to('.layer-ui', { z: 200, yPercent: -57, xPercent: -65, duration: 2 }, 1.5);
+    // Spread them further but keep inside screen relative to the base center
+    tTl.to('.layer-ui', { z: 200, yPercent: yOffset - 15, xPercent: isMobile ? -55 : -65, duration: 2 }, 1.5);
     tTl.to('.layer-body', { z: 0, duration: 2 }, 1.5);
-    tTl.to('.layer-ai', { z: -200, yPercent: -27, xPercent: -35, duration: 2 }, 1.5);
+    tTl.to('.layer-ai', { z: -200, yPercent: yOffset + 15, xPercent: isMobile ? -45 : -35, duration: 2 }, 1.5);
+
+    // Fade in Explanatory Labels as soon as the spread begins settling
+    tTl.to('.teardown-label', { opacity: 1, duration: 1 }, 2.0);
 
     // Step 4: Graceful fade out to prevent visual bleed during natural scroll
     tTl.to('.teardown-container', { opacity: 0, scale: 0.55, yPercent: -20, duration: 1.5 }, 3.5);
+    tTl.to('.teardown-label', { opacity: 0, duration: 0.5 }, 3.5);
   }
 
   // 5. Features Horizontal Scroll (with Lenis)
@@ -373,4 +387,50 @@ document.addEventListener('DOMContentLoaded', () => {
     duration: 1.2,
     ease: "power4.out"
   })
+
+  // 8. Practice Module Chat Bubble Stagger
+  const pracBubbles = gsap.utils.toArray<HTMLElement>('.prac-bubble');
+  gsap.fromTo(pracBubbles, {
+    scale: 0,
+    opacity: 0,
+    y: 20
+  }, {
+    scrollTrigger: {
+      trigger: '.prac-graphic',
+      start: "top 80%"
+    },
+    scale: 1,
+    opacity: 0.9,
+    y: 0,
+    duration: 0.6,
+    stagger: 0.3,
+    ease: "back.out(1.7)"
+  });
+
+  // 9. Evaluation Module Bar Chart Growth
+  const evalBars = gsap.utils.toArray<HTMLElement>('.eval-bar');
+  const evalTL = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.eval-graphic',
+      start: "top 80%"
+    }
+  });
+
+  // Set random heights for the bars
+  const targetHeights = [40, 70, 55, 90];
+  evalBars.forEach((bar, index) => {
+    evalTL.to(bar, {
+      scaleY: targetHeights[index] / 100, // grow up to percentage
+      duration: 0.8,
+      ease: "power3.out"
+    }, 0); // start all simultaneously
+  });
+
+  // Pop in the final score
+  evalTL.to('.eval-score', {
+    scale: 1,
+    duration: 0.6,
+    ease: "back.out(2)"
+  }, "-=0.2");
+
 })

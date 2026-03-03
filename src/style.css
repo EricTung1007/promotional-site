@@ -461,6 +461,160 @@ a {
   border-left: 2px solid var(--accent);
 }
 
+/* Teardown Labels */
+.teardown-label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 250px;
+  opacity: 0;
+  /* Hidden initially, GSAP will fade in */
+  z-index: 30;
+  pointer-events: none;
+}
+
+.lbl-content {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  flex: 1;
+}
+
+.lbl-content h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.lbl-content p {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.lbl-line {
+  height: 1px;
+  flex: 0 0 50px;
+  background: var(--text-primary);
+  opacity: 0.5;
+  position: relative;
+}
+
+.lbl-line::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lbl-ui .lbl-line::after {
+  right: -2px;
+}
+
+.lbl-body .lbl-line::after,
+.lbl-ai .lbl-line::after {
+  left: -2px;
+}
+
+/* Specific Label Placements */
+.lbl-ui {
+  top: 10%;
+  left: -50px;
+}
+
+.lbl-ui .lbl-line {
+  flex: 0 0 50px;
+}
+
+.lbl-body {
+  top: 50%;
+  right: -20px;
+}
+
+.lbl-body .lbl-line {
+  flex: 0 0 50px;
+}
+
+.lbl-ai {
+  bottom: -5%;
+  right: -50px;
+}
+
+.lbl-ai .lbl-line {
+  flex: 0 0 50px;
+}
+
+@media (max-width: 1024px) {
+  .lbl-ui {
+    left: -10px;
+  }
+
+  .lbl-body {
+    right: 10px;
+    top: 45%;
+  }
+
+  .lbl-ai {
+    right: -10px;
+    bottom: 0%;
+  }
+
+  .teardown-label {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teardown-container {
+    height: 85vh;
+  }
+
+  .teardown-label {
+    width: 90%;
+    left: 5% !important;
+    right: auto !important;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lbl-content {
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+  }
+
+  .lbl-line {
+    display: none;
+  }
+
+  .lbl-ui {
+    top: 55% !important;
+  }
+
+  .lbl-body {
+    top: 70% !important;
+  }
+
+  .lbl-ai {
+    top: 85% !important;
+  }
+
+  .device-layer {
+    /* Base scaling is now handled dynamically in main.ts GSAP logic */
+    transform: translate(-50%, -50%);
+  }
+}
+
+
 /* FEATURES HORIZONTAL SCROLL */
 .features-section {
   overflow: hidden;
@@ -581,6 +735,94 @@ a {
   background: #f5f5f7;
   padding: 40px;
   border-radius: 24px;
+}
+
+/* Practice Graphic Specifics */
+.prac-graphic {
+  position: relative;
+  overflow: hidden;
+}
+
+.prac-chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.prac-bubble {
+  height: 24px;
+  border-radius: 12px;
+  opacity: 0.8;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  transform: scale(0);
+}
+
+.prac-bubble.cb-ai {
+  background: var(--border-color);
+  width: 70%;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.prac-bubble.cb-user {
+  background: var(--accent);
+  width: 50%;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.prac-bubble.typing {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  background: var(--border-color);
+}
+
+@keyframes popIn {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Evaluation Graphic Specifics */
+.eval-graphic {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.eval-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 100px;
+  border-bottom: 2px solid var(--border-color);
+  padding: 0 10px;
+}
+
+.eval-bar {
+  width: 24px;
+  border-radius: 4px 4px 0 0;
+  background: var(--accent);
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+
+.eval-score {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: white;
+  padding: 10px 24px;
+  border-radius: 100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transform: scale(0);
 }
 
 /* RAG Graphic Specifics */

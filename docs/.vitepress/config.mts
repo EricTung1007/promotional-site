@@ -37,6 +37,20 @@ export default defineConfig({
                             { text: 'Lịch sử', link: '/history' },
                             { text: 'Trợ lý kiến thức', link: '/knowledge-assistant' },
                         ]
+                    },
+                    {
+                        text: 'Quản trị viên',
+                        items: [
+                            { text: 'Quản lý Giai đoạn', link: '/admin-stages' },
+                            { text: 'Quản lý Prompt', link: '/admin-prompts' },
+                        ]
+                    },
+                    {
+                        text: 'Quản trị nâng cao',
+                        items: [
+                            { text: 'Quản lý Kiến thức', link: '/admin-knowledge' },
+                            { text: 'Quản lý Người dùng', link: '/admin-users' },
+                        ]
                     }
                 ]
             }
@@ -67,6 +81,20 @@ export default defineConfig({
                             { text: 'Evaluation & Feedback', link: '/en/evaluation' },
                             { text: 'History Tracking', link: '/en/history' },
                             { text: 'Knowledge Assistant', link: '/en/knowledge-assistant' },
+                        ]
+                    },
+                    {
+                        text: 'Administrator',
+                        items: [
+                            { text: 'Stage Management', link: '/en/admin-stages' },
+                            { text: 'Prompt Management', link: '/en/admin-prompts' },
+                        ]
+                    },
+                    {
+                        text: 'Advanced Administration',
+                        items: [
+                            { text: 'Knowledge Base Management', link: '/en/admin-knowledge' },
+                            { text: 'User Management', link: '/en/admin-users' },
                         ]
                     }
                 ]
@@ -99,6 +127,20 @@ export default defineConfig({
                             { text: '練習歷史', link: '/zh-TW/history' },
                             { text: '知識助手', link: '/zh-TW/knowledge-assistant' },
                         ]
+                    },
+                    {
+                        text: '管理員區段',
+                        items: [
+                            { text: '階段管理', link: '/zh-TW/admin-stages' },
+                            { text: '提示詞管理', link: '/zh-TW/admin-prompts' },
+                        ]
+                    },
+                    {
+                        text: '進階管理',
+                        items: [
+                            { text: '知識庫管理', link: '/zh-TW/admin-knowledge' },
+                            { text: '使用者管理', link: '/zh-TW/admin-users' },
+                        ]
                     }
                 ]
             }
@@ -107,8 +149,6 @@ export default defineConfig({
 
     themeConfig: {
         search: { provider: 'local' },
-        socialLinks: [
-            { icon: 'github', link: 'https://github.com/EricTung1007/promotional-site' }
-        ]
+        socialLinks: []
     }
 })
