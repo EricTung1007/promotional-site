@@ -35,16 +35,7 @@ AI Coach là hệ thống đào tạo thông minh được thiết kế riêng c
 | Lịch sử | Hồ sơ luyện tập, lọc, thử lại | [History](./history.md) |
 | Trợ lý Kiến thức | Q&A thông minh, tra tìm | [Knowledge Assistant](./knowledge-assistant.md) |
 
-### Quản trị viên
 
-| Nội dung | Mô tả | Chi tiết |
-|------|------|------|
-| Quản lý người dùng | Tạo tài khoản, nhập hàng loạt, cài đặt quyền | [Admin Users](./admin-users.md) |
-| Quản lý Prompt | Chỉnh sửa dấu nhắc, kiểm soát phiên bản | [Admin Prompts](./admin-prompts.md) |
-| Quản lý Giai đoạn | Xác định các bước bán hàng | [Admin Stages](./admin-stages.md) |
-| Quản lý Kiến thức | Tải lên tài liệu, bảo trì dữ liệu | [Admin Knowledge](./admin-knowledge.md) |
-
-### Phụ lục
 
 | Nội dung | Mô tả | Chi tiết |
 |------|------|------|

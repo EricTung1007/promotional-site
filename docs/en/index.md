@@ -46,12 +46,12 @@ features:
   <p style="text-align: center; color: var(--vp-c-text-2); margin-bottom: 2rem;">Quickly find the answers you need or browse the full FAQ guide.</p>
   
   <div class="faq-grid">
-    <a href="./faq#q-i-cannot-log-into-the-system" class="faq-btn"><span class="faq-icon">❓</span>I cannot log into the system?</a>
-    <a href="./faq#q-it-says-account-disabled-after-logging-in" class="faq-btn"><span class="faq-icon">❓</span>It says "Account Disabled"?</a>
-    <a href="./faq#q-how-do-i-switch-languages" class="faq-btn"><span class="faq-icon">❓</span>How do I switch languages?</a>
-    <a href="./faq#q-what-is-the-difference-between-random-persona-and-custom-persona" class="faq-btn"><span class="faq-icon">❓</span>Random vs Custom Persona?</a>
-    <a href="./faq#q-why-does-persona-generation-take-so-long" class="faq-btn"><span class="faq-icon">❓</span>Why is persona generation slow?</a>
-    <a href="./faq#q-when-should-i-end-the-conversation" class="faq-btn"><span class="faq-icon">❓</span>When should I end the conversation?</a>
-    <a href="./faq#q-why-is-my-evaluation-report-stuck-generating" class="faq-btn"><span class="faq-icon">❓</span>Evaluation report stuck generating?</a>
+    <a href="./faq#i-cannot-log-into-the-system" class="faq-btn"><span class="faq-icon">❓</span>I cannot log into the system?</a>
+    <a href="./faq#it-says-account-disabled-after-logging-in" class="faq-btn"><span class="faq-icon">❓</span>It says "Account Disabled"?</a>
+    <a href="./faq#how-do-i-switch-languages" class="faq-btn"><span class="faq-icon">❓</span>How do I switch languages?</a>
+    <a href="./faq#what-is-the-difference-between-random-persona-and-custom-persona" class="faq-btn"><span class="faq-icon">❓</span>Random vs Custom Persona?</a>
+    <a href="./faq#why-does-persona-generation-take-so-long" class="faq-btn"><span class="faq-icon">❓</span>Why is persona generation slow?</a>
+    <a href="./faq#when-should-i-end-the-conversation" class="faq-btn"><span class="faq-icon">❓</span>When should I end the conversation?</a>
+    <a href="./faq#why-is-my-evaluation-report-stuck-generating" class="faq-btn"><span class="faq-icon">❓</span>Evaluation report stuck generating?</a>
   </div>
 </div>

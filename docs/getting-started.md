@@ -44,12 +44,12 @@ AI Coach sử dụng hệ thống đăng nhập SSO cấp doanh nghiệp. Bạn 
 
 ### Các Trang Chính
 
-| Trang | Đường dẫn | Mô tả |
-| --- | --- | --- |
-| Bảng điều khiển | `/dashboard` | Trang chủ, hiển thị thống kê học tập và dữ liệu gần đây |
-| Thực hành | `/chat` | Trò chuyện mô phỏng với khách hàng AI |
-| Báo cáo đánh giá | `/review/:sessionId` | Xem kết quả phân tích đánh giá sau thực hành |
-| Lịch sử | `/practice-history` | Xem danh sách tất cả các bài thực hành trước |
+| Trang | Mô tả |
+| --- | --- |
+| Bảng điều khiển | Trang chủ, hiển thị thống kê học tập và dữ liệu gần đây |
+| Thực hành | Trò chuyện mô phỏng với khách hàng AI |
+| Báo cáo đánh giá | Xem kết quả phân tích đánh giá sau thực hành |
+| Lịch sử | Xem danh sách tất cả các bài thực hành trước |
 
 ## Bài Thực Hành Đầu Tiên: Quy trình hoàn chỉnh
 

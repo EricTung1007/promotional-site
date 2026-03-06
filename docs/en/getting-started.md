@@ -57,12 +57,12 @@ The top navigation bar contains (from left to right):
 
 ### Main Pages
 
-| Page | Path | Description |
-| --- | --- | --- |
-| Dashboard | `/dashboard` | Home page, shows learning stats and recent history |
-| Practice | `/chat` | Simulate sales conversation with AI |
-| Evaluation | `/review/:sessionId` | View practice evaluation results |
-| History | `/practice-history` | View all historical practice records |
+| Page | Description |
+| --- | --- |
+| Dashboard | Home page, shows learning stats and recent history |
+| Practice | Simulate sales conversation with AI |
+| Evaluation | View practice evaluation results |
+| History | View all historical practice records |
 
 ## Your First Practice: Complete Flow
 

@@ -35,16 +35,7 @@ AI Coach is an intelligent training system designed specifically for insurance s
 | History Tracking | Querying records, advanced filters, retry | [History](./history.md) |
 | Knowledge Assistant | Intelligent Q&A, knowledge base queries | [Knowledge Assistant](./knowledge-assistant.md) |
 
-### Administrators
 
-| Chapter | Description | Link |
-|---------|-------------|------|
-| User Management | Account creation, batch import, permissions | [Admin Users](./admin-users.md) |
-| Prompt Management | Prompt editing, version control, release | [Admin Prompts](./admin-prompts.md) |
-| Stage Management | Sales stage definitions, grading criteria | [Admin Stages](./admin-stages.md) |
-| Knowledge Mgmt | Document upload, chunk management, updates | [Admin Knowledge](./admin-knowledge.md) |
-
-### Appendix
 
 | Chapter | Description | Link |
 |---------|-------------|------|
