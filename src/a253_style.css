@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg-color: #f5f5f7;
   --bg-secondary: #ffffff;
   --text-primary: #1d1d1f;
@@ -671,46 +671,13 @@ a {
   }
 
   /* Teardown Sequence Fixes */
-  /* Increased height to comfortably house both the animation and the static cards beneath */
   .teardown-container {
-    height: auto;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 40px;
+    height: 40vh;
   }
 
-  /* Absolute layout preserves GSAP rendering */
   .device-layer {
     width: 260px;
     height: 530px;
-    position: absolute;
-    top: 35% !important;
-    /* Shifting up to avoid text cards on small screens */
-    /* The GSAP code handles pinning this beautifully above the cards */
-  }
-
-  /* Stack cards relatively at bottom of teardown flex col to prevent overlap! */
-  .teardown-label {
-    position: relative;
-    width: 100%;
-    margin-top: 24px;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: auto !important;
-  }
-
-  /* Remove all transparency so they stand out clearly */
-  .lbl-content {
-    background: rgba(255, 255, 255, 1) !important;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Hide connection lines on mobile */
-  .lbl-line {
-    display: none;
   }
 
   .chat-bubble {
