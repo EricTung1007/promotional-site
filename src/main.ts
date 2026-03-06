@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const baseScale = isMobile ? 0.6 : 0.85;
     const step1Scale = isMobile ? 0.55 : 0.75;
     const step3Scale = isMobile ? 0.45 : 0.65;
-    const yOffset = isMobile ? -60 : -42; // move phone higher on mobile to make room for labels
+    const yOffset = isMobile ? -60 : -36; // Middle ground offset to perfectly balance the layout
 
     // Set the labels' initial state and attach them to the layers using the same transforms
     // but without the 3D rotation offsets so they stay flat.

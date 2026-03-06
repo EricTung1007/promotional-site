@@ -232,7 +232,8 @@ a {
 /* ULTRA-PREMIUM TEARDOWN SEQUENCE */
 .teardown-section {
   position: relative;
-  padding: 0 0 10vh 0;
+  padding: 5vh 0 10vh 0;
+  /* Added padding-top to push it away from hero/navbar */
   display: flex;
   justify-content: center;
   z-index: 5;
@@ -240,11 +241,12 @@ a {
 
 .teardown-container {
   position: relative;
-  margin-top: 10vh;
+  margin-top: 12vh;
   /* Re-adding space so it sits below hero */
   width: 100%;
   max-width: 900px;
-  height: 50vh;
+  height: 55vh;
+  /* Increased from 50vh for more breathing room */
   perspective: 2000px;
   transform-style: preserve-3d;
 }
