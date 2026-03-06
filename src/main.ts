@@ -263,13 +263,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const step3Scale = isMobile ? 0.45 : 0.65;
     const yOffset = isMobile ? -60 : -42; // move phone higher on mobile to make room for labels
 
+    // Set the labels' initial state and attach them to the layers using the same transforms
+    // but without the 3D rotation offsets so they stay flat.
+    gsap.set('.teardown-label', { opacity: 0 });
+
+    // Prevent pinning on mobile because it disrupts the pure vertical scrolling flow of relative blocks
     const tTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".teardown-section",
-        start: "center center",
-        end: "+=1200",
+        start: "top top",
+        end: isMobile ? "+=600" : "+=1200",
         scrub: 1, // smooth dragging tied to lenis
-        pin: true,
+        pin: !isMobile, // Only pin on desktop where things overlay
       }
     });
 
@@ -322,9 +327,16 @@ document.addEventListener('DOMContentLoaded', () => {
     tTl.to('.device-layer', { rotateX: 30, rotateY: -10, scale: step3Scale, duration: 2 }, 1.5);
 
     // Spread them further but keep inside screen relative to the base center
-    tTl.to('.layer-ui', { z: 200, yPercent: yOffset - 15, xPercent: isMobile ? -55 : -65, duration: 2 }, 1.5);
-    tTl.to('.layer-body', { z: 0, duration: 2 }, 1.5);
-    tTl.to('.layer-ai', { z: -200, yPercent: yOffset + 15, xPercent: isMobile ? -45 : -35, duration: 2 }, 1.5);
+    if (!isMobile) {
+      tTl.to('.layer-ui', { z: 200, yPercent: yOffset - 15, xPercent: -65, duration: 2 }, 1.5);
+      tTl.to('.layer-body', { z: 0, duration: 2 }, 1.5);
+      tTl.to('.layer-ai', { z: -200, yPercent: yOffset + 15, xPercent: -35, duration: 2 }, 1.5);
+    } else {
+      // Very slight spread on mobile to keep things compact
+      tTl.to('.layer-ui', { z: 50, yPercent: yOffset - 5, xPercent: -50, duration: 2 }, 1.5);
+      tTl.to('.layer-body', { z: 0, duration: 2 }, 1.5);
+      tTl.to('.layer-ai', { z: -50, yPercent: yOffset + 5, xPercent: -50, duration: 2 }, 1.5);
+    }
 
     // Fade in Explanatory Labels as soon as the spread begins settling
     tTl.to('.teardown-label', { opacity: 1, duration: 1 }, 2.0);

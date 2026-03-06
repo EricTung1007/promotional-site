@@ -5,7 +5,9 @@
 ## Tổng quan
 Các giai đoạn bán hàng là nền tảng của bài thực hành. Mỗi giai đoạn đại diện cho một bước quyết định trong cuộc trò chuyện; AI sẽ theo dõi và đánh giá bạn dựa trên cấu hình này.
 
-> Chỉ dành cho Quản trị viên.
+::: warning Lưu ý Phân quyền
+Quản lý Giai đoạn Nâng cao hiện bị giới hạn. Chỉ **Siêu Quản trị viên (Superuser)** hệ thống mới có thể xem và sửa đổi.
+:::
 
 ## Cấu trúc Giao diện
 Trang quản lý hiển thị một danh sách các giai đoạn được sắp xếp theo số thứ tự (từ 1 đến 5 hoặc hơn):

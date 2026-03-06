@@ -46,12 +46,12 @@ features:
   <p style="text-align: center; color: var(--vp-c-text-2); margin-bottom: 2rem;">快速找到您需要的解答，或瀏覽完整的常見問題指南。</p>
   
   <div class="faq-grid">
-    <a href="/zh-TW/faq#q-我無法登入系統" class="faq-btn"><span class="faq-icon">❓</span>我無法登入系統？</a>
-    <a href="/zh-TW/faq#q-登入後顯示「帳號已停用」" class="faq-btn"><span class="faq-icon">❓</span>登入後顯示「帳號已停用」？</a>
-    <a href="/zh-TW/faq#q-如何切換語言" class="faq-btn"><span class="faq-icon">❓</span>如何切換語言？</a>
-    <a href="/zh-TW/faq#q-隨機角色和自訂角色有什麼差別" class="faq-btn"><span class="faq-icon">❓</span>「隨機角色」和「自訂角色」有什麼差別？</a>
-    <a href="/zh-TW/faq#q-角色生成需要等很久" class="faq-btn"><span class="faq-icon">❓</span>角色生成需要等很久？</a>
-    <a href="/zh-TW/faq#q-什麼時候應該結束對話" class="faq-btn"><span class="faq-icon">❓</span>何時應該結束對話？</a>
-    <a href="/zh-TW/faq#q-評量報告一直在「產生中」" class="faq-btn"><span class="faq-icon">❓</span>評量報告一直在「產生中」？</a>
+    <a href="./faq#q-我無法登入系統" class="faq-btn"><span class="faq-icon">❓</span>我無法登入系統？</a>
+    <a href="./faq#q-登入後顯示「帳號已停用」" class="faq-btn"><span class="faq-icon">❓</span>登入後顯示「帳號已停用」？</a>
+    <a href="./faq#q-如何切換語言" class="faq-btn"><span class="faq-icon">❓</span>如何切換語言？</a>
+    <a href="./faq#q-隨機角色和自訂角色有什麼差別" class="faq-btn"><span class="faq-icon">❓</span>「隨機角色」和「自訂角色」有什麼差別？</a>
+    <a href="./faq#q-角色生成需要等很久" class="faq-btn"><span class="faq-icon">❓</span>角色生成需要等很久？</a>
+    <a href="./faq#q-什麼時候應該結束對話" class="faq-btn"><span class="faq-icon">❓</span>何時應該結束對話？</a>
+    <a href="./faq#q-評量報告一直在「產生中」" class="faq-btn"><span class="faq-icon">❓</span>評量報告一直在「產生中」？</a>
   </div>
 </div>

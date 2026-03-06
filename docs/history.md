@@ -8,7 +8,6 @@ Trang Lịch sử cung cấp danh sách đầy đủ tất cả các bài thực
 
 ## Cách Truy cập
 - Lựa chọn **"Tất cả"** trong phần lọc nhanh của Bảng điều khiển
-- Truy cập trực tiếp đường dẫn `/practice-history`
 
 ## Cấu trúc Trang
 Trang Lịch sử bao gồm các khu vực sau:

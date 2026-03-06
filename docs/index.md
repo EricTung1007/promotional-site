@@ -46,12 +46,12 @@ features:
   <p style="text-align: center; color: var(--vp-c-text-2); margin-bottom: 2rem;">Nhanh chóng tìm thấy câu trả lời bạn cần hoặc tìm kiếm hướng dẫn đầy đủ.</p>
   
   <div class="faq-grid">
-    <a href="/faq#hỏi-tôi-không-thể-đăng-nhập-vào-hệ-thống" class="faq-btn"><span class="faq-icon">❓</span>Tôi không thể đăng nhập?</a>
-    <a href="/faq#hỏi-sau-khi-đăng-nhập-hiển-thị-tài-khoản-đã-bị-vô-hiệu-hóa" class="faq-btn"><span class="faq-icon">❓</span>Hiển thị "Tài khoản vô hiệu hóa"?</a>
-    <a href="/faq#hỏi-làm-thế-nào-để-chuyển-đổi-ngôn-ngữ" class="faq-btn"><span class="faq-icon">❓</span>Làm thế nào chuyển đổi ngôn ngữ?</a>
-    <a href="/faq#hỏi-sự-khác-biệt-giữa-vai-trò-ngẫu-nhiên-và-vai-trò-tùy-chỉnh-là-gì" class="faq-btn"><span class="faq-icon">❓</span>Vai trò ngẫu nhiên vs tùy chỉnh?</a>
-    <a href="/faq#hỏi-tại-sao-việc-tạo-vai-trò-lại-mất-nhiều-thời-gian-như-vậy" class="faq-btn"><span class="faq-icon">❓</span>Tại sao việc tạo vai trò diễn ra lâu?</a>
-    <a href="/faq#hỏi-khi-nào-tôi-nên-kết-thúc-cuộc-trò-chuyện" class="faq-btn"><span class="faq-icon">❓</span>Khi nào kết thúc cuộc trò chuyện?</a>
-    <a href="/faq#hỏi-báo-cáo-đánh-giá-bị-kẹt-ở-trạng-thái-đang-tạo" class="faq-btn"><span class="faq-icon">❓</span>Báo cáo đánh giá bị kẹt đang tạo?</a>
+    <a href="./faq#hỏi-tôi-không-thể-đăng-nhập-vào-hệ-thống" class="faq-btn"><span class="faq-icon">❓</span>Tôi không thể đăng nhập?</a>
+    <a href="./faq#hỏi-sau-khi-đăng-nhập-hiển-thị-tài-khoản-đã-bị-vô-hiệu-hóa" class="faq-btn"><span class="faq-icon">❓</span>Hiển thị "Tài khoản vô hiệu hóa"?</a>
+    <a href="./faq#hỏi-làm-thế-nào-để-chuyển-đổi-ngôn-ngữ" class="faq-btn"><span class="faq-icon">❓</span>Làm thế nào chuyển đổi ngôn ngữ?</a>
+    <a href="./faq#hỏi-sự-khác-biệt-giữa-vai-trò-ngẫu-nhiên-và-vai-trò-tùy-chỉnh-là-gì" class="faq-btn"><span class="faq-icon">❓</span>Vai trò ngẫu nhiên vs tùy chỉnh?</a>
+    <a href="./faq#hỏi-tại-sao-việc-tạo-vai-trò-lại-mất-nhiều-thời-gian-như-vậy" class="faq-btn"><span class="faq-icon">❓</span>Tại sao việc tạo vai trò diễn ra lâu?</a>
+    <a href="./faq#hỏi-khi-nào-tôi-nên-kết-thúc-cuộc-trò-chuyện" class="faq-btn"><span class="faq-icon">❓</span>Khi nào kết thúc cuộc trò chuyện?</a>
+    <a href="./faq#hỏi-báo-cáo-đánh-giá-bị-kẹt-ở-trạng-thái-đang-tạo" class="faq-btn"><span class="faq-icon">❓</span>Báo cáo đánh giá bị kẹt đang tạo?</a>
   </div>
 </div>

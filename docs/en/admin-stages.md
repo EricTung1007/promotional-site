@@ -5,7 +5,9 @@
 ## Overview
 Sales stages are the foundation of the practice sessions. Each stage represents a crucial step in the conversation; the AI will monitor and evaluate the user based on this configuration.
 
-> Access is restricted to Administrators only.
+::: warning Authorization Notice
+Advanced Stage Management is currently restricted. Only **System Superusers** can view and modify stages.
+:::
 
 ## Interface Structure
 The management page displays a list of stages ordered numerically (typically 1 to 5):

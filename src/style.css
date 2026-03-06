@@ -576,41 +576,49 @@ a {
 
 @media (max-width: 768px) {
   .teardown-container {
-    height: 85vh;
+    height: auto;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Reset the absolute positioning of the container on mobile */
+  .device-layer {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    /* Base scaling is handled by GSAP, but GSAP shouldn't translate it off-center on mobile */
+    margin: 40px auto;
   }
 
   .teardown-label {
+    position: relative;
     width: 90%;
-    left: 5% !important;
+    left: auto !important;
     right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 24px;
+    z-index: 40;
+    /* Ensure they stay on top */
   }
 
   .lbl-content {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 1);
+    /* 100% solid opacity on mobile */
+    backdrop-filter: none;
+    /* Remove blur since it's solid */
     width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    /* Stronger shadow for depth since it's solid */
   }
 
   .lbl-line {
     display: none;
-  }
-
-  .lbl-ui {
-    top: 50% !important;
-  }
-
-  .lbl-body {
-    top: 70% !important;
-  }
-
-  .lbl-ai {
-    top: 90% !important;
-  }
-
-  .device-layer {
-    /* Base scaling is now handled dynamically in main.ts GSAP logic */
-    transform: translate(-50%, -50%);
   }
 }
 

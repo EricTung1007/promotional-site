@@ -7,7 +7,6 @@ The History page provides a complete list of all your practice records, supporti
 
 ## Accessing the Page
 - The **"All"** option in the Dashboard's quick filter
-- Direct access to path `/practice-history`
 
 ## Page Layout
 The History page consists of the following areas:
