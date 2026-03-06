@@ -117,6 +117,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set initial language immediately
   setLanguage(savedLang);
 
+  // Initialize Language Pills
+  const langPills = document.querySelectorAll('.lang-pill');
+  langPills.forEach(pill => {
+    pill.addEventListener('click', (e) => {
+      const target = e.currentTarget as HTMLElement;
+      const lang = target.getAttribute('data-lang') as SupportedLocales;
+      if (lang) {
+        setLanguage(lang);
+        if (langSwitcher) langSwitcher.value = lang;
+        setTimeout(() => ScrollTrigger.refresh(), 100);
+      }
+    });
+  });
+
   // 1. Text Masking Instantiations
   // Hero section specifically (Need a small timeout because setLanguage triggers immediately before)
   const heroSubtitleElements = splitTextForMasking(document.querySelector('.hero-subtitle') as HTMLElement);
