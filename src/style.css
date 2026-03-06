@@ -1091,7 +1091,12 @@ a {
   }
 
   /* Teardown Sequence Fixes */
+  .teardown-section {
+    padding: 0 0 10vh 0;
+  }
+
   .teardown-container {
+    margin-top: 10vh;
     height: 40vh;
   }
 
