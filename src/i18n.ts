@@ -58,6 +58,10 @@ export const i18n = {
         'mod.prac.desc': '擬真 AI 客戶扮演。客製化人設與隨機對話劇本，訓練應變能力。',
         'mod.eval.title': '多維度對話評量',
         'mod.eval.desc': '對話結束即產出綜合評分雷達圖，抓出銷售盲點，即刻改善。',
+        'slogan.title': '不僅是訓練。',
+        'slogan.desc': '更是您邁向頂尖業務的專屬加速器。',
+        'cta.title': '準備好提升您的銷售技巧了嗎？',
+        'cta.desc': '立刻沉浸於 AI 驅動的實戰模擬，成為下一位王牌銷售員。',
         'footer': 'AI Coach — 讓每一次練習都更接近真實，讓每一次對話都更有價值。',
     },
     'en': {
@@ -117,6 +121,10 @@ export const i18n = {
         'mod.prac.desc': 'Hyper-realistic AI customer roleplay. Custom personas and varied scenarios to train adaptability.',
         'mod.eval.title': 'Multi-dimensional Evaluation',
         'mod.eval.desc': 'Comprehensive scoring radar chart generated instantly upon finish, highlighting blind spots to improve.',
+        'slogan.title': 'More than just training.',
+        'slogan.desc': 'It\'s your personal accelerator to the top tier of sales.',
+        'cta.title': 'Ready to elevate your sales game?',
+        'cta.desc': 'Dive into AI-driven practice simulations now and become the next top closer.',
         'footer': 'AI Coach — Making every practice closer to reality, and every conversation more valuable.',
     },
     'vi': {
@@ -176,6 +184,10 @@ export const i18n = {
         'mod.prac.desc': 'Đóng vai khách hàng AI siêu chân thực. Trải nghiệm kịch bản tùy chỉnh để rèn luyện phản ứng.',
         'mod.eval.title': 'Đánh giá đa chiều',
         'mod.eval.desc': 'Biểu đồ radar chấm điểm toàn diện được tạo ngay sau khi kết thúc, giúp tìm ra điểm yếu để cải thiện.',
+        'slogan.title': 'Hơn cả một khóa huấn luyện.',
+        'slogan.desc': 'Đây là máy gia tốc cá nhân đưa bạn lên đỉnh cao doanh số.',
+        'cta.title': 'Bạn đã sẵn sàng nâng tầm kỹ năng bán hàng?',
+        'cta.desc': 'Tham gia ngay vào các mô phỏng AI thực tế và trở thành chuyên gia chốt sale tiếp theo.',
         'footer': 'AI Coach — Làm cho từng bài thực hành chân thực hơn, tạo giá trị cho từng cuộc hội thoại.',
     }
 }

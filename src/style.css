@@ -903,6 +903,84 @@ a {
   margin-right: 0;
 }
 
+/* SLOGAN & CTA SECTIONS (MARKETING) */
+.slogan-section {
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.slogan-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slogan-title {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--text-primary), #555);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slogan-desc {
+  font-size: 28px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.cta-section {
+  padding: 120px 20px;
+  text-align: center;
+  background: var(--text-primary);
+  color: var(--bg-color);
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-title {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  color: var(--bg-secondary);
+}
+
+.cta-desc {
+  font-size: 24px;
+  color: #a1a1a6;
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+
+.cta-btn {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-size: 18px;
+  padding: 16px 36px;
+}
+
+.cta-btn:hover {
+  background-color: var(--bg-secondary);
+  color: var(--accent);
+}
+
 .lang-pill {
   padding: 16px 32px;
   border-radius: 100px;
