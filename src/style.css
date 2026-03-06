@@ -537,7 +537,7 @@ a {
 }
 
 .lbl-body {
-  top: 50%;
+  top: 25%;
   right: -20px;
 }
 
@@ -546,7 +546,7 @@ a {
 }
 
 .lbl-ai {
-  bottom: -5%;
+  bottom: -15%;
   right: -50px;
 }
 
@@ -561,12 +561,12 @@ a {
 
   .lbl-body {
     right: 10px;
-    top: 45%;
+    top: 30%;
   }
 
   .lbl-ai {
     right: -10px;
-    bottom: 0%;
+    bottom: -15%;
   }
 
   .teardown-label {
@@ -597,7 +597,7 @@ a {
   }
 
   .lbl-ui {
-    top: 55% !important;
+    top: 50% !important;
   }
 
   .lbl-body {
@@ -605,7 +605,7 @@ a {
   }
 
   .lbl-ai {
-    top: 85% !important;
+    top: 90% !important;
   }
 
   .device-layer {
@@ -633,35 +633,63 @@ a {
 
 .feature-card {
   min-width: 350px;
-  height: 400px;
+  height: 480px;
+  /* Taller to show off images */
   background: var(--card-bg);
-  border-radius: 24px;
-  padding: 40px;
+  border-radius: 32px;
   border: 1px solid var(--border-color);
-  backdrop-filter: blur(20px);
+  overflow: hidden;
+  position: relative;
+  /* Nano Banana specific styles */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  /* Align content to bottom */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Gradient to ensure text is readable against the generated images */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.nano-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px 32px;
+  width: 100%;
+  color: white;
+  /* Force white text over dark gradient */
 }
 
 .feature-card h3 {
   font-size: 28px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .feature-card p {
-  color: var(--text-secondary);
-  font-size: 18px;
-}
-
-.feature-icon {
-  font-size: 40px;
-  margin-bottom: 24px;
-  background: #ffffff;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  line-height: 1.5;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* ROLES BENTO GRID */

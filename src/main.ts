@@ -334,42 +334,30 @@ document.addEventListener('DOMContentLoaded', () => {
     tTl.to('.teardown-label', { opacity: 0, duration: 0.5 }, 3.5);
   }
 
-  // 5. Features Horizontal Scroll (with Lenis)
+  // 5. Shared Horizontal Scroll Carousels (with Lenis)
   if (window.innerWidth > 768) {
-    const featuresTrack = document.querySelector('.features-track') as HTMLElement
-    if (featuresTrack) {
-      // Add a fixed padding (200px) so the last card clears the right side of the screen perfectly on all viewports
-      const scrollAmount = featuresTrack.scrollWidth - window.innerWidth + 200
-      gsap.to(featuresTrack, {
-        x: -scrollAmount,
-        ease: "none",
-        scrollTrigger: {
-          trigger: '.features-section',
-          start: "center center",
-          end: `+=${scrollAmount}`,
-          pin: true,
-          scrub: true
-        }
-      })
-    }
-  }
+    const tracks = document.querySelectorAll('.features-track');
+    tracks.forEach((track) => {
+      const htmlTrack = track as HTMLElement;
+      // Get the closest section to use as the trigger
+      const triggerSection = htmlTrack.closest('.section') || htmlTrack.parentElement;
+      const scrollAmount = htmlTrack.scrollWidth - window.innerWidth + 200;
 
-  // 6. Roles Bento Grid Staggered Reveal
-  const roleItems = gsap.utils.toArray<HTMLElement>('.role-grid-item')
-  gsap.fromTo(roleItems, {
-    opacity: 0,
-    y: 50
-  }, {
-    scrollTrigger: {
-      trigger: '.roles-grid',
-      start: "top 80%"
-    },
-    opacity: 1,
-    y: 0,
-    stagger: 0.1,
-    duration: 1,
-    ease: "power3.out"
-  })
+      if (triggerSection && scrollAmount > 0) {
+        gsap.to(htmlTrack, {
+          x: -scrollAmount,
+          ease: "none",
+          scrollTrigger: {
+            trigger: triggerSection,
+            start: "center center",
+            end: `+=${scrollAmount}`,
+            pin: true,
+            scrub: true
+          }
+        });
+      }
+    });
+  }
 
   // 7. Modules Cards Scale Outline Staggered Reveal
   const moduleCards = gsap.utils.toArray<HTMLElement>('.module-card')

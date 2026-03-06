@@ -22,3 +22,8 @@ dist-ssr
 *.sln
 *.sw?
 /AI-coach-promotional-site
+# Build output and temp files
+dist/
+docs/.vitepress/.temp/
+docs/.vitepress/cache/
+node_modules/
