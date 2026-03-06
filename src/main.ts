@@ -258,10 +258,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const teardownSection = document.querySelector('.teardown-section');
   if (teardownSection) {
     const isMobile = window.innerWidth <= 768;
-    const baseScale = isMobile ? 0.6 : 0.85;
-    const step1Scale = isMobile ? 0.55 : 0.75;
-    const step3Scale = isMobile ? 0.45 : 0.65;
-    const yOffset = isMobile ? -60 : -36; // Middle ground offset to perfectly balance the layout
+    const baseScale = isMobile ? 0.8 : 0.85;
+    const step1Scale = isMobile ? 0.75 : 0.75;
+    const step3Scale = isMobile ? 0.65 : 0.65;
+    const yOffset = isMobile ? -50 : -36; // Adjusting yOffset to prevent clipping on mobile now that CSS is absolute
 
     // Set the labels' initial state and attach them to the layers using the same transforms
     // but without the 3D rotation offsets so they stay flat.
