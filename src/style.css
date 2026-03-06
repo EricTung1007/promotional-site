@@ -729,6 +729,13 @@ a {
     padding: 20px 0;
   }
 
+  /* Nano Card Specific Overrides for Pictures */
+  .nano-card {
+    min-height: 350px;
+    background-size: cover;
+    background-position: center bottom;
+  }
+
   .feature-card {
     min-width: 100%;
     height: auto;
@@ -754,6 +761,14 @@ a {
     flex-direction: column;
     padding: 30px 20px;
     gap: 30px;
+  }
+
+  .module-graphic {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
   }
 
   .lang-pill {
