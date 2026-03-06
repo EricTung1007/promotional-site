@@ -581,8 +581,8 @@ a {
     height: auto !important;
     min-height: 85vh;
     display: block;
-    padding-top: 520px;
-    /* Space for the 3D absolute phones to animate inside */
+    padding-top: 260px;
+    /* Snug fit for the text cards precisely below the bottom edge of the 3D phone */
   }
 
   /* Force absolute stacking for GSAP 3D overlay on mobile */
@@ -1098,10 +1098,6 @@ a {
     margin-top: 10vh;
     height: auto !important;
     /* Let it expand for the text cards */
-  }
-
-  .device-layer {
-    /* Dimensions inherited from desktop to prevent double-shrink with GSAP */
   }
 
   .chat-bubble {

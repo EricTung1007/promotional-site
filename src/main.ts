@@ -332,10 +332,10 @@ document.addEventListener('DOMContentLoaded', () => {
       tTl.to('.layer-body', { z: 0, duration: 2 }, 1.5);
       tTl.to('.layer-ai', { z: -200, yPercent: yOffset + 15, xPercent: -35, duration: 2 }, 1.5);
     } else {
-      // Very slight spread on mobile to keep things compact
-      tTl.to('.layer-ui', { z: 50, yPercent: yOffset - 5, xPercent: -50, duration: 2 }, 1.5);
+      // Elegant 3D spread on mobile that does NOT close together
+      tTl.to('.layer-ui', { z: 80, yPercent: yOffset - 5, xPercent: -60, duration: 2 }, 1.5);
       tTl.to('.layer-body', { z: 0, duration: 2 }, 1.5);
-      tTl.to('.layer-ai', { z: -50, yPercent: yOffset + 5, xPercent: -50, duration: 2 }, 1.5);
+      tTl.to('.layer-ai', { z: -80, yPercent: yOffset + 5, xPercent: -40, duration: 2 }, 1.5);
     }
 
     // Fade in Explanatory Labels as soon as the spread begins settling
