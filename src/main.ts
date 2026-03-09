@@ -358,9 +358,11 @@ document.addEventListener('DOMContentLoaded', () => {
     ease: "power3.out"
   })
 
-  // 7. Modules Container Scale Outline
-  gsap.fromTo('.modules-container', {
+  // 7. Modules Grid Bento Staggered Reveal
+  const moduleItems = gsap.utils.toArray<HTMLElement>('.module-card')
+  gsap.fromTo(moduleItems, {
     opacity: 0,
+    y: 50,
     scale: 0.95
   }, {
     scrollTrigger: {
@@ -368,7 +370,9 @@ document.addEventListener('DOMContentLoaded', () => {
       start: "top 75%"
     },
     opacity: 1,
+    y: 0,
     scale: 1,
+    stagger: 0.1,
     duration: 1.2,
     ease: "power4.out"
   })
