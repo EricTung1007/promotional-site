@@ -914,6 +914,7 @@ a {
   opacity: 0;
   z-index: 30;
   pointer-events: none;
+  transform: translateZ(300px);
 }
 
 .lbl-ui {
