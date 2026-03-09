@@ -307,9 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tTl.to('.layer-body', { z: 0, duration: 2 }, 1.5);
     tTl.to('.layer-ai', { z: -200, yPercent: -35, xPercent: -35, duration: 2 }, 1.5);
 
-    if (window.innerWidth > 768) {
-      tTl.to('.teardown-label', { opacity: 1, duration: 1, stagger: 0.2 }, 2);
-    }
+    tTl.to('.teardown-label', { opacity: 1, duration: 1, stagger: 0.2 }, 2);
 
     // Step 4: Graceful fade out to prevent visual bleed during natural scroll
     tTl.to('.teardown-container', { opacity: 0, scale: 0.55, yPercent: -20, duration: 1.5 }, 3.5);
