@@ -893,18 +893,18 @@ a {
 
 .lbl-ui {
   top: 15%;
-  left: -25%;
+  left: -20%;
 }
 
 .lbl-body {
-  top: 40%;
-  right: -25%;
+  top: 30%;
+  right: -20%;
   left: auto;
 }
 
 .lbl-ai {
-  top: 70%;
-  right: -25%;
+  top: 80%;
+  right: -20%;
   left: auto;
 }
 
