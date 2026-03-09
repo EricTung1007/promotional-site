@@ -885,7 +885,7 @@ a {
 /* TEARDOWN DESKTOP LABELS */
 .teardown-label {
   position: absolute;
-  width: 280px;
+  width: 320px;
   opacity: 0;
   z-index: 30;
   pointer-events: none;
@@ -893,17 +893,19 @@ a {
 
 .lbl-ui {
   top: 15%;
-  left: 0%;
+  left: -25%;
 }
 
 .lbl-body {
-  top: 45%;
-  left: 0%;
+  top: 40%;
+  right: -25%;
+  left: auto;
 }
 
 .lbl-ai {
-  top: 75%;
-  left: 0%;
+  top: 70%;
+  right: -25%;
+  left: auto;
 }
 
 .lbl-content {
