@@ -35,13 +35,11 @@ function splitTextForMasking(element: HTMLElement) {
   // simple split by spaces for words, or we can just split lines naively
   const words = text.split(' ');
 
-  words.forEach((word) => {
+  words.forEach((word, index) => {
     const wrapper = document.createElement('span');
     wrapper.style.overflow = 'hidden';
     wrapper.style.display = 'inline-block';
     wrapper.style.verticalAlign = 'top';
-    // Add a space after the word wrapper for natural flowing
-    wrapper.style.marginRight = '0.25em';
 
     const inner = document.createElement('span');
     inner.style.display = 'inline-block';
@@ -50,6 +48,9 @@ function splitTextForMasking(element: HTMLElement) {
 
     wrapper.appendChild(inner);
     element.appendChild(wrapper);
+    if (index < words.length - 1) {
+      element.appendChild(document.createTextNode(' '));
+    }
   });
 
   return element.querySelectorAll('.mask-inner');
@@ -171,18 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }, "-=0.8")
   }, 50);
 
-  // 1b. Background Subtle Logo Rotation
-  gsap.to('.bg-logo-shape', {
-    scrollTrigger: {
-      trigger: 'body',
-      start: "top top",
-      endTrigger: ".teardown-section",
-      end: "bottom bottom",
-      scrub: 1
-    },
-    rotationY: 720, // Spin like a coin (diffrent axis) so words stay upright
-    ease: "none"
-  });
+
 
   // 2. Magnetic Buttons Effect
   const magneticEls = document.querySelectorAll('.magnetic-btn');
@@ -317,28 +307,32 @@ document.addEventListener('DOMContentLoaded', () => {
     tTl.to('.layer-body', { z: 0, duration: 2 }, 1.5);
     tTl.to('.layer-ai', { z: -200, yPercent: -35, xPercent: -35, duration: 2 }, 1.5);
 
+    if (window.innerWidth > 768) {
+      tTl.to('.teardown-label', { opacity: 1, duration: 1, stagger: 0.2 }, 2);
+    }
+
     // Step 4: Graceful fade out to prevent visual bleed during natural scroll
     tTl.to('.teardown-container', { opacity: 0, scale: 0.55, yPercent: -20, duration: 1.5 }, 3.5);
   }
 
-  // 5. Features Horizontal Scroll (with Lenis)
+  // 5. Features & Roles Horizontal Scroll (with Lenis)
   if (window.innerWidth > 768) {
-    const featuresTrack = document.querySelector('.features-track') as HTMLElement
-    if (featuresTrack) {
+    const featureTracks = gsap.utils.toArray<HTMLElement>('.features-track')
+    featureTracks.forEach((track) => {
       // Add a fixed padding (200px) so the last card clears the right side of the screen perfectly on all viewports
-      const scrollAmount = featuresTrack.scrollWidth - window.innerWidth + 200
-      gsap.to(featuresTrack, {
+      const scrollAmount = track.scrollWidth - window.innerWidth + 200
+      gsap.to(track, {
         x: -scrollAmount,
         ease: "none",
         scrollTrigger: {
-          trigger: '.features-section',
+          trigger: track.closest('.section'),
           start: "center center",
           end: `+=${scrollAmount}`,
           pin: true,
           scrub: true
         }
       })
-    }
+    })
   }
 
   // 6. Roles Bento Grid Staggered Reveal
