@@ -1067,18 +1067,20 @@ a {
 
   /* Nano Card Specific Overrides for Pictures */
   .nano-card {
-    min-height: 400px;
-    background-size: 85%;
-    background-position: center bottom -15px;
+    min-height: 500px;
+    background-size: 70%;
+    background-position: center bottom -10px;
     background-repeat: no-repeat;
   }
 
   .nano-content {
     text-align: center;
+    padding-bottom: 24px;
   }
 
   .feature-card {
     min-width: 100%;
+    min-height: 500px;
     height: auto;
     padding: 32px 24px;
     border-radius: 36px;
