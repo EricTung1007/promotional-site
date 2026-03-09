@@ -246,7 +246,7 @@ a {
 
 .teardown-container {
   position: relative;
-  margin-top: 10vh;
+  margin-top: 15vh;
   /* Re-adding space so it sits below hero */
   width: 100%;
   max-width: 900px;
@@ -1026,7 +1026,7 @@ a {
   .hero-section {
     padding-top: 100px;
     min-height: auto;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
   }
 
   .hero-title {
@@ -1074,7 +1074,7 @@ a {
   .teardown-label {
     position: relative;
     width: 100%;
-    margin-top: 12px;
+    margin-top: 10px;
     left: auto !important;
     right: auto !important;
     top: auto !important;
