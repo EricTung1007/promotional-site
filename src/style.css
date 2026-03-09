@@ -587,28 +587,290 @@ a {
   flex: 1;
 }
 
-.module-graphic {
-  flex: 1;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  background: #f5f5f7;
-  padding: 40px;
-  border-radius: 24px;
+.module-icon {
+  font-size: 40px;
+  margin-bottom: 24px;
 }
 
-.lang-pill {
-  padding: 16px 32px;
-  border-radius: 100px;
+.module-preview {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color);
+  padding: 40px;
+  border-radius: 24px;
   border: 1px solid var(--border-color);
-  font-size: 24px;
-  font-weight: 500;
+  overflow: hidden;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* 1. Chat Simulation UI Preview */
+.preview-chat-ui {
+  width: 100%;
+  max-width: 320px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.preview-chat-header {
+  padding: 12px 16px;
+  background: #f9f9f9;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.preview-chat-header .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e5e5ea;
+}
+
+.preview-chat-header .dot:nth-child(1) {
+  background: #ff5f56;
+}
+
+.preview-chat-header .dot:nth-child(2) {
+  background: #ffbd2e;
+}
+
+.preview-chat-header .dot:nth-child(3) {
+  background: #27c93f;
+}
+
+.preview-chat-header .header-title {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 600;
   color: var(--text-secondary);
 }
 
-.lang-pill.active {
-  background: var(--text-primary);
-  color: var(--bg-color);
+.preview-chat-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.preview-chat-body .msg {
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 13px;
+  max-width: 85%;
+}
+
+.preview-chat-body .msg.left {
+  background: #f0f0f5;
+  color: #1d1d1f;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.preview-chat-body .msg.right {
+  background: var(--accent);
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+/* 2. Radar Chart UI Preview */
+.preview-chart-ui {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.radar-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid #e5e5ea;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+}
+
+.radar-score {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.radar-metrics {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radar-metrics .metric {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.radar-metrics .label {
+  width: 45px;
+  text-align: right;
+}
+
+.radar-metrics .bar-bg {
+  flex: 1;
+  height: 6px;
+  background: #e5e5ea;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.radar-metrics .bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* 3. Translation UI Preview */
+.preview-translation-ui {
+  width: 100%;
+  max-width: 320px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.lang-tabs {
+  display: flex;
+  background: #f9f9f9;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.lang-tabs .tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+}
+
+.lang-tabs .tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  background: white;
+}
+
+.translation-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.translation-body p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.translation-body .source-text {
+  color: var(--text-secondary);
+}
+
+.translation-body .divider {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.translation-body .divider::before,
+.translation-body .divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: #e5e5ea;
+}
+
+.translation-body .divider::before {
+  left: 0;
+}
+
+.translation-body .divider::after {
+  right: 0;
+}
+
+/* 4. RAG Search UI Preview */
+.preview-rag-ui {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.preview-rag-ui .search-box {
+  background: white;
+  padding: 14px 20px;
+  border-radius: 100px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.preview-rag-ui .typing-text {
+  border-right: 2px solid var(--text-primary);
+  padding-right: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.preview-rag-ui .search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.result-item {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* FOOTER */
@@ -795,16 +1057,8 @@ a {
     gap: 24px;
   }
 
-  .module-graphic {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  .lang-pill {
-    padding: 12px 24px;
-    font-size: 18px;
+  .module-preview {
+    padding: 24px;
+    border-radius: 20px;
   }
 }

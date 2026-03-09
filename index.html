@@ -227,16 +227,21 @@
         <!-- Practice Simulation Module Card -->
         <div class="module-card">
           <div class="module-text">
+            <div class="module-icon">💡</div>
             <h2 class="section-title mask-text" data-i18n="mod.prac.title">沈浸式對話練習</h2>
-            <p class="section-desc mask-text" style="margin-top:20px;" data-i18n="mod.prac.desc">擬真 AI
+            <p class="section-desc mask-text" style="margin-top:10px;" data-i18n="mod.prac.desc">擬真 AI
               客戶扮演。客製化人設與隨機對話劇本，訓練應變能力。</p>
           </div>
-          <div class="module-graphic prac-graphic">
-            <div class="prac-chat-container">
-              <div class="prac-bubble cb-ai"></div>
-              <div class="prac-bubble cb-user"></div>
-              <div class="prac-bubble cb-ai typing">
-                <span></span><span></span><span></span>
+          <div class="module-preview">
+            <div class="preview-chat-ui">
+              <div class="preview-chat-header">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="header-title">AI 客戶 - 王先生</span>
+              </div>
+              <div class="preview-chat-body">
+                <div class="msg right">您好！我是國泰人壽的林專員...</div>
+                <div class="msg left">這個保單的彈性好嗎？</div>
+                <div class="msg right typing"><span></span><span></span><span></span></div>
               </div>
             </div>
           </div>
@@ -245,49 +250,80 @@
         <!-- Evaluation Reports Module Card -->
         <div class="module-card">
           <div class="module-text">
+            <div class="module-icon">🎯</div>
             <h2 class="section-title mask-text" data-i18n="mod.eval.title">多維度對話評量</h2>
-            <p class="section-desc mask-text" style="margin-top:20px;" data-i18n="mod.eval.desc">
+            <p class="section-desc mask-text" style="margin-top:10px;" data-i18n="mod.eval.desc">
               對話結束即產出綜合評分雷達圖，抓出銷售盲點，即刻改善。</p>
           </div>
-          <div class="module-graphic eval-graphic">
-            <div class="eval-chart">
-              <div class="eval-bar b1"></div>
-              <div class="eval-bar b2"></div>
-              <div class="eval-bar b3"></div>
-              <div class="eval-bar b4"></div>
+          <div class="module-preview">
+            <div class="preview-chart-ui">
+              <div class="radar-circle">
+                <div class="radar-polygon mask-polygon"></div>
+                <div class="radar-score">A+</div>
+              </div>
+              <div class="radar-metrics">
+                <div class="metric"><span class="label">同理心</span>
+                  <div class="bar-bg">
+                    <div class="bar" style="width: 90%;"></div>
+                  </div>
+                </div>
+                <div class="metric"><span class="label">專業度</span>
+                  <div class="bar-bg">
+                    <div class="bar" style="width: 85%;"></div>
+                  </div>
+                </div>
+                <div class="metric"><span class="label">促結力</span>
+                  <div class="bar-bg">
+                    <div class="bar" style="width: 70%;"></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="eval-score">A+</div>
           </div>
         </div>
 
         <!-- Cross Border Module Card -->
         <div class="module-card">
           <div class="module-text">
+            <div class="module-icon">🌍</div>
             <h2 class="section-title mask-text" data-i18n="mod.title">Cộng tác xuyên biên giới</h2>
-            <p class="section-desc mask-text" style="margin-top:20px;" data-i18n="mod.desc">Hỗ trợ đa ngôn ngữ, chuyển
+            <p class="section-desc mask-text" style="margin-top:10px;" data-i18n="mod.desc">Hỗ trợ đa ngôn ngữ, chuyển
               đổi mượt mà. Đội ngũ xuyên quốc gia sử dụng dễ dàng.</p>
           </div>
-          <div class="module-graphic">
-            <div class="lang-pill active magnetic-btn" data-lang="vi">vi</div>
-            <div class="lang-pill magnetic-btn" data-lang="en">en</div>
-            <div class="lang-pill magnetic-btn" data-lang="zh-TW">zh-TW</div>
+          <div class="module-preview">
+            <div class="preview-translation-ui">
+              <div class="lang-tabs">
+                <div class="tab">Tiếng Việt</div>
+                <div class="tab active">繁體中文</div>
+              </div>
+              <div class="translation-body">
+                <p class="source-text">Lợi nhuận bảo hiểm hiện tại không cao...</p>
+                <div class="divider">AI Ánh xạ</div>
+                <p class="target-text">這個保單目前的投報率不高...</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- RAG Database Module Card -->
         <div class="module-card">
           <div class="module-text">
+            <div class="module-icon">📚</div>
             <h2 class="section-title mask-text" data-i18n="mod.rag.title">Cơ sở dữ liệu RAG</h2>
-            <p class="section-desc mask-text" style="margin-top:20px;" data-i18n="mod.rag.desc">Truy xuất ngay tài liệu
+            <p class="section-desc mask-text" style="margin-top:10px;" data-i18n="mod.rag.desc">Truy xuất ngay tài liệu
               sản phẩm và cơ sở kiến thức mà không cần rời khỏi môi trường huấn luyện.</p>
           </div>
-          <div class="module-graphic rag-graphic">
-            <div class="rag-db-icon">📚</div>
-            <div class="rag-search-bar">
-              <span class="rag-search-icon">🔍</span>
-              <div class="rag-search-text typing-fast"><span></span><span></span><span></span></div>
+          <div class="module-preview">
+            <div class="preview-rag-ui">
+              <div class="search-box">
+                <span class="icon">🔍</span>
+                <span class="typing-text">Quyền lợi thai sản gói VITA...</span>
+              </div>
+              <div class="search-results">
+                <div class="result-item">📄 Hướng dẫn VITA (Trang 12)</div>
+                <div class="result-item">📄 Sổ tay tư vấn 2024</div>
+              </div>
             </div>
-            <div class="rag-doc-icon">📄</div>
           </div>
         </div>
 
@@ -295,12 +331,14 @@
     </section>
 
     <!-- Final Call to Action -->
-    <section class="section cta-section">
+    <section class="section cta-section" style="padding-top: 20px;">
       <div class="cta-container">
         <h2 class="cta-title mask-text" data-i18n="cta.title">準備好提升您的銷售技巧了嗎？</h2>
         <p class="cta-desc mask-text" data-i18n="cta.desc">立刻沉浸於 AI 驅動的實戰模擬，成為下一位王牌銷售員。</p>
-        <a href="https://ai-coach-frontend-service-for-dev-218172420486.asia-east1.run.app/"
-          class="btn-primary cta-btn magnetic-btn" target="_blank" data-i18n="nav.start">開始訓練</a>
+        <div class="cta-action-wrapper" style="margin-top: 40px;">
+          <a href="https://ai-coach-frontend-service-for-dev-218172420486.asia-east1.run.app/"
+            class="btn-primary cta-btn magnetic-btn" target="_blank" data-i18n="nav.start">開始訓練</a>
+        </div>
       </div>
     </section>
 
