@@ -310,7 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
         yPercent: isDesktop ? -60 : -55,
         xPercent: isDesktop ? -60 : -55,
         z: isDesktop ? 120 : 100, // Increased Z to clear the rotation intersection
-        rotateX: isDesktop ? 10 : 10, // Restored original "fan out" rotation
         duration: 1.5,
         ease: "power2.out"
       }, 0.5);
@@ -327,7 +326,6 @@ document.addEventListener('DOMContentLoaded', () => {
         yPercent: isDesktop ? -40 : -45,
         xPercent: isDesktop ? -40 : -45,
         z: isDesktop ? -120 : -100, // Increased Z to clear the rotation intersection
-        rotateX: isDesktop ? -10 : -10, // Restored original "fan out" rotation
         duration: 1.5,
         ease: "power2.out"
       }, 0.5);
