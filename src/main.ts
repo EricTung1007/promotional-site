@@ -309,8 +309,8 @@ document.addEventListener('DOMContentLoaded', () => {
         opacity: 1,
         yPercent: isDesktop ? -60 : -55,
         xPercent: isDesktop ? -60 : -55,
-        z: isDesktop ? 120 : 60,
-        rotateX: isDesktop ? 10 : 10, // Maintain geometry angle
+        z: isDesktop ? 120 : 100, // Increased Z to clear the rotation intersection
+        rotateX: isDesktop ? 10 : 10, // Restored original "fan out" rotation
         duration: 1.5,
         ease: "power2.out"
       }, 0.5);
@@ -326,8 +326,8 @@ document.addEventListener('DOMContentLoaded', () => {
         opacity: 1,
         yPercent: isDesktop ? -40 : -45,
         xPercent: isDesktop ? -40 : -45,
-        z: isDesktop ? -120 : -60,
-        rotateX: isDesktop ? -10 : -10, // Maintain geometry angle
+        z: isDesktop ? -120 : -100, // Increased Z to clear the rotation intersection
+        rotateX: isDesktop ? -10 : -10, // Restored original "fan out" rotation
         duration: 1.5,
         ease: "power2.out"
       }, 0.5);
@@ -337,9 +337,9 @@ document.addEventListener('DOMContentLoaded', () => {
       tTl.to('.device-layer', { rotateX: isDesktop ? 30 : 30, rotateY: isDesktop ? -10 : -10, scale: isDesktop ? 0.65 : 0.55, duration: 2 }, 1.5);
 
       // Spread them further but keep inside screen relative to the -50% center
-      tTl.to('.layer-ui', { z: isDesktop ? 200 : 80, yPercent: isDesktop ? -65 : -60, xPercent: isDesktop ? -65 : -60, duration: 2 }, 1.5);
+      tTl.to('.layer-ui', { z: isDesktop ? 200 : 150, yPercent: isDesktop ? -65 : -60, xPercent: isDesktop ? -65 : -60, duration: 2 }, 1.5);
       tTl.to('.layer-body', { z: 0, duration: 2 }, 1.5);
-      tTl.to('.layer-ai', { z: isDesktop ? -200 : -80, yPercent: isDesktop ? -35 : -40, xPercent: isDesktop ? -35 : -40, duration: 2 }, 1.5);
+      tTl.to('.layer-ai', { z: isDesktop ? -200 : -150, yPercent: isDesktop ? -35 : -40, xPercent: isDesktop ? -35 : -40, duration: 2 }, 1.5);
 
       tTl.to('.teardown-label', { opacity: 1, duration: 1, stagger: 0.2 }, 2);
 
