@@ -158,38 +158,38 @@ document.addEventListener('DOMContentLoaded', () => {
     tl.to(heroWords, {
       y: 0,
       opacity: 1,
-      duration: 1.2,
-      stagger: 0.1,
+      duration: 0.8,
+      stagger: 0.05,
       ease: "power4.out"
     })
       // Mask reveal for subtitle
       .from(heroSubtitleElements, {
         y: "100%",
-        duration: 1,
-        stagger: 0.05,
+        duration: 0.8,
+        stagger: 0.03,
         ease: "power4.out"
-      }, "-=0.8")
+      }, "-=0.6")
       // Fade Description
       .to('.hero-description', {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 0.8,
         ease: "power3.out"
       }, "-=0.6")
       // Fade Actions
       .to('.hero-actions', {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 0.8,
         ease: "power3.out"
-      }, "-=0.8")
+      }, "-=0.6")
       // Float mockup
       .to('.hero-visual', {
         opacity: 1,
         y: 0,
-        duration: 1.5,
+        duration: 1.0,
         ease: "power3.out"
-      }, "-=0.8")
+      }, "-=0.6")
   }, 50);
 
 
@@ -266,71 +266,84 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4b. Ultra-Premium Teardown Sequence
+  // 4b. Ultra-Premium Teardown Sequence (Responsive MatchMedia)
   const teardownSection = document.querySelector('.teardown-section');
   if (teardownSection) {
-    const tTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".teardown-section",
-        start: "center center",
-        end: "+=800",
-        scrub: 1, // smooth dragging tied to lenis
-        pin: true,
-      }
+    const tMm = gsap.matchMedia();
+
+    // Reusable core animation setup mapped for responsiveness
+    tMm.add({
+      isDesktop: "(min-width: 769px)",
+      isMobile: "(max-width: 768px)"
+    }, (context) => {
+      let { isDesktop } = context.conditions as { isDesktop: boolean; isMobile: boolean; };
+
+      const tTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".teardown-section",
+          start: isDesktop ? "center center" : "top top", // Pin earlier on mobile so cards fit below
+          end: isDesktop ? "+=800" : "+=600",
+          scrub: 1,
+          pin: true,
+        }
+      });
+
+      // Initial state setup
+      gsap.set('.device-layer', { z: 0, scale: isDesktop ? 0.85 : 0.65, rotateX: 0, rotateY: 0, xPercent: -50, yPercent: -50 });
+      gsap.set('.layer-ui', { opacity: 0 });
+      gsap.set('.layer-ai', { opacity: 0 });
+      gsap.set('.layer-body', { opacity: 1 });
+
+      // Step 1: All layers tilt back together to prevent Z-fighting
+      tTl.to('.device-layer', {
+        rotateX: isDesktop ? 45 : 30, // Less tilt on mobile
+        rotateY: isDesktop ? -15 : 0,  // Keep perfectly centered horizontally on mobile
+        scale: isDesktop ? 0.75 : 0.6,
+        duration: 1
+      }, 0);
+
+      // Step 2: Layers separate in 3D space
+      // Chat UI springs UP
+      tTl.to('.layer-ui', {
+        opacity: 1,
+        yPercent: isDesktop ? -60 : -45, // Hugely shortened separation for mobile
+        xPercent: isDesktop ? -60 : -45, // Hugely shortened separation for mobile
+        z: isDesktop ? 120 : 50,
+        rotateX: isDesktop ? 10 : 0,
+        duration: 1.5,
+        ease: "power2.out"
+      }, 0.5);
+
+      // Dim the cover page slightly but KEEP IT VISIBLE
+      tTl.to('.layer-body', {
+        opacity: 0.6,
+        duration: 1
+      }, 0.5);
+
+      // AI Core emerges DOWN
+      tTl.to('.layer-ai', {
+        opacity: 1,
+        yPercent: isDesktop ? -40 : -5, // Hugely shortened separation for mobile
+        xPercent: isDesktop ? -40 : -5, // Hugely shortened separation for mobile
+        z: isDesktop ? -120 : -50,
+        rotateX: isDesktop ? -10 : 0,
+        duration: 1.5,
+        ease: "power2.out"
+      }, 0.5);
+
+      // Step 3: Final glorious spread out (adjusting spread to keep in view)
+      tTl.to('.device-layer', { rotateX: isDesktop ? 30 : 20, rotateY: isDesktop ? -10 : 0, scale: isDesktop ? 0.65 : 0.55, duration: 2 }, 1.5);
+
+      // Spread them further but keep inside screen relative to the -50% center
+      tTl.to('.layer-ui', { z: isDesktop ? 200 : 70, yPercent: isDesktop ? -65 : -50, xPercent: isDesktop ? -65 : -50, duration: 2 }, 1.5);
+      tTl.to('.layer-body', { z: 0, duration: 2 }, 1.5);
+      tTl.to('.layer-ai', { z: isDesktop ? -200 : -70, yPercent: isDesktop ? -35 : 0, xPercent: isDesktop ? -35 : 0, duration: 2 }, 1.5);
+
+      tTl.to('.teardown-label', { opacity: 1, duration: 1, stagger: 0.2 }, 2);
+
+      // Step 4: Graceful fade out to prevent visual bleed during natural scroll
+      tTl.to('.teardown-container', { opacity: 0, scale: 0.55, yPercent: -20, duration: 1.5 }, 3.5);
     });
-
-    // Initial state setup
-    // Center them all with neutral rotation, keeping the -50% translation offset!
-    gsap.set('.device-layer', { z: 0, scale: 0.85, rotateX: 0, rotateY: 0, xPercent: -50, yPercent: -50 });
-    gsap.set('.layer-ui', { opacity: 0 });
-    gsap.set('.layer-ai', { opacity: 0 });
-    gsap.set('.layer-body', { opacity: 1 });
-
-    // Step 1: All layers tilt back together to prevent Z-fighting
-    tTl.to('.device-layer', {
-      rotateX: 45,
-      rotateY: -15,
-      scale: 0.75,
-      duration: 1
-    }, 0);
-
-    // Step 2: Layers separate in 3D space
-    // Chat UI springs UP
-    tTl.to('.layer-ui', {
-      opacity: 1,
-      z: 120,
-      yPercent: -60, // -50 (base) - 10 (movement)
-      xPercent: -60, // -50 (base) - 10 (movement)
-      duration: 1
-    }, 0.5);
-
-    // Dim the cover page slightly but KEEP IT VISIBLE
-    tTl.to('.layer-body', {
-      opacity: 0.6,
-      duration: 1
-    }, 0.5);
-
-    // AI Core emerges DOWN
-    tTl.to('.layer-ai', {
-      opacity: 1,
-      z: -120,
-      yPercent: -40, // -50 (base) + 10 (movement)
-      xPercent: -40, // -50 (base) + 10 (movement)
-      duration: 1
-    }, 0.5);
-
-    // Step 3: Final glorious spread out (adjusting spread to keep in view)
-    tTl.to('.device-layer', { rotateX: 30, rotateY: -10, scale: 0.65, duration: 2 }, 1.5);
-
-    // Spread them further but keep inside screen relative to the -50% center
-    tTl.to('.layer-ui', { z: 200, yPercent: -65, xPercent: -65, duration: 2 }, 1.5);
-    tTl.to('.layer-body', { z: 0, duration: 2 }, 1.5);
-    tTl.to('.layer-ai', { z: -200, yPercent: -35, xPercent: -35, duration: 2 }, 1.5);
-
-    tTl.to('.teardown-label', { opacity: 1, duration: 1, stagger: 0.2 }, 2);
-
-    // Step 4: Graceful fade out to prevent visual bleed during natural scroll
-    tTl.to('.teardown-container', { opacity: 0, scale: 0.55, yPercent: -20, duration: 1.5 }, 3.5);
   }
 
   // 5. Features & Roles Horizontal Scroll (with Lenis and dynamic resizing)
