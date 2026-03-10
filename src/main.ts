@@ -57,6 +57,14 @@ function splitTextForMasking(element: HTMLElement) {
 }
 
 // --- i18n Localization Engine ---
+function getCurrentLanguageFromUrl(): SupportedLocales {
+  const path = window.location.pathname;
+  if (path.includes('/en/')) return 'en';
+  if (path.includes('/zh-TW/')) return 'zh-TW';
+  if (path.includes('/vi/')) return 'vi';
+  return 'vi'; // Default fallback
+}
+
 function setLanguage(lang: SupportedLocales) {
   const dictionary = i18n[lang];
   if (!dictionary) return;
@@ -101,17 +109,21 @@ function setLanguage(lang: SupportedLocales) {
 document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize Language Switcher
-  const savedLang = (localStorage.getItem('ai-coach-lang') || 'zh-TW') as SupportedLocales;
+  const savedLang = getCurrentLanguageFromUrl();
   const langSwitcher = document.getElementById('lang-switcher') as HTMLSelectElement;
 
   if (langSwitcher) {
     langSwitcher.value = savedLang;
     langSwitcher.addEventListener('change', (e) => {
       const target = e.target as HTMLSelectElement;
-      setLanguage(target.value as SupportedLocales);
+      const newLang = target.value as SupportedLocales;
 
-      // Re-trigger scrolltrigger calculations in case text height changed significantly
-      setTimeout(() => ScrollTrigger.refresh(), 100);
+      // Navigate to the correct URL based on language selection
+      let newPath = '/promotional-site/';
+      if (newLang === 'en') newPath = '/promotional-site/en/';
+      if (newLang === 'zh-TW') newPath = '/promotional-site/zh-TW/';
+
+      window.location.href = newPath;
     });
   }
 
@@ -123,11 +135,12 @@ document.addEventListener('DOMContentLoaded', () => {
   langPills.forEach(pill => {
     pill.addEventListener('click', (e) => {
       const target = e.currentTarget as HTMLElement;
-      const lang = target.getAttribute('data-lang') as SupportedLocales;
-      if (lang) {
-        setLanguage(lang);
-        if (langSwitcher) langSwitcher.value = lang;
-        setTimeout(() => ScrollTrigger.refresh(), 100);
+      const newLang = target.getAttribute('data-lang') as SupportedLocales;
+      if (newLang) {
+        let newPath = '/promotional-site/vi/';
+        if (newLang === 'en') newPath = '/promotional-site/en/';
+        if (newLang === 'zh-TW') newPath = '/promotional-site/zh-TW/';
+        window.location.href = newPath;
       }
     });
   });
@@ -156,13 +169,20 @@ document.addEventListener('DOMContentLoaded', () => {
         stagger: 0.05,
         ease: "power4.out"
       }, "-=0.8")
+      // Fade Description
+      .to('.hero-description', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out"
+      }, "-=0.6")
       // Fade Actions
       .to('.hero-actions', {
         opacity: 1,
         y: 0,
         duration: 1,
         ease: "power3.out"
-      }, "-=0.6")
+      }, "-=0.8")
       // Float mockup
       .to('.hero-visual', {
         opacity: 1,
@@ -253,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollTrigger: {
         trigger: ".teardown-section",
         start: "center center",
-        end: "+=1200",
+        end: "+=800",
         scrub: 1, // smooth dragging tied to lenis
         pin: true,
       }
@@ -313,25 +333,39 @@ document.addEventListener('DOMContentLoaded', () => {
     tTl.to('.teardown-container', { opacity: 0, scale: 0.55, yPercent: -20, duration: 1.5 }, 3.5);
   }
 
-  // 5. Features & Roles Horizontal Scroll (with Lenis)
-  if (window.innerWidth > 768) {
+  // 5. Features & Roles Horizontal Scroll (with Lenis and dynamic resizing)
+  const mm = gsap.matchMedia();
+
+  mm.add("(min-width: 768px)", () => {
     const featureTracks = gsap.utils.toArray<HTMLElement>('.features-track')
+
     featureTracks.forEach((track) => {
-      // Add a fixed padding (200px) so the last card clears the right side of the screen perfectly on all viewports
-      const scrollAmount = track.scrollWidth - window.innerWidth + 200
+
+      // Calculate dynamic scroll amount.
+      const getScrollAmount = () => {
+        let trackWidth = track.scrollWidth;
+        let containerWidth = track.parentElement!.offsetWidth;
+        // The max distance the track needs to scroll is its width minus its container's width, plus a small padding
+        return Math.max(0, trackWidth - containerWidth + 40);
+      };
+
+      // We explicitly create the trigger unconditionally, but pass it functional 
+      // values so that if the screen resizes to 'fit' everything, the math 
+      // returns 0, and the animation gracefully skips.
       gsap.to(track, {
-        x: -scrollAmount,
+        x: () => -getScrollAmount(),
         ease: "none",
         scrollTrigger: {
           trigger: track.closest('.section'),
           start: "center center",
-          end: `+=${scrollAmount}`,
+          end: () => `+=${getScrollAmount()}`,
           pin: true,
-          scrub: true
+          scrub: true,
+          invalidateOnRefresh: true // Re-calculate these functional values on resize!
         }
-      })
-    })
-  }
+      });
+    });
+  });
 
   // 6. Roles Bento Grid Staggered Reveal
   const roleItems = gsap.utils.toArray<HTMLElement>('.role-grid-item')

@@ -10,6 +10,7 @@ export const i18n = {
         'hero.title1': '智能銷售.',
         'hero.title2': '重新定義.',
         'hero.subtitle': '透過 AI 驅動的客戶模擬對話，提升保險銷售人員的實戰溝通能力。',
+        'hero.desc': '結合大語言模型與專業保險知識庫，AI Coach 提供擬真的客製化情境模擬，讓您的團隊在無壓力的環境下反覆演練，快速提升溝通與促結能力。',
         'hero.explore': '探索 AI Coach',
         'hero.more': '了解更多 >',
         'chat.b1': '王先生早安！我是國泰人壽的小林，之前提到的理財專案...',
@@ -22,11 +23,11 @@ export const i18n = {
 
         // Teardown Labels
         'tear.lbl.ui': '互動式對話介面',
-        'tear.lbl.ui.desc': '與擬真 AI 客戶進行流暢的對話練習。',
+        'tear.lbl.ui.desc': '與擬真 AI 客戶進行流暢的語音與文字對話練習。系統根據客戶的情緒、性格與產品理解度即時給予真實的反應。',
         'tear.lbl.body': '人設與 RAG 系統',
-        'tear.lbl.body.desc': '動態生成客戶背景，並即時檢索企業知識庫。',
+        'tear.lbl.body.desc': '運用 RAG 技術動態生成客戶背景與情境，並即時檢索企業內部知識庫，確保每一場模擬都符合真實銷售場景。',
         'tear.lbl.ai': 'AI 評估後端',
-        'tear.lbl.ai.desc': '驅動即時對話生成、邏輯分析與最終評分。',
+        'tear.lbl.ai.desc': '強大的評估引擎在背景運作，驅動即時對話生成、對話邏輯分析，並在對話結束後生成多維度的最終表現評分報告。',
 
         'feat.title': '核心價值',
         'feat.desc': '為保險業務量身打造',
@@ -82,6 +83,7 @@ export const i18n = {
         'hero.title1': 'Smart Sales.',
         'hero.title2': 'Redefined.',
         'hero.subtitle': 'Elevate your insurance pitch with AI-driven, hyper-realistic customer simulations.',
+        'hero.desc': 'Powered by Large Language Models and enterprise RAG, AI Coach provides hyper-realistic, customizable scenarios. Train your agents in a stress-free environment to rapidly improve communication and closing skills.',
         'hero.explore': 'Explore AI Coach',
         'hero.more': 'Learn More >',
         'chat.b1': 'Good morning Mr. Wang! I\'m Lin from Cathay Life. About the plan we discussed...',
@@ -94,11 +96,11 @@ export const i18n = {
 
         // Teardown Labels
         'tear.lbl.ui': 'Interactive Conversation Interface',
-        'tear.lbl.ui.desc': 'Engage in fluid practice conversations with hyper-realistic AI customers.',
+        'tear.lbl.ui.desc': 'Engage in fluid voice and text practice conversations with hyper-realistic AI customers that react naturally based on mood, personality, and product knowledge.',
         'tear.lbl.body': 'Persona & RAG System',
-        'tear.lbl.body.desc': 'Dynamically generates customer backgrounds and instantly retrieves enterprise knowledge.',
+        'tear.lbl.body.desc': 'Dynamically generates tailored customer backgrounds and instantly retrieves enterprise knowledge using RAG technology, ensuring every simulation maps to real-world sales.',
         'tear.lbl.ai': 'AI Evaluation Backend',
-        'tear.lbl.ai.desc': 'Powers real-time conversation generation, logic analysis, and final scoring.',
+        'tear.lbl.ai.desc': 'A powerful evaluation engine working in the background to drive real-time conversation generation, logic analysis, and comprehensive multi-dimensional scoring reports.',
 
         'feat.title': 'Values',
         'feat.desc': 'Tailor-made for Insurance Agents',
@@ -154,6 +156,7 @@ export const i18n = {
         'hero.title1': 'Bán hàng thông minh.',
         'hero.title2': 'Định nghĩa lại.',
         'hero.subtitle': 'Nâng cao kỹ năng giao tiếp thực tế của nhân viên tư vấn qua hội thoại mô phỏng AI.',
+        'hero.desc': 'Được hỗ trợ bởi Mô hình ngôn ngữ lớn và kiến thức RAG chuyên sâu, AI Coach cung cấp các kịch bản tùy chỉnh siêu chân thực. Huấn luyện đội ngũ trong môi trường không áp lực để cải thiện nhanh chóng kỹ năng giao tiếp và chốt sale.',
         'hero.explore': 'Khám phá AI Coach',
         'hero.more': 'Tìm hiểu thêm >',
         'chat.b1': 'Chào buổi sáng anh Vương! Tôi là Lâm từ Cathay Life. Về kế hoạch chúng ta đã bàn...',
@@ -166,11 +169,11 @@ export const i18n = {
 
         // Teardown Labels
         'tear.lbl.ui': 'Giao diện trò chuyện tương tác',
-        'tear.lbl.ui.desc': 'Thực hành hội thoại trôi chảy với khách hàng AI siêu thực.',
+        'tear.lbl.ui.desc': 'Thực hành hội thoại bằng giọng nói và văn bản trôi chảy với khách hàng AI mô phỏng siêu thực. Hệ thống phản ứng tự nhiên dựa trên cảm xúc, tính cách và mức độ hiểu biết về sản phẩm.',
         'tear.lbl.body': 'Hệ thống Persona & RAG',
-        'tear.lbl.body.desc': 'Tạo lập lý lịch khách hàng và truy tìm ngay kiến thức doanh nghiệp.',
+        'tear.lbl.body.desc': 'Tự động tạo lý lịch khách hàng linh hoạt và truy xuất nhanh chóng cơ sở kiến thức doanh nghiệp qua công nghệ RAG, đảm bảo mỗi mô phỏng đều sát với thực tế bán hàng.',
         'tear.lbl.ai': 'Lõi AI Backend',
-        'tear.lbl.ai.desc': 'Kiểm soát tạo đối thoại, phân tích logic và chấm điểm cuối cùng.',
+        'tear.lbl.ai.desc': 'Công cụ đánh giá mạnh mẽ hoạt động ở chế độ nền để định hướng quá trình tạo đối thoại theo thời gian thực, phân tích logic và đưa ra báo cáo chấm điểm đa chiều toàn diện.',
 
         'feat.title': 'Giá trị',
         'feat.desc': 'Dành riêng cho Tư vấn viên',

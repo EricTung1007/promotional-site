@@ -10,5 +10,15 @@ export default defineConfig({
                 changeOrigin: true
             }
         }
+    },
+    build: {
+        rollupOptions: {
+            input: {
+                main: 'index.html',
+                vi: 'vi/index.html',
+                en: 'en/index.html',
+                'zh-TW': 'zh-TW/index.html'
+            }
+        }
     }
 })

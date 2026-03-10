@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Coach - Smart Sales Training Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="https://ai-coach-frontend-service-for-dev-218172420486.asia-east1.run.app/login"
+                class="logo magnetic-btn" style="display: flex; align-items: center;">
+                <img src="/AI-coach-logo.png" alt="AI Coach Logo"
+                    style="height: 32px; width: auto; object-fit: contain;" />
+            </a>
+            <div class="nav-links">
+                <a href="/promotional-site/en/#features" class="magnetic-btn hide-on-mobile"
+                    data-i18n="nav.features">Features</a>
+                <a href="/promotional-site/en/#roles" class="magnetic-btn hide-on-mobile"
+                    data-i18n="nav.roles">Roles</a>
+                <a href="/promotional-site/en/#modules" class="magnetic-btn hide-on-mobile"
+                    data-i18n="nav.modules">Modules</a>
+                <select id="lang-switcher" class="lang-select magnetic-btn">
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="en" selected>English</option>
+                    <option value="zh-TW">繁體中文</option>
+                </select>
+                <a href="/promotional-site/docs/en/" class="magnetic-btn"
+                    style="color: var(--accent); font-weight: 500;" data-i18n="nav.docs">Docs</a>
+                <a href="https://ai-coach-frontend-service-for-dev-218172420486.asia-east1.run.app/"
+                    class="btn-primary-small magnetic-btn" target="_blank" data-i18n="nav.start">Start Training</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="section hero-section">
+            <div class="hero-text-container">
+                <h1 class="hero-title">
+                    <span class="hero-word" data-i18n="hero.title1"></span><br />
+                    <span class="hero-word" data-i18n="hero.title2"></span>
+                </h1>
+                <p class="hero-subtitle mask-text" data-i18n="hero.subtitle"></p>
+                <p class="hero-description" data-i18n="hero.desc"></p>
+                <div class="hero-actions">
+                    <a href="https://ai-coach-frontend-service-for-dev-218172420486.asia-east1.run.app/"
+                        class="btn-primary magnetic-btn" target="_blank" data-i18n="hero.explore"></a>
+                    <a href="/promotional-site/docs/en/" class="btn-secondary magnetic-btn" data-i18n="hero.more"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Slogan Section -->
+        <section class="section slogan-section">
+            <div class="slogan-container">
+                <h2 class="slogan-title mask-text" data-i18n="slogan.title"></h2>
+                <p class="slogan-desc mask-text" data-i18n="slogan.desc"></p>
+            </div>
+        </section>
+
+        <!-- Ultra-Premium Teardown Sequence -->
+        <section id="teardown" class="section teardown-section">
+            <div class="teardown-container">
+                <!-- Layer 1: The Phone Body -->
+                <div class="device-layer layer-body">
+                    <div class="device-frame"></div>
+                </div>
+
+                <!-- Layer 2: The UI Chat Interface -->
+                <div class="device-layer layer-ui">
+                    <div class="mockup-header">
+                        <span class="mockup-dot r"></span>
+                        <span class="mockup-dot y"></span>
+                        <span class="mockup-dot g"></span>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="chat-bubble right" data-i18n="chat.b1"></div>
+                        <div class="chat-bubble left" data-i18n="chat.b2"></div>
+                        <div class="chat-bubble right" data-i18n="chat.b3"></div>
+                        <div class="chat-bubble left typing">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 3: The AI Engine Brain -->
+                <div class="device-layer layer-ai">
+                    <div class="ai-core">
+                        <div class="ai-orbit">
+                            <div class="ai-particle p1"></div>
+                            <div class="ai-particle p2"></div>
+                            <div class="ai-particle p3"></div>
+                        </div>
+                        <div class="ai-center" data-i18n="ai.core"></div>
+                        <ul class="ai-stats">
+                            <li data-i18n="ai.stat1"></li>
+                            <li data-i18n="ai.stat2"></li>
+                            <li data-i18n="ai.stat3"></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Explanatory Labels (Overlay 2D Layer) -->
+            <div class="teardown-labels-container">
+                <div class="teardown-label lbl-ui">
+                    <div class="lbl-content">
+                        <h4 data-i18n="tear.lbl.ui"></h4>
+                        <p data-i18n="tear.lbl.ui.desc"></p>
+                    </div>
+                    <div class="lbl-line"></div>
+                </div>
+
+                <div class="teardown-label lbl-body">
+                    <div class="lbl-line"></div>
+                    <div class="lbl-content">
+                        <h4 data-i18n="tear.lbl.body"></h4>
+                        <p data-i18n="tear.lbl.body.desc"></p>
+                    </div>
+                </div>
+
+                <div class="teardown-label lbl-ai">
+                    <div class="lbl-line"></div>
+                    <div class="lbl-content">
+                        <h4 data-i18n="tear.lbl.ai"></h4>
+                        <p data-i18n="tear.lbl.ai.desc"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section features-section">
+            <div class="section-header">
+                <h2 class="section-title mask-text" data-i18n="feat.title"></h2>
+                <p class="section-desc mask-text" data-i18n="feat.desc"></p>
+            </div>
+            <div class="features-scroll-container">
+                <div class="features-track">
+                    <!-- Structured Feature Cards replacing Nano style -->
+                    <div class="feature-card">
+                        <div class="module-text">
+                            <span class="overline-label" data-i18n="feat.c1.lbl"></span>
+                            <h3 data-i18n="feat.c1.t"></h3>
+                            <p data-i18n="feat.c1.d"></p>
+                        </div>
+                        <div class="module-preview p-0">
+                            <img src="/feature-interaction.png" class="preview-img" alt="" />
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="module-text">
+                            <span class="overline-label" data-i18n="feat.c2.lbl"></span>
+                            <h3 data-i18n="feat.c2.t"></h3>
+                            <p data-i18n="feat.c2.d"></p>
+                        </div>
+                        <div class="module-preview p-0">
+                            <img src="/feature-stages.png" class="preview-img" alt="" />
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="module-text">
+                            <span class="overline-label" data-i18n="feat.c3.lbl"></span>
+                            <h3 data-i18n="feat.c3.t"></h3>
+                            <p data-i18n="feat.c3.d"></p>
+                        </div>
+                        <div class="module-preview p-0">
+                            <img src="/feature-evaluation.png" class="preview-img" alt="" />
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="module-text">
+                            <span class="overline-label" data-i18n="feat.c4.lbl"></span>
+                            <h3 data-i18n="feat.c4.t"></h3>
+                            <p data-i18n="feat.c4.d"></p>
+                        </div>
+                        <div class="module-preview p-0">
+                            <img src="/feature-tracking.png" class="preview-img" alt="" />
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="module-text">
+                            <span class="overline-label" data-i18n="feat.c5.lbl"></span>
+                            <h3 data-i18n="feat.c5.t"></h3>
+                            <p data-i18n="feat.c5.d"></p>
+                        </div>
+                        <div class="module-preview p-0">
+                            <img src="/feature-knowledge-insurance.png" class="preview-img" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roles" class="section roles-section features-section">
+            <div class="section-header">
+                <h2 class="section-title mask-text" data-i18n="roles.title"></h2>
+                <p class="section-desc mask-text" data-i18n="roles.desc"></p>
+            </div>
+            <div class="features-scroll-container">
+                <div class="features-track">
+                    <div class="feature-card">
+                        <div class="module-text">
+                            <span class="overline-label" data-i18n="roles.c2.lbl"></span>
+                            <h3 data-i18n="roles.c2.t"></h3>
+                            <p data-i18n="roles.c2.d"></p>
+                        </div>
+                        <div class="module-preview p-0">
+                            <img src="/role-newbie.png" class="preview-img" alt="" />
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="module-text">
+                            <span class="overline-label" data-i18n="roles.c1.lbl"></span>
+                            <h3 data-i18n="roles.c1.t"></h3>
+                            <p data-i18n="roles.c1.d"></p>
+                        </div>
+                        <div class="module-preview p-0">
+                            <img src="/role-agent.png" class="preview-img" alt="" />
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="module-text">
+                            <span class="overline-label" data-i18n="roles.c3.lbl"></span>
+                            <h3 data-i18n="roles.c3.t"></h3>
+                            <p data-i18n="roles.c3.d"></p>
+                        </div>
+                        <div class="module-preview p-0">
+                            <img src="/role-manager.png" class="preview-img" alt="" />
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="module-text">
+                            <span class="overline-label" data-i18n="roles.c4.lbl"></span>
+                            <h3 data-i18n="roles.c4.t"></h3>
+                            <p data-i18n="roles.c4.d"></p>
+                        </div>
+                        <div class="module-preview p-0">
+                            <img src="/role-trainer.png" class="preview-img" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="modules" class="section modules-section">
+            <div class="modules-grid-container">
+
+                <!-- Practice Simulation Module Card -->
+                <div class="module-card">
+                    <div class="module-text">
+                        <div class="module-icon">💡</div>
+                        <h2 class="section-title mask-text" data-i18n="mod.prac.title"></h2>
+                        <p class="section-desc mask-text" style="margin-top:10px;" data-i18n="mod.prac.desc"></p>
+                    </div>
+                    <div class="module-preview">
+                        <div class="preview-chat-ui">
+                            <div class="preview-chat-header">
+                                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                                <span class="header-title">AI Client - Mr. Wang</span>
+                            </div>
+                            <div class="preview-chat-body">
+                                <div class="msg right">Hello! I'm Lin from Cathay Life...</div>
+                                <div class="msg left">Is this policy flexible?</div>
+                                <div class="msg right typing"><span></span><span></span><span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evaluation Reports Module Card -->
+                <div class="module-card">
+                    <div class="module-text">
+                        <div class="module-icon">🎯</div>
+                        <h2 class="section-title mask-text" data-i18n="mod.eval.title"></h2>
+                        <p class="section-desc mask-text" style="margin-top:10px;" data-i18n="mod.eval.desc"></p>
+                    </div>
+                    <div class="module-preview">
+                        <div class="preview-chart-ui">
+                            <div class="radar-circle">
+                                <div class="radar-polygon mask-polygon"></div>
+                                <div class="radar-score">A+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cross Border Module Card -->
+                <div class="module-card">
+                    <div class="module-text">
+                        <div class="module-icon">🌍</div>
+                        <h2 class="section-title mask-text" data-i18n="mod.title"></h2>
+                        <p class="section-desc mask-text" style="margin-top:10px;" data-i18n="mod.desc"></p>
+                    </div>
+                    <div class="module-preview">
+                        <div class="preview-translation-ui">
+                            <div class="lang-tabs">
+                                <div class="tab">Tiếng Việt</div>
+                                <div class="tab active">English</div>
+                            </div>
+                            <div class="translation-body">
+                                <p class="source-text">Lợi nhuận bảo hiểm hiện tại không cao...</p>
+                                <div class="divider">AI Map</div>
+                                <p class="target-text">Returns are pretty low right now...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RAG Database Module Card -->
+                <div class="module-card">
+                    <div class="module-text">
+                        <div class="module-icon">📚</div>
+                        <h2 class="section-title mask-text" data-i18n="mod.rag.title"></h2>
+                        <p class="section-desc mask-text" style="margin-top:10px;" data-i18n="mod.rag.desc"></p>
+                    </div>
+                    <div class="module-preview">
+                        <div class="preview-rag-ui">
+                            <div class="search-box">
+                                <span class="icon">🔍</span>
+                                <span class="typing-text">VITA benefits package...</span>
+                            </div>
+                            <div class="search-results">
+                                <div class="result-item">📄 VITA Guide (Page 12)</div>
+                                <div class="result-item">📄 Agent Manual 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Final Call to Action -->
+        <section class="section cta-section" style="padding-top: 20px;">
+            <div class="cta-container">
+                <h2 class="cta-title mask-text" data-i18n="cta.title"></h2>
+                <p class="cta-desc mask-text" data-i18n="cta.desc"></p>
+                <div class="cta-action-wrapper" style="margin-top: 40px;">
+                    <a href="https://ai-coach-frontend-service-for-dev-218172420486.asia-east1.run.app/"
+                        class="btn-primary cta-btn magnetic-btn" target="_blank" data-i18n="nav.start"></a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p data-i18n="footer"></p>
+            </div>
+        </footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
