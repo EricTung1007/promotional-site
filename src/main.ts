@@ -295,9 +295,10 @@ document.addEventListener('DOMContentLoaded', () => {
       gsap.set('.layer-body', { opacity: 1 });
 
       // Step 1: All layers tilt back together to prevent Z-fighting
+      // Reinstated the aggressive 3D tilt on mobile per user request
       tTl.to('.device-layer', {
-        rotateX: isDesktop ? 45 : 30, // Less tilt on mobile
-        rotateY: isDesktop ? -15 : 0,  // Keep perfectly centered horizontally on mobile
+        rotateX: isDesktop ? 45 : 45, // Full tilt on mobile
+        rotateY: isDesktop ? -15 : -15, // Full angle on mobile
         scale: isDesktop ? 0.75 : 0.6,
         duration: 1
       }, 0);
@@ -306,10 +307,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // Chat UI springs UP
       tTl.to('.layer-ui', {
         opacity: 1,
-        yPercent: isDesktop ? -60 : -45, // Hugely shortened separation for mobile
-        xPercent: isDesktop ? -60 : -45, // Hugely shortened separation for mobile
-        z: isDesktop ? 120 : 50,
-        rotateX: isDesktop ? 10 : 0,
+        yPercent: isDesktop ? -60 : -55,
+        xPercent: isDesktop ? -60 : -55,
+        z: isDesktop ? 120 : 60,
+        rotateX: isDesktop ? 10 : 10, // Maintain geometry angle
         duration: 1.5,
         ease: "power2.out"
       }, 0.5);
@@ -323,21 +324,22 @@ document.addEventListener('DOMContentLoaded', () => {
       // AI Core emerges DOWN
       tTl.to('.layer-ai', {
         opacity: 1,
-        yPercent: isDesktop ? -40 : -5, // Hugely shortened separation for mobile
-        xPercent: isDesktop ? -40 : -5, // Hugely shortened separation for mobile
-        z: isDesktop ? -120 : -50,
-        rotateX: isDesktop ? -10 : 0,
+        yPercent: isDesktop ? -40 : -45,
+        xPercent: isDesktop ? -40 : -45,
+        z: isDesktop ? -120 : -60,
+        rotateX: isDesktop ? -10 : -10, // Maintain geometry angle
         duration: 1.5,
         ease: "power2.out"
       }, 0.5);
 
       // Step 3: Final glorious spread out (adjusting spread to keep in view)
-      tTl.to('.device-layer', { rotateX: isDesktop ? 30 : 20, rotateY: isDesktop ? -10 : 0, scale: isDesktop ? 0.65 : 0.55, duration: 2 }, 1.5);
+      // Restored rotation consistency on mobile
+      tTl.to('.device-layer', { rotateX: isDesktop ? 30 : 30, rotateY: isDesktop ? -10 : -10, scale: isDesktop ? 0.65 : 0.55, duration: 2 }, 1.5);
 
       // Spread them further but keep inside screen relative to the -50% center
-      tTl.to('.layer-ui', { z: isDesktop ? 200 : 70, yPercent: isDesktop ? -65 : -50, xPercent: isDesktop ? -65 : -50, duration: 2 }, 1.5);
+      tTl.to('.layer-ui', { z: isDesktop ? 200 : 80, yPercent: isDesktop ? -65 : -60, xPercent: isDesktop ? -65 : -60, duration: 2 }, 1.5);
       tTl.to('.layer-body', { z: 0, duration: 2 }, 1.5);
-      tTl.to('.layer-ai', { z: isDesktop ? -200 : -70, yPercent: isDesktop ? -35 : 0, xPercent: isDesktop ? -35 : 0, duration: 2 }, 1.5);
+      tTl.to('.layer-ai', { z: isDesktop ? -200 : -80, yPercent: isDesktop ? -35 : -40, xPercent: isDesktop ? -35 : -40, duration: 2 }, 1.5);
 
       tTl.to('.teardown-label', { opacity: 1, duration: 1, stagger: 0.2 }, 2);
 
